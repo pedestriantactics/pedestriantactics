@@ -1,0 +1,60 @@
+@font-face {
+	font-family: "Hyperwalk VF";
+	src: url("fonts/HyperwalkVF.woff2") format("woff2"),
+		url("fonts/HyperwalkVF.woff") format("woff"),
+		url("fonts/HyperwalkVF.ttf") format("ttf");
+}
+
+@font-face {
+	font-family: "Hyperwalk Mono VF";
+	src: url("fonts/HyperwalkMonoVF.woff2") format("woff2"),
+		url("fonts/HyperwalkMonoVF.woff") format("woff"),
+		url("fonts/HyperwalkMonoVF.ttf") format("ttf");
+}
+
+:root {
+	--color-fg: black;
+	--color-bg: white;
+	--color-accent: blue;
+	font-family: "Hyperwalk VF", sans-serif;
+	font-weight: 80;
+	font-size: 12pt;
+	background-color: var(--color-bg);
+	color: var(--color-fg);
+}
+
+p {
+	margin-bottom: .8em;
+	line-height: 1.2em;
+}
+
+a,
+a:hover,
+a:visited,
+a:active {
+	color: var(--color-fg);
+	text-decoration: none;
+	border-bottom: none;
+}
+
+
+.caption {
+	font-size: 6pt;
+	letter-spacing: .06em;
+}
+
+.mono {
+	font-family: 'Hyperwalk Mono VF', Courier, monospace;
+	font-weight: 80;
+	line-height: 1em;
+	letter-spacing: .06em;
+	margin-bottom: 0em;
+	text-transform: uppercase;
+}
+
+h1 {
+	font-size: 4rem;
+	font-weight: 80;
+	/* letter-spacing: -.06em; */
+	align-self: stretch;
+}

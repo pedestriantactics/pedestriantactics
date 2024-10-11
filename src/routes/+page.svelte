@@ -1,0 +1,70 @@
+<div id="container">
+	<div id="title-container">
+		<div class="grid-container">
+			<p class="caption">
+				Assembled in various workspaces <br />and coffee shops
+			</p>
+			<h1>Pedestrian &nbsp;</h1>
+			<p class="mono">Index /</p>
+		</div>
+		<div class="grid-container">
+			<p class="caption">
+				©2024 <br /> <br />
+			</p>
+			<h1>Tactics®</h1>
+			<div id="links">
+				<a href="products" class="mono">Products</a>
+				<a href="newsletter" class="mono">Newsletter</a>
+				<a href="links" class="mono">Links</a>
+				<a href="bio" class="mono">Bio</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<style>
+	:root {
+		--color-fg: white;
+		--color-bg: black;
+	}
+
+	.grid-container {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 32px;
+	}
+
+	#links {
+		display: flex;
+		flex-direction: column;
+		gap: 12pt;
+	}
+
+	a {
+		position: relative;
+	}
+
+	a:hover::before {
+		content: "→";
+		/* offset the arrow so it's to the left of the link */
+		position: absolute;
+		left: -1em;
+	}
+
+	#title-container {
+		display: inline-flex;
+		align-items: top;
+	}
+
+	#container {
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+</style>
