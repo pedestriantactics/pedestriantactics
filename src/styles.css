@@ -13,19 +13,31 @@
 }
 
 :root {
-	--color-fg: black;
-	--color-bg: white;
-	--color-accent: blue;
+	/* --color-fg: black; */
+	/* --color-bg: white; */
+	/* --color-accent: blue; */
 	font-family: "Hyperwalk VF", sans-serif;
 	font-weight: 80;
 	font-size: 12pt;
 	background-color: var(--color-bg);
 	color: var(--color-fg);
+	text-align: left;
 }
 
 p {
 	margin-bottom: .8em;
 	line-height: 1.2em;
+}
+
+h1 {
+	font-size: 4rem;
+	font-weight: 80;
+	/* letter-spacing: -.06em; */
+	align-self: stretch;
+}
+
+h2 {
+	font-size: 1.4rem;
 }
 
 a,
@@ -39,7 +51,7 @@ a:active {
 
 
 .caption {
-	font-size: 6pt;
+	font-size: 8pt;
 	letter-spacing: .06em;
 }
 
@@ -50,11 +62,4 @@ a:active {
 	letter-spacing: .06em;
 	margin-bottom: 0em;
 	text-transform: uppercase;
-}
-
-h1 {
-	font-size: 4rem;
-	font-weight: 80;
-	/* letter-spacing: -.06em; */
-	align-self: stretch;
 }

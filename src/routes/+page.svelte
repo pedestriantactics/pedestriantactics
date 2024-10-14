@@ -1,19 +1,20 @@
 <div id="container">
 	<div id="title-container">
 		<div class="grid-container">
-			<p class="caption">
-				Assembled in various workspaces <br />and coffee shops
+			<p id="description" class="caption">
+				Electronic music and design works assembled by Dan Taylor in
+				various coffee shops and workspaces
 			</p>
 			<h1>Pedestrian &nbsp;</h1>
 			<p class="mono">Index /</p>
 		</div>
 		<div class="grid-container">
 			<p class="caption">
-				©2024 <br /> <br />
+				©2024 <br /> <br /><br />
 			</p>
 			<h1>Tactics®</h1>
 			<div id="links">
-				<a href="products" class="mono">Products</a>
+				<a href="releases" class="mono">Releases</a>
 				<a href="newsletter" class="mono">Newsletter</a>
 				<a href="links" class="mono">Links</a>
 				<a href="bio" class="mono">Bio</a>
@@ -22,17 +23,25 @@
 	</div>
 </div>
 
-<style>
-	:root {
-		--color-fg: white;
-		--color-bg: black;
-	}
+<svelte:head>
+	<style>
+		:root {
+			--color-fg: white;
+			--color-bg: black;
+		}
+	</style>
+</svelte:head>
 
+<style>
 	.grid-container {
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
 		gap: 32px;
+	}
+
+	#description {
+		max-width: 22em;
 	}
 
 	#links {
