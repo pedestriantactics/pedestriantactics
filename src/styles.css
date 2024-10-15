@@ -1,15 +1,15 @@
 @font-face {
 	font-family: "Hyperwalk VF";
-	src: url("fonts/HyperwalkVF.woff2") format("woff2"),
-		url("fonts/HyperwalkVF.woff") format("woff"),
-		url("fonts/HyperwalkVF.ttf") format("ttf");
+	src: url("/fonts/HyperwalkVF.woff2") format("woff2"),
+		url("/fonts/HyperwalkVF.woff") format("woff"),
+		url("/fonts/HyperwalkVF.ttf") format("ttf");
 }
 
 @font-face {
 	font-family: "Hyperwalk Mono VF";
-	src: url("fonts/HyperwalkMonoVF.woff2") format("woff2"),
-		url("fonts/HyperwalkMonoVF.woff") format("woff"),
-		url("fonts/HyperwalkMonoVF.ttf") format("ttf");
+	src: url("/fonts/HyperwalkMonoVF.woff2") format("woff2"),
+		url("/fonts/HyperwalkMonoVF.woff") format("woff"),
+		url("/fonts/HyperwalkMonoVF.ttf") format("ttf");
 }
 
 :root {

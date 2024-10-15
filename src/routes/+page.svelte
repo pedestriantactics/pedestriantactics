@@ -50,15 +50,9 @@
 		gap: 12pt;
 	}
 
-	a {
-		position: relative;
-	}
-
-	a:hover::before {
-		content: "→";
+	a:hover::after {
+		content: "←";
 		/* offset the arrow so it's to the left of the link */
-		position: absolute;
-		left: -1em;
 	}
 
 	#title-container {
