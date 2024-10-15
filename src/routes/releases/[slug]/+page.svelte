@@ -59,39 +59,50 @@
 
 <div id="container">
 	<div class="grid-row">
-		<div></div>
-		<p class="caption mono">{data.code}</p>
-		<p class="caption mono">{formatDate(data.formattedDate)}</p>
-	</div>
-	<div class="grid-row">
-		<div>
-			<img src="/images/{data.images[currentImage]}" alt={data.title} />
-			<!-- add an if statement to generate the image nav if there is more than one image -->
-			{#if data.images.length > 1}
-				<div id="image-nav">
-					{#each data.images as image, i}
-						<p class="caption mono">
-							<a
-								style="cursor: pointer;"
-								class:active={i === currentImage}
-								on:click={() => (currentImage = i)}
-							>
-								IMG{i + 1}
-							</a>
-						</p>
-					{/each}
-					<!-- <a on:click={showPreviousImage}>&lt;</a>
-					<a on:click={showNextImage}>&rt;</a> -->
-				</div>
-			{/if}
+		<div class="grid-column">
+			<!-- space to line image up with the top -->
+			<div class="top-row"><p class="caption mono"><br /></p></div>
+			<div>
+				<img
+					src="/images/{data.images[currentImage]}"
+					alt={data.title}
+				/>
+				<!-- add an if statement to generate the image nav if there is more than one image -->
+				{#if data.images.length > 1}
+					<div id="image-nav">
+						{#each data.images as image, i}
+							<p class="caption mono">
+								<a
+									style="cursor: pointer;"
+									class:active={i === currentImage}
+									on:click={() => (currentImage = i)}
+								>
+									IMG{i + 1}
+								</a>
+							</p>
+						{/each}
+						<!-- <a on:click={showPreviousImage}>&lt;</a>
+						<a on:click={showNextImage}>&rt;</a> -->
+					</div>
+				{/if}
+			</div>
 		</div>
-		<div>
-			<h2>
-				{data.title}
-			</h2>
-			<svelte:component this={data.content} />
+		<div class="grid-column">
+			<div class="top-row">
+				<p class="caption mono">{data.code}</p>
+			</div>
+			<div>
+				<h2>
+					{data.title}
+				</h2>
+				<svelte:component this={data.content} />
+			</div>
 		</div>
-		<div></div>
+		<div class="grid-column">
+			<div class="top-row">
+				<p class="caption mono">{formatDate(data.formattedDate)}</p>
+			</div>
+		</div>
 	</div>
 </div>
 
@@ -111,6 +122,10 @@
 		align-items: center;
 		margin: auto;
 		margin-top: 4rem;
+	}
+
+	.top-row {
+		margin-bottom: 2rem;
 	}
 
 	.grid-row {
