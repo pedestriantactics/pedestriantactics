@@ -10,6 +10,13 @@ images:
 - m2-2.jpg
 - m2-5.jpg
 - m2-6.jpg
+details:
+- "Materials: 100% organic cotton"
+- "Colors: B Black, W White"
+- "Country of origin: Bangladesh"
+links:
+- "[Buy](https://pedestriantactics.gumroad.com/l/pt-m2)"
+price: 30USD
 ---
 
 An organic cotton unisex t-shirt featuring washing instructions, material information, and country of origin on the outside.

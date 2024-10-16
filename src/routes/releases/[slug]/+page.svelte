@@ -5,8 +5,11 @@
 		code: string;
 		formattedDate: Date;
 		images: string[];
+		links: string[];
 		description: string;
 		content: any;
+		details: string[];
+		price: string;
 	};
 
 	let breakpoint = 800;
@@ -91,16 +94,37 @@
 			<div class="top-row">
 				<p class="caption mono">{data.code}</p>
 			</div>
-			<div>
-				<h2>
+			<div class="title-row">
+				<h1>
 					{data.title}
-				</h2>
+				</h1>
 				<svelte:component this={data.content} />
 			</div>
 		</div>
 		<div class="grid-column">
 			<div class="top-row">
 				<p class="caption mono">{formatDate(data.formattedDate)}</p>
+			</div>
+			<div class="title-row">
+				<h1><br /></h1>
+			</div>
+			<div>
+				{#if data.details}
+				{#each data.details as detail}
+					<!-- parse the link by capturing everything in the parenthesis as the title of the link and everything in the braces as the link href -->
+					<p class="caption mono">
+						{detail}
+					</p>{/each}
+			{/if}
+				{#if data.links}
+					{#each data.links as link}
+						<!-- parse the link by capturing everything in the parenthesis as the title of the link and everything in the braces as the link href -->
+						<p class="caption mono">
+							<a href={link.match(/\(([^)]+)\)/)?.[1] ?? "#"}>
+								{link.match(/\[([^)]+)\]/)?.[1] ?? "Unknown"}
+							</a>
+						</p>{/each}
+				{/if}
 			</div>
 		</div>
 	</div>
@@ -128,11 +152,25 @@
 		margin-bottom: 2rem;
 	}
 
+	.title-row {
+		margin-bottom: 2rem;
+	}
+
 	.grid-row {
 		width: 100%;
 		display: grid;
 		grid-gap: 1rem;
-		grid-template-columns: 2fr 2fr 1fr;
+		grid-template-columns: 1fr 1fr;
+		margin-bottom: 2rem;
+	}
+
+	#image-nav a:hover,
+	#image-nav a.active {
+		border-bottom: 1px solid;
+	}
+
+	h1 {
+		font-size: 2rem;
 		margin-bottom: 2rem;
 	}
 
@@ -144,7 +182,6 @@
 	#image-nav {
 		width: 100%;
 		display: flex;
-		justify-content: center;
 		height: 50px;
 	}
 

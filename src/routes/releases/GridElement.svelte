@@ -26,22 +26,27 @@
 		<p class="caption mono">
 			{formatDate(formattedDate)}
 		</p>
-		<p class="image-caption caption mono">
-			{#if code != ""}{code} /
-			{/if}
-			{title} /
-			{#if audioType != ""}{audioType} /
-			{/if}
-			{#if recordLabel != ""}{recordLabel} /
-			{/if}
-			{category}
-		</p>
+		<div id="description">
+			<p class="image-caption caption mono">
+				{#if code != ""}{code} /
+				{/if}
+				{title} /
+				{#if audioType != ""}{audioType} /
+				{/if}
+				{#if recordLabel != ""}{recordLabel} /
+				{/if}
+				{category}
+			</p>
+		</div>
 	</div>
 </a>
 
 <style>
 	#grid-element {
-		margin-bottom: 2rem;
+		/* margin-bottom: 2rem; */
+	}
+	#description {
+		height: 3rem;
 	}
 	img {
 		width: 100%;
