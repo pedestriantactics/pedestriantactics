@@ -49,17 +49,58 @@ a:active {
 	border-bottom: none;
 }
 
+/* details is being used by markdown files */
 
-.caption {
+.caption, 
+.details p,
+.environment p {
 	font-size: 8pt;
 	letter-spacing: .06em;
 }
 
-.mono {
+.mono, 
+.details p {
 	font-family: 'Hyperwalk Mono VF', Courier, monospace;
 	font-weight: 80;
 	line-height: 1em;
 	letter-spacing: .06em;
 	margin-bottom: 0em;
 	text-transform: uppercase;
+}
+
+/* markdown specific */
+.details {
+	margin-bottom: 1rem;
+}
+
+.environment {
+	/* border: 1px solid black; */
+	display: inline-block;
+	padding: 0em 0em 0em 3em;
+	/* padding: 2.5em 0em 0em 0em; */
+	/* add an image to the left side of the content that's aligned to the top with a 1rem space on the top and left sides  */
+	background-image: url("/images/environment-warning-3.svg");
+	background-repeat: no-repeat;
+	/* background-position: top .5em left .5em; */
+	background-size: 2rem;
+	/* min-height: 0rem; */
+	/* max-width: 14rem; */
+	/* margin-bottom: 1rem; */
+}
+
+h4 a {
+	font-weight: 80;
+	color: white !important;
+	background-color: black;
+	padding: .4em .4em .2em .4em;
+	display: inline-block;
+	/* the margin below links seemed small before the warning label */
+	margin-bottom: 1em;
+}
+
+hr {
+	border: none;
+	margin-bottom: 2rem;
+	height: 0;
+	/* height: 1rem; */
 }

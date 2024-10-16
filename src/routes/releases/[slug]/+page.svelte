@@ -10,6 +10,7 @@
 		content: any;
 		details: string[];
 		price: string;
+		environment: string;
 	};
 
 	let breakpoint = 800;
@@ -64,7 +65,7 @@
 	<div class="grid-row">
 		<div class="grid-column">
 			<!-- space to line image up with the top -->
-			<div class="top-row"><p class="caption mono"><br /></p></div>
+			<div class="top-row"></div>
 			<div>
 				<img
 					src="/images/{data.images[currentImage]}"
@@ -93,38 +94,13 @@
 		<div class="grid-column">
 			<div class="top-row">
 				<p class="caption mono">{data.code}</p>
+				<p class="caption mono">{formatDate(data.formattedDate)}</p>
 			</div>
 			<div class="title-row">
 				<h1>
 					{data.title}
 				</h1>
 				<svelte:component this={data.content} />
-			</div>
-		</div>
-		<div class="grid-column">
-			<div class="top-row">
-				<p class="caption mono">{formatDate(data.formattedDate)}</p>
-			</div>
-			<div class="title-row">
-				<h1><br /></h1>
-			</div>
-			<div>
-				{#if data.details}
-				{#each data.details as detail}
-					<!-- parse the link by capturing everything in the parenthesis as the title of the link and everything in the braces as the link href -->
-					<p class="caption mono">
-						{detail}
-					</p>{/each}
-			{/if}
-				{#if data.links}
-					{#each data.links as link}
-						<!-- parse the link by capturing everything in the parenthesis as the title of the link and everything in the braces as the link href -->
-						<p class="caption mono">
-							<a href={link.match(/\(([^)]+)\)/)?.[1] ?? "#"}>
-								{link.match(/\[([^)]+)\]/)?.[1] ?? "Unknown"}
-							</a>
-						</p>{/each}
-				{/if}
 			</div>
 		</div>
 	</div>
@@ -149,10 +125,12 @@
 	}
 
 	.top-row {
-		margin-bottom: 2rem;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		height: 1em;
 	}
 
-	.title-row {
+	.top-row, img, .title-row {
 		margin-bottom: 2rem;
 	}
 
@@ -176,7 +154,7 @@
 
 	img {
 		width: 100%;
-		margin-bottom: 0.8rem;
+		/* margin-bottom: 0.8rem; */
 	}
 
 	#image-nav {
@@ -199,7 +177,7 @@
 
 	/* set the shop container to 1 column when the screen is smaller than the mobile threshold */
 	@media (max-width: 800px) {
-		#shop-container {
+		.grid-row {
 			grid-template-columns: 1fr;
 		}
 	}
