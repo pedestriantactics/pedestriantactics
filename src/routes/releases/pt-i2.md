@@ -17,8 +17,6 @@ MSRP: 21USD (All sales are final)
 
 #### [Buy on Gumroad](https://pedestriantactics.gumroad.com/l/pt-i2)
 
----
-
 <div class="details">
 
 Size: 70 x 50 cm (19.6 x 27.6 in)

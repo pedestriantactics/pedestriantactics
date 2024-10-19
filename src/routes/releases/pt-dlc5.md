@@ -16,8 +16,16 @@ A website creation kit that can take you from no coding experience to a function
 
 An example website created from The Template is available [here](https://dlc5example.pedestriantactics.com).
 
-Includes: One 20ish minute video tutorial, supporting site files
-
 MSRP: 15USD
 
 #### [Buy on Gumroad](https://pedestriantactics.gumroad.com/l/PT-DLC5)
+
+<div class="details">
+
+Package: ZIP
+
+Contents: Video tutorial, supporting site files
+
+Size: 769MB
+
+</div>

@@ -3,10 +3,20 @@
 	import NavMenu from "$lib/NavMenu.svelte";
 </script>
 
+<svelte:head>
+	<title>Links - Pedestrian Tactics</title>
+	<style>
+		:root {
+			--color-fg: black;
+			--color-bg: white;
+		}
+	</style>
+</svelte:head>
+
 <NavMenu currentPage="Links" breadcrumbs={[]} />
 
 <div id="container">
-	<div class="row">
+	<div class="content">
 		<div class="column">
 			<h1>↘</h1>
 			<p class="caption">
@@ -48,7 +58,6 @@
 
 <style>
 	#container {
-		/* max-width: 320px; */
 		width: 100vw;
 		height: 100vh;
 		display: grid;
@@ -58,7 +67,8 @@
 		margin-right: auto;
 	}
 
-	.row {
+	.content {
+		padding: 2rem;
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
@@ -83,8 +93,8 @@
 	}
 
 	/* add a breakpoint for 700px */
-	@media (max-width: 700px) {
-		.row {
+	@media (max-width: 500px) {
+		.content {
 			flex-direction: column;
 		}
 	}

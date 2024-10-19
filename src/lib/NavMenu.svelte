@@ -16,7 +16,7 @@
 
 <div id="nav-top">
 	<p class="caption mono">
-		<a href="./">Pedestrian Tactics</a> / {#each breadcrumbs as breadcrumb}<a
+		<a href="../">Pedestrian Tactics</a> / {#each breadcrumbs as breadcrumb}<a
 				href={breadcrumb.destination}>{breadcrumb.name}</a
 			> /
 		{/each}{currentPage}

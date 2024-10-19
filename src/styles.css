@@ -80,6 +80,7 @@ a:active {
 /* markdown specific */
 .details {
 	margin-bottom: 1rem;
+	margin-top: 2rem;
 }
 
 .warning {

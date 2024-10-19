@@ -26,8 +26,6 @@ Sizes run small. Dan is 6ft tall and is wearing a size L that has been washed.
 MSRP: 30USD (All sales are final)
 #### [Buy on Gumroad](https://pedestriantactics.gumroad.com/l/pt-m2)
 
----
-
 <div class="details">
 
 Materials: 100% organic cotton

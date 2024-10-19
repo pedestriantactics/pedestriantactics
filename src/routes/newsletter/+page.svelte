@@ -6,7 +6,7 @@
 <NavMenu currentPage="Newsletter" breadcrumbs={[]} />
 
 <div id="container">
-	<div id="form-container">
+	<div id="content">
 		<h2>Newsletter</h2>
 		<p>Enter your email to receive infrequent communications about upcoming releases and live shows.</p>
 		<div class="warning">
@@ -14,6 +14,7 @@
 			(By entering your email you are confirming that you also agree to my <a
 				href="privacy-policy">Privacy Policy</a
 			>)</p>
+			<hr>
 		</div>
 
 		<!-- <hr /> -->
@@ -92,6 +93,7 @@
 </div>
 
 <svelte:head>
+	<title>Newsletter - Pedestrian Tactics</title>
 	<style>
 		:root {
 			--color-fg: black;
@@ -102,7 +104,7 @@
 
 <style>
 	#container {
-		max-width: 320px;
+		max-width: 480px;
 		width: 100vw;
 		height: 100vh;
 		display: grid;
@@ -110,6 +112,10 @@
 		justify-items: center;
 		margin-left: auto;
 		margin-right: auto;
+	}
+
+	#content {
+		padding: 2rem;
 	}
 
 	/* .warning p, .warning a {

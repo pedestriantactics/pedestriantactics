@@ -3,26 +3,27 @@
 	import NavMenu from "$lib/NavMenu.svelte";
 </script>
 
+<NavMenu currentPage="Privacy Policy" breadcrumbs={[]} />
+
+<div id="container">
+	<div id="content">
+		<slot />
+	</div>
+</div>
+
 <svelte:head>
-	<title>404 - Pedestrian Tactics</title>
+	<title>Privacy Policy - Pedestrian Tactics</title>
 	<style>
 		:root {
-			--color-fg: white;
-			--color-bg: black;
+			--color-fg: black;
+			--color-bg: white;
 		}
 	</style>
 </svelte:head>
 
-<NavMenu currentPage="404" breadcrumbs={[]} />
-
-<div id="container">
-	<div>
-	<h1>404</h1>
-</div>
-</div>
-
 <style>
 	#container {
+		max-width: 900px;
 		width: 100vw;
 		height: 100vh;
 		display: grid;
@@ -30,5 +31,10 @@
 		justify-items: center;
 		margin-left: auto;
 		margin-right: auto;
+		margin-top: 8rem;
+	}
+
+	#content {
+		padding: 2rem;
 	}
 </style>

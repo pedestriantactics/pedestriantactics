@@ -1,8 +1,5 @@
----
-title: Privacy Policy
-layout: text
----
-Last updated: 2023-01-25
+## Privacy Policy
+Last updated: 2024-10-18
 
 ***
 
@@ -12,13 +9,13 @@ We use your Personal Information only for providing and improving the Site. By u
 
 ***
 
-# Information collection and use
+### Information collection and use
 
 While using our Site, we may ask you to provide us with certain personally identifiable information that can be used to contact or identify you. Personally identifiable information may include, but is not limited to your title, email address, phone number, and mailing address (“Personal Information”).
 
 ***
 
-# Log data
+### Log data
 
 Like many site operators, we collect information that your browser sends whenever you visit our Site (“Log Data”).
 
@@ -26,15 +23,15 @@ This Log Data may include information such as your computer’s Internet Protoco
 
 In addition, we may use third party services such as Google Analytics that collect, monitor and analyze this.
 
-***
+---
 
-# Communications
+### Communications
 
 We may use your Personal Information to contact you with newsletters, marketing or promotional materials.
 
 ***
 
-# Cookies
+### Cookies
 
 Cookies are files with small amount of data, which may include an anonymous unique identifier. Cookies are sent to your browser from a web site and stored on your computer’s hard drive.
 
@@ -42,13 +39,13 @@ Like many sites, we use “cookies” to collect information. You can instruct y
 
 ***
 
-# Security
+### Security
 
 The security of your Personal Information is important to us, but remember that no method of transmission over the Internet, or method of electronic storage, is 100% secure. While we strive to use commercially acceptable means to protect your Personal Information, we cannot guarantee its absolute security.
 
 ***
 
-# Changes to this Privacy Policy
+### Changes to this Privacy Policy
 
 This Privacy Policy is effective as of (April/28/2018) and will remain in effect except with respect to any changes in its provisions in the future, which will be in effect immediately after being posted on this page.
 
@@ -58,6 +55,6 @@ If we make any material changes to this Privacy Policy, we will notify you eithe
 
 ***
 
-# Contact
+### Contact
 
-If you have any questions about this, please contact hi@pedestriantactics.com
+If you have any questions about this, please contact using the contact link on the website.

@@ -17,8 +17,6 @@ MSRP: 26USD
 
 #### [Buy on Gumroad](https://pedestriantactics.gumroad.com/l/pt-m4)
 
----
-
 <div class="details">
 
 (All sales are final)
@@ -31,7 +29,7 @@ Finish: Matte
 
 </div>
 
-<div class="environment">
+<div class="warning environment">
 
 This poster is made from 170g paper sourced from Sappi in Japan. An average tree can be made into approximately 762 of these. A 0.3USD charge is included in the cost which is sent to Terrapass as an attempt to offset the environmental impact of this product.
 

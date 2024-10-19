@@ -16,10 +16,21 @@ Includes:
 - 70 hats
 - 16 crash cymbals
 - 73 percussion elements
-- and additional hits
 
-Format: 16-bit WAV
+and additional hits
 
 MSRP: 30USD
 
 #### [Buy on Gumroad](https://pedestriantactics.gumroad.com/l/Pt-dlc4) [Buy on Producer Dojo](https://producerdj.com/product/every-drum-ive-ever-made-sample-pack/)
+
+<div class="details">
+
+Package: ZIP
+
+Format: 16-bit WAV
+
+Contents: 321 wav files
+
+Size: 769MB
+
+</div>

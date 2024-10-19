@@ -9,8 +9,18 @@ images:
 
 70 kick drum samples directly taken from every track released by Corporate and Pedestrian Tactics over the last 10 years.
 
-Format: 16-bit WAV
-
 MSRP: 15USD
 
 #### [Buy on Gumroad](https://pedestriantactics.gumroad.com/l/Pt-dlc4-2) [Buy on Producer Dojo](https://producerdj.com/product/every-kick-ive-ever-made)
+
+<div class="details">
+
+Package: ZIP
+
+Format: 16-bit WAV
+
+Contents: 70 WAV files
+
+Size: 4MB
+
+</div>
