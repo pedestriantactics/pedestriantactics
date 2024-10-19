@@ -23,14 +23,12 @@ An organic cotton unisex t-shirt featuring washing instructions, material inform
 
 Sizes run small. Dan is 6ft tall and is wearing a size L that has been washed.
 
-MSRP: 30USD
+MSRP: 30USD (All sales are final)
 #### [Buy on Gumroad](https://pedestriantactics.gumroad.com/l/pt-m2)
 
 ---
 
 <div class="details">
-
-(All sales are final)
 
 Materials: 100% organic cotton
 
@@ -40,7 +38,7 @@ Origin: Bangladesh
 
 </div>
 
-<div class="environment">
+<div class="warning environment">
 
 This t-shirt is made from organic cotton sourced by Stanley/Stella. It requires approximately 650 gallons of water to produce one t-shirt. A 0.5USD charge is included in the cost which is sent to Terrapass to offset the environmental impact of this product.
 

@@ -13,4 +13,4 @@ Format: 16-bit WAV
 
 MSRP: 15USD
 
-#### [Buy on Gumroad](https://pedestriantactics.gumroad.com/l/Pt-dlc4-2) [Buy on The Producer Dojo](https://producerdj.com/product/every-kick-ive-ever-made)
+#### [Buy on Gumroad](https://pedestriantactics.gumroad.com/l/Pt-dlc4-2) [Buy on Producer Dojo](https://producerdj.com/product/every-kick-ive-ever-made)

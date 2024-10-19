@@ -1,4 +1,6 @@
 <script lang="ts">
+	import NavMenu from "$lib/NavMenu.svelte";
+
 	export let data: {
 		// metadata: { [key: string]: string };
 		title: string;
@@ -43,23 +45,12 @@
 	{/if}
 </svelte:head>
 
-<!-- this keeps everything grouped together for the layout -->
-<div id="nav-top">
-	<p class="caption mono">
-		<a href="/">pedestrian tactics</a> / <a href="/releases">Releases</a> / {data.code}
-		<br />
-		<br />
-		<a href="/releases">Releases</a>
-		<br />
-		<a href="/newsletter">Newsletter</a>
-		<br />
-		<a href="/links">Links</a>
-		<br />
-		<a href="/bio">Contact</a>
-		<br />
-		<br />
-	</p>
-</div>
+<NavMenu
+	currentPage={data.code}
+	breadcrumbs={[
+		{ name: "Releases", destination: "/releases" }
+	]}
+/>
 
 <div id="container">
 	<div class="grid-row">
@@ -97,9 +88,9 @@
 				<p class="caption mono">{formatDate(data.formattedDate)}</p>
 			</div>
 			<div class="title-row">
-				<h1>
+				<h2>
 					{data.title}
-				</h1>
+				</h2>
 				<svelte:component this={data.content} />
 			</div>
 		</div>
@@ -145,11 +136,6 @@
 	#image-nav a:hover,
 	#image-nav a.active {
 		border-bottom: 1px solid;
-	}
-
-	h1 {
-		font-size: 2rem;
-		margin-bottom: 2rem;
 	}
 
 	img {

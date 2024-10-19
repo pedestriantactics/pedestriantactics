@@ -13,4 +13,4 @@ Includes: A ZIP file containing the entire packaged .als for the Animal remix
 
 MSRP: 50USD
 
-#### [Buy on the Producer Dojo website](https://members.producerdojo.com/a/2147642139/LZ6h6XgH)
+#### [Buy on Producer Dojo](https://members.producerdojo.com/a/2147642139/LZ6h6XgH)

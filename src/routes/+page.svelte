@@ -17,7 +17,7 @@
 				<a href="releases" class="mono">Releases</a>
 				<a href="newsletter" class="mono">Newsletter</a>
 				<a href="links" class="mono">Links</a>
-				<a href="bio" class="mono">Bio</a>
+				<a href="contact" class="mono">Contact</a>
 			</div>
 		</div>
 	</div>
@@ -37,7 +37,7 @@
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
-		gap: 32px;
+		gap: 2rem;
 	}
 
 	#description {

@@ -1,5 +1,6 @@
 <script lang="ts">
 	import GridElement from "./GridElement.svelte";
+	import NavMenu from "$lib/NavMenu.svelte";
 	// import { onMount } from "svelte";
 	import { page } from "$app/stores";
 
@@ -39,21 +40,10 @@
 	</style>
 </svelte:head>
 
-<div id="nav-top">
-	<p class="caption mono">
-		<a href="/">pedestrian tactics</a> / Releases
-	<br>
-	<br>
-	Releases←
-	<br>
-	<a href="/newsletter">Newsletter</a>
-	<br>
-	<a href="/links">Links</a>
-	<br>
-	<a href="/bio">Contact</a>
-	<br>
-	<br>
-</div>
+<NavMenu
+	currentPage="Releases"
+	breadcrumbs={[]}
+/>
 
 <!-- <div id="nav-bottom">
 	<p class="caption mono">
@@ -74,7 +64,7 @@
 	<!-- render the filter links and the grid -->
 	<!-- <p id="breadcrumb" class="caption mono"><a href="/">pedestrian tactics</a> / releases</p> -->
 	<div id="filter-container">
-		<h2>
+		<h3>
 			<a href="?filter=all" class:active={filter === "all"}>All</a>
 			<a href="?filter=audio" class:active={filter === "audio"}>Audio</a>
 			<a
@@ -84,7 +74,7 @@
 			<a href="?filter=physical" class:active={filter === "physical"}
 				>Physical</a
 			>
-		</h2>
+		</h3>
 	</div>
 
 	<div id="grid-container">
@@ -106,13 +96,6 @@
 </div>
 
 <style>
-	#nav-top {
-		position: fixed;
-		top: 1rem;
-		left: 1rem;
-		padding: 2px;
-	}
-
 	/* #nav-bottom {
 		position: fixed;
 		bottom: 1rem;
@@ -120,7 +103,7 @@
 		padding: 2px;
 	} */
 
-	#filter-container a:hover, 
+	#filter-container a:hover,
 	#filter-container a:focus,
 	#filter-container a.active {
 		/* text-decoration: underline; */
@@ -152,7 +135,7 @@
 
 	/* make each link have --spacer on the right */
 	#filter-container a {
-		margin-right: 1em;
+		margin-right: .5em;
 	}
 
 	/* change grid to two columns when max width changes */

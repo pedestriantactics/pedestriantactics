@@ -1,0 +1,91 @@
+<script>
+	// import the textlayout from the lib folder
+	import NavMenu from "$lib/NavMenu.svelte";
+</script>
+
+<NavMenu currentPage="Links" breadcrumbs={[]} />
+
+<div id="container">
+	<div class="row">
+		<div class="column">
+			<h1>↘</h1>
+			<p class="caption">
+				All links open in a new tab for your convenience
+			</p>
+		</div>
+		<div class="column">
+			<h2>
+				<a
+					target="blank"
+					href="https://open.spotify.com/artist/6TFOalvhHRXh8JmQTVSoyY?si=LAiGHSjrQ_ygKM9K_AV3wA"
+					>Spotify</a
+				>
+				<a
+					target="blank"
+					href="https://music.apple.com/us/artist/pedestrian-tactics/1248460066"
+					>Apple Music</a
+				>
+				<a target="blank" href="http://soundcloud.com/pedestriantactics"
+					>Soundcloud</a
+				>
+				<a target="blank" href="http://twitter.com/pedestriantac"
+					>X (Twitter)</a
+				>
+				<a target="blank" href="http://instagram.com/pedestriantactics"
+					>Instagram</a
+				>
+				<a target="blank" href="http://youtube.com/pedestriantactics"
+					>YouTube</a
+				>
+				<a
+					target="blank"
+					href="https://www.patreon.com/pedestriantactics">Patreon</a
+				>
+			</h2>
+		</div>
+	</div>
+</div>
+
+<style>
+	#container {
+		/* max-width: 320px; */
+		width: 100vw;
+		height: 100vh;
+		display: grid;
+		align-items: center;
+		justify-items: center;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.row {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		/* add a gap of 32px */
+		gap: 3rem;
+	}
+
+	p {
+		max-width: 14em;
+	}
+
+	h1 {
+		font-size: 128pt;
+		margin-top: -0.1em;
+		margin-right: 0.1em;
+		margin-bottom: 0;
+	}
+
+	a {
+		/* font-size: 2rem; */
+		display: block;
+	}
+
+	/* add a breakpoint for 700px */
+	@media (max-width: 700px) {
+		.row {
+			flex-direction: column;
+		}
+	}
+</style>
