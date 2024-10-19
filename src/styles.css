@@ -85,10 +85,10 @@ a:active {
 
 .warning {
 	display: inline-block;
-	padding: 0em 0em 0em 2.4em;
+	padding: 0em 0em 0em 2.2em;
 	background-image: url("/images/warning.svg");
 	background-repeat: no-repeat;
-	background-size: 2rem;
+	background-size: 1.6rem;
 	min-height: 2.1rem;
 	margin-bottom: 1rem;
 }

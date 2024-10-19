@@ -128,7 +128,7 @@
 	.grid-row {
 		width: 100%;
 		display: grid;
-		grid-gap: 1rem;
+		grid-gap: 3rem;
 		grid-template-columns: 1fr 1fr;
 		margin-bottom: 2rem;
 	}
