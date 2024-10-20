@@ -9,10 +9,10 @@
             "*:not(.no-animate):not(.no-animate *)",
         );
         elements.forEach((element, index) => {
-            const elementDelay = index === 0 ? 0 : index * delay;
+            const elementDelay = index * delay;
             setTimeout(() => {
                 console.log(
-                    `Animating element: ${element.tagName}, index: ${index}`,
+                    `Animating element: ${element.tagName}, index: ${index}, delay: ${elementDelay}`,
                 );
                 const animation = element.animate(
                     [{ opacity: 0 }, { opacity: 1 }],
