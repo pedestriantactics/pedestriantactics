@@ -25,7 +25,7 @@
 			{#if link.name === currentPage}
 				{link.name}←
 			{:else}
-				<a href={link.destination}>{link.name}</a>
+				<a class="linky" href={link.destination}>{link.name}</a>
 			{/if}
 			<br />
 		{/each}
@@ -41,21 +41,13 @@
 		z-index: 100;
 	}
 
-	.menu-link {
-		display: inline-block;
-	}
-
-	.menu-link:hover,
-	.menu-link:focus {
+	.linky:hover,
+	.linky:focus {
 		text-decoration: none;
 	}
 
-	.active-link {
-		text-decoration: none;
-		color: inherit;
-	}
 
-	.active-link:after {
+	.linky:hover::after {
 		content: "←";
 	}
 </style>

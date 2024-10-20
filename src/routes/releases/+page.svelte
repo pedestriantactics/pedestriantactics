@@ -129,7 +129,11 @@
 		width: 100%;
 		display: flex;
 		justify-content: flex-start;
-		height: 50px;
+		min-height: 50px;
+	}
+
+	#filter-container h3 {
+		line-height: 1.5em
 	}
 
 	/* make each link have --spacer on the right */

@@ -37,10 +37,10 @@
 			<p id="description" class="caption">
 				Electronic music and design works assembled by Dan Taylor in
 				various coffee shops and workspaces
-				<br> <br>
+				<br /> <br />
 				©2024
 			</p>
-			<h1>Pedestrian<br>Tactics®</h1>
+			<h1>Pedestrian<br />Tactics®</h1>
 		</div>
 		<div class="grid-container">
 			<p class="mono">Index /</p>
@@ -98,13 +98,19 @@
 	}
 
 	@media (max-width: 600px) {
-		#content-desktop{
+		#content-desktop {
 			display: none;
 		}
 
 		#content-mobile {
 			display: flex;
 			flex-direction: column;
+		}
+	}
+
+	@media (max-height: 500px) {
+		#links {
+			gap: 0pt;
 		}
 	}
 </style>
