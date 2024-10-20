@@ -1,7 +1,6 @@
 <script lang="ts">
 	import GridElement from "./GridElement.svelte";
 	import NavMenu from "$lib/NavMenu.svelte";
-	// import { onMount } from "svelte";
 	import { page } from "$app/stores";
 
 	$: filter = $page.url?.searchParams?.get("filter") ?? "all";

@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { page } from "$app/stores";
-
 	export let currentPage: string;
 	export let breadcrumbs: { name: string; destination: string }[];
 
@@ -14,7 +13,7 @@
 	$: activeLink = links.find((link) => link.name === currentPage);
 </script>
 
-<div id="nav-top">
+<div id="nav-top" class="no-animate">
 	<p class="caption mono">
 		<a href="../">Pedestrian Tactics</a> / {#each breadcrumbs as breadcrumb}<a
 				href={breadcrumb.destination}>{breadcrumb.name}</a
@@ -39,6 +38,7 @@
 		top: 1rem;
 		left: 1rem;
 		padding: 2px;
+		z-index: 100;
 	}
 
 	.menu-link {
