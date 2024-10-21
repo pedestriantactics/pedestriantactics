@@ -84,8 +84,8 @@
 		</div>
 		<div class="grid-column">
 			<div class="top-row">
-				<p class="caption mono">{data.code}</p>
-				<p class="caption mono">{formatDate(data.formattedDate)}</p>
+				<p class="caption mono">{#if data.code}{data.code}{:else}{formatDate(data.formattedDate)}{/if}</p>
+				<p class="caption mono">{#if data.code}{formatDate(data.formattedDate)}{/if}</p>
 			</div>
 			<div class="title-row">
 				<h2>
