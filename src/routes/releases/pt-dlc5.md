@@ -4,6 +4,7 @@ category: downloadable
 code: PT-DLC5
 formattedDate: 2023-07-13
 images:
+- dlc5/template-cover.jpg
 - dlc5/dlc5-7.jpeg
 - dlc5/dlc5-2.jpeg
 - dlc5/dlc5-3.jpeg
