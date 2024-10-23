@@ -67,7 +67,7 @@
 					<div id="image-nav">
 						{#each data.images as image, i}
 							<p class="caption mono">
-								<a
+								<a class="unstyled"
 									style="cursor: pointer;"
 									class:active={i === currentImage}
 									on:click={() => (currentImage = i)}
@@ -98,12 +98,6 @@
 </div>
 
 <style>
-	#nav-top {
-		position: fixed;
-		top: 1rem;
-		left: 1rem;
-		padding: 2px;
-	}
 
 	#container {
 		max-width: 960px;

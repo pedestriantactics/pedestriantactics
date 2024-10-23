@@ -15,7 +15,7 @@
 
 <div id="nav-top" class="no-animate">
 	<p class="caption mono">
-		<a href="../">Pedestrian Tactics</a> / {#each breadcrumbs as breadcrumb}<a
+		<a class="unstyled" href="../">Pedestrian Tactics</a> / {#each breadcrumbs as breadcrumb}<a class="unstyled"
 				href={breadcrumb.destination}>{breadcrumb.name}</a
 			> /
 		{/each}{currentPage}
@@ -25,7 +25,7 @@
 			{#if link.name === currentPage}
 				{link.name}←
 			{:else}
-				<a class="linky" href={link.destination}>{link.name}</a>
+				<a class="linky unstyled" href={link.destination}>{link.name}</a>
 			{/if}
 			<br />
 		{/each}

@@ -20,7 +20,7 @@
 	}
 </script>
 
-<a href="{currentRoute}/{postPath}">
+<a class="unstyled" href="{currentRoute}/{postPath}">
 	<div id="grid-element">
 		<img src="/images/{image}" alt={title} />
 		<p class="caption mono">

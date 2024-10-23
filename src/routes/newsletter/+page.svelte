@@ -122,9 +122,9 @@
 		color: var(--color-bg);
 	} */
 
-	.warning a {
+	/* .warning a {
 		border-bottom: 1px solid var(--color-fg);
-	}
+	} */
 
 	/* mailchimp styling */
 	#mc_embed_signup {

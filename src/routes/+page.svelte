@@ -24,10 +24,10 @@
 			</p>
 			<h1>Tactics®</h1>
 			<div id="links">
-				<a href="releases" class="mono">Releases</a>
-				<a href="newsletter" class="mono">Newsletter</a>
-				<a href="links" class="mono">Links</a>
-				<a href="contact" class="mono">Contact</a>
+				<a href="releases" class="mono unstyled">Releases</a>
+				<a href="newsletter" class="mono unstyled">Newsletter</a>
+				<a href="links" class="mono unstyled">Links</a>
+				<a href="contact" class="mono unstyled">Contact</a>
 			</div>
 		</div>
 	</div>

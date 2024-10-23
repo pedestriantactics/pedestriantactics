@@ -39,10 +39,7 @@
 	</style>
 </svelte:head>
 
-<NavMenu
-	currentPage="Releases"
-	breadcrumbs={[]}
-/>
+<NavMenu currentPage="Releases" breadcrumbs={[]} />
 
 <!-- <div id="nav-bottom">
 	<p class="caption mono">
@@ -64,14 +61,25 @@
 	<!-- <p id="breadcrumb" class="caption mono"><a href="/">pedestrian tactics</a> / releases</p> -->
 	<div id="filter-container">
 		<h3>
-			<a href="?filter=all" class:active={filter === "all"}>All</a>
-			<a href="?filter=audio" class:active={filter === "audio"}>Audio</a>
 			<a
+				class="unstyled"
+				href="?filter=all"
+				class:active={filter === "all"}>All</a
+			>
+			<a
+				class="unstyled"
+				href="?filter=audio"
+				class:active={filter === "audio"}>Audio</a
+			>
+			<a
+				class="unstyled"
 				href="?filter=downloadable"
 				class:active={filter === "downloadable"}>Downloadable</a
 			>
-			<a href="?filter=physical" class:active={filter === "physical"}
-				>Physical</a
+			<a
+				class="unstyled"
+				href="?filter=physical"
+				class:active={filter === "physical"}>Physical</a
 			>
 		</h3>
 	</div>
@@ -133,12 +141,12 @@
 	}
 
 	#filter-container h3 {
-		line-height: 1.5em
+		line-height: 1.5em;
 	}
 
 	/* make each link have --spacer on the right */
 	#filter-container a {
-		margin-right: .5em;
+		margin-right: 0.5em;
 	}
 
 	/* change grid to two columns when max width changes */

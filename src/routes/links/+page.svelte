@@ -26,28 +26,39 @@
 		<div class="column">
 			<h2>
 				<a
+					class="unstyled"
 					target="blank"
 					href="https://open.spotify.com/artist/6TFOalvhHRXh8JmQTVSoyY?si=LAiGHSjrQ_ygKM9K_AV3wA"
 					>Spotify</a
 				>
 				<a
+					class="unstyled"
 					target="blank"
 					href="https://music.apple.com/us/artist/pedestrian-tactics/1248460066"
 					>Apple Music</a
 				>
-				<a target="blank" href="http://soundcloud.com/pedestriantactics"
-					>Soundcloud</a
-				>
-				<a target="blank" href="http://twitter.com/pedestriantac"
-					>X (Twitter)</a
-				>
-				<a target="blank" href="http://instagram.com/pedestriantactics"
-					>Instagram</a
-				>
-				<a target="blank" href="http://youtube.com/pedestriantactics"
-					>YouTube</a
+				<a
+					class="unstyled"
+					target="blank"
+					href="http://soundcloud.com/pedestriantactics">Soundcloud</a
 				>
 				<a
+					class="unstyled"
+					target="blank"
+					href="http://twitter.com/pedestriantac">X (Twitter)</a
+				>
+				<a
+					class="unstyled"
+					target="blank"
+					href="http://instagram.com/pedestriantactics">Instagram</a
+				>
+				<a
+					class="unstyled"
+					target="blank"
+					href="http://youtube.com/pedestriantactics">YouTube</a
+				>
+				<a
+					class="unstyled"
 					target="blank"
 					href="https://www.patreon.com/pedestriantactics">Patreon</a
 				>
