@@ -2,12 +2,13 @@
 	export var date = "";
 	export var name = "";
 	export var location = "";
+	export var link = "";
 </script>
 
 <div id="line">
 	<p id="date" class="mono">{date}</p>
 	<p id="location" class="mono">{location}</p>
-	<p class="mono">{name}</p>
+	<p class="mono">{#if link != ""}<a href={link}>{name}</a>{:else}{name}{/if}</p>
 </div>
 
 <style>

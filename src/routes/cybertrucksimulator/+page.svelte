@@ -46,11 +46,21 @@
 			</h4>
 		</div>
 	</div>
-	<div id="top-left"><p class=“caption mono”>PT-G3</p></div>
+	<div id="top-left"><p class="caption mono">PT-G3</p></div>
 	<div id="bottom-right">
-		<p class=“caption mono”>A game by <a href="http://pedestriantactics.com">Pedestrian Tactics</a></p>
+		<p class="caption mono">A game by <a href="http://pedestriantactics.com">Pedestrian Tactics</a></p>
 	</div>
 </body>
+
+<svelte:head>
+	<title>Cybertruck Simulator - Pedestrian Tactics</title>
+	<style>
+		:root {
+			--color-fg: white;
+			--color-bg: black;
+		}
+	</style>
+</svelte:head>
 
 <style>
 	/* add the font PT-F3 */

@@ -129,7 +129,7 @@
 </div>
 
 <svelte:head>
-	<title>In Transit - Pedestrian Tactics</title>
+	<title>Shows - Pedestrian Tactics</title>
 	<style>
 		:root {
 			--color-fg: black;
