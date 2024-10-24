@@ -6,6 +6,7 @@
 	let links: { name: string; destination: string }[] = [
 		{ name: "Releases", destination: "/releases" },
 		{ name: "Newsletter", destination: "/newsletter" },
+		{ name: "Shows", destination: "/shows" },
 		{ name: "Links", destination: "/links" },
 		{ name: "Contact", destination: "/contact" },
 	];
