@@ -46,9 +46,9 @@
 			</h4>
 		</div>
 	</div>
-	<div id="top-left">PT-G3</div>
+	<div id="top-left"><p class=“caption mono”>PT-G3</p></div>
 	<div id="bottom-right">
-		A game by <a href="http://pedestriantactics.com">Pedestrian Tactics</a>
+		<p class=“caption mono”>A game by <a href="http://pedestriantactics.com">Pedestrian Tactics</a></p>
 	</div>
 </body>
 
