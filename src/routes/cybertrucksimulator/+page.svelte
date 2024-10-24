@@ -1,9 +1,3 @@
-<script>
-	import Layout from "$lib/BaseLayout.svelte";
-</script>
-
-
-<Layout>
 <body>
 	<div id="video-container">
 		<video autoplay loop muted playsinline>
@@ -57,7 +51,7 @@
 		A game by <a href="http://pedestriantactics.com">Pedestrian Tactics</a>
 	</div>
 </body>
-</Layout>
+
 <style>
 	/* add the font PT-F3 */
 	@font-face {
