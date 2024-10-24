@@ -21,13 +21,13 @@
 </script>
 
 <a class="unstyled" href="{currentRoute}/{postPath}">
-	<div id="grid-element">
-		<img src="/images/{image}" alt={title} />
+	<div id="grid-element" class="fast-animate">
+		<img src="/images/{image}" class="no-animate" alt={title} />
 		<p class="caption mono">
 			{formatDate(formattedDate)}
 		</p>
-		<div id="description">
-			<p class="image-caption caption mono">
+		<div id="description" class="no-animate">
+			<p class="image-caption caption mono fast-animate">
 				{#if code != ""}{code} /
 				{/if}
 				{title} /

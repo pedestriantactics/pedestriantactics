@@ -5,10 +5,10 @@
 	export var link = "";
 </script>
 
-<div id="line">
-	<p id="date" class="mono">{date}</p>
-	<p id="location" class="mono">{location}</p>
-	<p class="mono">{#if link != ""}<a href={link}>{name}</a>{:else}{name}{/if}</p>
+<div id="line" class="fast-animate">
+	<p id="date" class="mono fast-animate">{date}</p>
+	<p id="location" class="mono fast-animate">{location}</p>
+	<p class="mono fast-animate">{#if link != ""}<a href={link}>{name}</a>{:else}{name}{/if}</p>
 </div>
 
 <style>

@@ -7,6 +7,7 @@
     let elements: NodeListOf<Element>;
 
 	let animateDelay = 24;
+	let fastAnimateDelay = 10;
 
     function gatherElements() {
         // Select specific elements within the body except those with the class 'no-animate' and their descendants
@@ -15,8 +16,15 @@
         );
     }
 
-    export function animateElements(duration = 0, delay = 0) {
+    export function animateElements() {
         elements.forEach((element, index) => {
+			let delay = animateDelay;
+			// check if the element has the class 'fast-animate'
+			if (element.classList.contains("fast-animate")) {
+				delay = fastAnimateDelay;
+			}
+			// fade duration, instant for this case
+			let duration = 0;
             const elementDelay = index * delay;
             setTimeout(() => {
                 console.log(
@@ -45,13 +53,13 @@
     onMount(() => {
         gatherElements();
         setInitialOpacity();
-        animateElements(0, animateDelay);
+        animateElements();
     });
 
     afterUpdate(() => {
         gatherElements();
         setInitialOpacity();
-        animateElements(0, animateDelay);
+        animateElements();
     });
 </script>
 
