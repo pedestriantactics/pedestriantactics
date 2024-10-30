@@ -4,75 +4,118 @@
 
 	import { onMount, afterUpdate } from "svelte";
 
-	let elements: NodeListOf<Element>;
-
-	let animateDelay = 24;
-	let fastAnimateDelay = 10;
+	let elements: Element[] = [];
+	let currentIndex = 0;
 
 	function gatherElements() {
-		// Select specific elements within the body except those with the class 'no-animate' and their descendants
-		elements = document.querySelectorAll(
-			"body img:not(.no-animate):not(.no-animate *), body div:not(.no-animate):not(.no-animate *), body p:not(.no-animate):not(.no-animate *), body a:not(.no-animate):not(.no-animate *), body h1:not(.no-animate):not(.no-animate *), body h2:not(.no-animate):not(.no-animate *), body h3:not(.no-animate):not(.no-animate *), body h4:not(.no-animate):not(.no-animate *)",
+		// Select all elements within the body except those with the class 'no-animate' and their descendants
+		const elementsList = document.querySelectorAll(
+			"body *:not(.no-animate):not(.no-animate *)",
 		);
-	}
 
-	export function animateElements() {
-		elements.forEach((element, index) => {
-			let delay = animateDelay;
-			// check if the element has the class 'fast-animate'
-			if (element.classList.contains("fast-animate")) {
-				delay = fastAnimateDelay;
-			}
-			// fade duration, instant for this case
-			let duration = 0;
-			const elementDelay = index * delay;
-			setTimeout(() => {
-				console.log(
-					`Animating element: ${element.tagName}, index: ${index}, delay: ${elementDelay}`,
-				);
-				const animation = element.animate(
-					[{ opacity: 0 }, { opacity: 1 }],
-					{
-						duration,
-						fill: "forwards", // Ensure the element stays visible after the animation
-					},
-				);
-				animation.onfinish = () => {
-					(element as HTMLElement).style.opacity = "1";
-				};
-			}, elementDelay); // adjust delay for each element
+		// Filter the elements to include only the desired types
+		elements = Array.from(elementsList).filter((element) => {
+			return (
+				element.tagName === "DIV" ||
+				element.tagName === "IMG" ||
+				element.tagName === "A" ||
+				element.tagName === "P" ||
+				element.tagName === "H1" ||
+				element.tagName === "H2" ||
+				element.tagName === "H3" ||
+				element.tagName === "H4"
+			);
 		});
-	}
 
-	function setInitialOpacity() {
+		// Print all the elements to the console
+		console.log(elements);
+		console.log("Number of elements: " + elements.length);
+
+		// Reset the index
+		currentIndex = 0;
+
+		// Hide all the elements
 		elements.forEach((element) => {
 			(element as HTMLElement).style.opacity = "0";
 		});
+
+		iterate();
 	}
 
-	// var i = 0;
-	// var txt = "Lorem ipsum dummy text blabla.";
-	// var typeSpeed = 50;
+	function iterate() {
+		console.log("Iterating on element " + currentIndex);
+		if (currentIndex >= elements.length) return;
 
-	// function typeWriter() {
-	// 	if (i < txt.length) {
-	// 		document.getElementById("demo").innerHTML += txt.charAt(i);
-	// 		i++;
-	// 		setTimeout(typeWriter, typeSpeed);
-	// 	}
-	// }
+		const element = elements[currentIndex];
+		currentIndex++;
+
+		// temporarily using X to prevent this from running cause it's glitchy
+		if (!element.classList.contains("type") && element.tagName === "X") {
+			console.log("Element has class 'type'");
+			typeWriter(element as HTMLElement, 0);
+		} else {
+			console.log("Element does not have class 'type'");
+			standardDelay(element as HTMLElement, 0);
+		}
+	}
+
+	function typeWriter(element: HTMLElement, delay: number) {
+		console.log("Typing text");
+		const originalText = element.textContent || "";
+		const typeSpeed = element.classList.contains("fast-animate")
+			? 0.1
+			: 0.1;
+		let typedText = "";
+		let i = 0;
+
+		// Clear the element and set opacity to 1
+		element.textContent = "";
+		element.style.opacity = "1";
+
+		const intervalId = setInterval(() => {
+			if (i < originalText.length) {
+				typedText += originalText.charAt(i);
+				i += 1;
+				typedText += originalText.charAt(i);
+				i += 1;
+				typedText += originalText.charAt(i);
+				i += 1;
+				typedText += originalText.charAt(i);
+				i += 1;
+				typedText += originalText.charAt(i);
+				i += 1;
+				typedText += originalText.charAt(i);
+				i += 1;
+				element.textContent = typedText;
+			} else {
+				clearInterval(intervalId);
+				iterate();
+			}
+		}, typeSpeed);
+	}
+
+	function standardDelay(element: HTMLElement, delay: number) {
+		console.log("Standard delay");
+		const duration = element.classList.contains("fast-animate") ? 10 : 24;
+		setTimeout(() => {
+			element.style.opacity = "1";
+			iterate();
+		}, duration);
+	}
 
 	onMount(() => {
 		gatherElements();
-		setInitialOpacity();
-		animateElements();
 	});
 
 	afterUpdate(() => {
 		gatherElements();
-		setInitialOpacity();
-		animateElements();
 	});
 </script>
 
 <slot />
+
+<style>
+	.untyped {
+		color: transparent;
+	}
+</style>
