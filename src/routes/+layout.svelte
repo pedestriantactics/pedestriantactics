@@ -50,21 +50,53 @@
 		currentIndex++;
 
 		// temporarily using X to prevent this from running cause it's glitchy
-		if (element.classList.contains("type")) {
-			console.log("Element has class 'type'");
-			typeWriter(element as HTMLElement, 0);
-		} else {
-			console.log("Element does not have class 'type'");
-			standardDelay(element as HTMLElement, 0);
+		// if (element.classList.contains("type")) {
+		// 	console.log("Element has class 'type'");
+		// 	typeWriter(element as HTMLElement, 0);
+		// 	return;
+		// }
+		if (element.classList.contains("scramble")) {
+			unscramble(element as HTMLElement);
+			return;
 		}
+		console.log("Element does not have class 'type'");
+		standardDelay(element as HTMLElement, 0);
+	}
+
+	function unscramble(element: HTMLElement) {
+		const originalText = element.textContent || "";
+		const scrambleSpeed = 15;
+		let scrambledText = "";
+		let i = 0;
+
+		// Clear the element and set opacity to 1
+		element.textContent = "";
+		element.style.opacity = "1";
+
+		const intervalId = setInterval(() => {
+			if (i < originalText.length) {
+				const randomChar = String.fromCharCode(
+					33 + Math.floor(Math.random() * 94),
+				);
+				scrambledText += randomChar;
+				element.textContent = scrambledText;
+				setTimeout(() => {
+					scrambledText =
+						scrambledText.slice(0, i) + originalText.charAt(i);
+					element.textContent = scrambledText;
+					i++;
+				}, scrambleSpeed);
+			} else {
+				clearInterval(intervalId);
+				iterate();
+			}
+		}, scrambleSpeed*2);
 	}
 
 	function typeWriter(element: HTMLElement, delay: number) {
 		console.log("Typing text");
 		const originalText = element.textContent || "";
-		const typeSpeed = element.classList.contains("fast-animate")
-			? 2
-			: 2;
+		const typeSpeed = element.classList.contains("fast-animate") ? 2 : 2;
 		let typedText = "";
 		let i = 0;
 
@@ -96,7 +128,7 @@
 
 	function standardDelay(element: HTMLElement, delay: number) {
 		console.log("Standard delay");
-		const duration = element.classList.contains("fast-animate") ? 10 : 24;
+		const duration = element.classList.contains("fast-animate") ? 10 : 34;
 		setTimeout(() => {
 			element.style.opacity = "1";
 			iterate();

@@ -117,7 +117,7 @@
 				or <a href="./links">follow me</a> for updates!
 			</p>
 		{/if}
-		<h2><br />Past</h2>
+		<br /><h2>Past</h2>
 		{#each pastShows as show}
 			<LineItem
 				date={show.date}
