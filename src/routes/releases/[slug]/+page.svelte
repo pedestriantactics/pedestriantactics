@@ -88,7 +88,7 @@
 				<p class="caption mono">{#if data.code}{formatDate(data.formattedDate)}{/if}</p>
 			</div>
 			<div class="title-row">
-				<h2>
+				<h2 class="type">
 					{data.title}
 				</h2>
 				<svelte:component this={data.content} />

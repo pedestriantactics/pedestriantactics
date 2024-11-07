@@ -50,7 +50,7 @@
 		currentIndex++;
 
 		// temporarily using X to prevent this from running cause it's glitchy
-		if (!element.classList.contains("type") && element.tagName === "X") {
+		if (element.classList.contains("type")) {
 			console.log("Element has class 'type'");
 			typeWriter(element as HTMLElement, 0);
 		} else {
@@ -63,8 +63,8 @@
 		console.log("Typing text");
 		const originalText = element.textContent || "";
 		const typeSpeed = element.classList.contains("fast-animate")
-			? 0.1
-			: 0.1;
+			? 2
+			: 2;
 		let typedText = "";
 		let i = 0;
 
