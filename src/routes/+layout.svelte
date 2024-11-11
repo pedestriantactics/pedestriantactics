@@ -135,9 +135,25 @@
 		}, duration);
 	}
 
-	onMount(() => {
-		gatherElements();
-	});
+    onMount(() => {
+        // Google Analytics setup
+        const script1 = document.createElement("script");
+        script1.setAttribute("async", "");
+        script1.setAttribute("src", "https://www.googletagmanager.com/gtag/js?id=G-K72PDDGNQF");
+        document.head.appendChild(script1);
+
+        const script2 = document.createElement("script");
+        script2.innerHTML = `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-K72PDDGNQF');
+        `;
+        document.head.appendChild(script2);
+		// end Google stuff
+
+        gatherElements();
+    });
 
 	afterUpdate(() => {
 		gatherElements();
