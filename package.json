@@ -23,6 +23,6 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"exif-js": "^2.3.0"
+		"exifreader": "^4.25.0"
 	}
 }
