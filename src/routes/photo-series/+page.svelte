@@ -36,12 +36,8 @@
 			img.src = src;
             img.onload = () => {
                 exif.getData(img as any, function(this: any) {
-                    const exifData = exif.getAllTags(this);
-                    // image.name = exifData.imageFileName || "";
-                    image.focalLength = exifData.FocalLength ? `${exifData.FocalLength}mm` : "";
-                    image.iso = exifData.ISOSpeedRatings ? `ISO ${exifData.ISOSpeedRatings}` : "";
-                    image.fstop = exifData.FNumber ? `f/${exifData.FNumber}` : "";
-                    image.shutterspeed = exifData.ExposureTime ? `${exifData.ExposureTime}s` : "";
+                    var make = exif.getTag(this, "Model");
+					console.log(make);
                 });
             };
 			return image;
