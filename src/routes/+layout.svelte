@@ -27,10 +27,6 @@
 			);
 		});
 
-		// Print all the elements to the console
-		console.log(elements);
-		console.log("Number of elements: " + elements.length);
-
 		// Reset the index
 		currentIndex = 0;
 
@@ -43,7 +39,6 @@
 	}
 
 	function iterate() {
-		console.log("Iterating on element " + currentIndex);
 		if (currentIndex >= elements.length) return;
 
 		const element = elements[currentIndex];
@@ -59,7 +54,7 @@
 			unscramble(element as HTMLElement);
 			return;
 		}
-		console.log("Element does not have class 'type'");
+		// console.log("Element does not have class 'type'");
 		standardDelay(element as HTMLElement, 0);
 	}
 
@@ -94,7 +89,6 @@
 	}
 
 	function typeWriter(element: HTMLElement, delay: number) {
-		console.log("Typing text");
 		const originalText = element.textContent || "";
 		const typeSpeed = element.classList.contains("fast-animate") ? 2 : 2;
 		let typedText = "";
@@ -127,7 +121,6 @@
 	}
 
 	function standardDelay(element: HTMLElement, delay: number) {
-		console.log("Standard delay");
 		const duration = element.classList.contains("fast-animate") ? 10 : 34;
 		setTimeout(() => {
 			element.style.opacity = "1";

@@ -34,7 +34,7 @@
 				i += 1;
 			} else {
 				clearInterval(intervalId);
-				console.log("Unscramble complete");
+				// console.log("Unscramble complete");
 			}
 		}, delay);
 	}
@@ -53,7 +53,7 @@
 			return element.classList.contains("scramble");
 		});
 
-		console.log("hello there");
+		// console.log("hello there");
 
 		// Hide all the elements
 		elements.forEach((element) => {
