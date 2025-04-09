@@ -153,6 +153,10 @@
 	});
 </script>
 
+<svelte:head>
+	<script defer src="https://umami.catalystsoftworks.com/script.js" data-website-id="b7828a5d-9421-478b-9e4a-0dc218da5435"></script>
+</svelte:head>
+
 <slot />
 
 <style>
