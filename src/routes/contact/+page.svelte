@@ -5,12 +5,6 @@
 
 <svelte:head>
 	<title>Contact - Pedestrian Tactics</title>
-	<style>
-		:root {
-			--color-fg: black;
-			--color-bg: white;
-		}
-	</style>
 </svelte:head>
 
 <NavMenu currentPage="Contact" breadcrumbs={[]} />

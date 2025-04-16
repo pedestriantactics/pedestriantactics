@@ -31,12 +31,6 @@
 
 <svelte:head>
 	<title>{metaTitle} - Pedestrian Tactics</title>
-	<style>
-		:root {
-			--color-fg: black;
-			--color-bg: white;
-		}
-	</style>
 </svelte:head>
 
 <NavMenu currentPage="Releases" breadcrumbs={[]} />
@@ -60,7 +54,7 @@
 	<!-- render the filter links and the grid -->
 	<!-- <p id="breadcrumb" class="caption mono"><a href="/">pedestrian tactics</a> / releases</p> -->
 	<div id="filter-container">
-		<h3>
+		<p>
 			<a
 				class="unstyled"
 				href="?filter=all"
@@ -81,7 +75,7 @@
 				href="?filter=physical"
 				class:active={filter === "physical"}>Physical</a
 			>
-		</h3>
+		</p>
 	</div>
 
 	<div id="grid-container">
@@ -124,7 +118,7 @@
 		flex-direction: column;
 		align-items: center;
 		margin: auto;
-		margin-top: 4rem;
+		margin-top: 6rem;
 	}
 
 	#grid-container {

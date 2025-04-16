@@ -13,12 +13,12 @@
 }
 
 :root {
-	/* --color-fg: black; */
-	/* --color-bg: white; */
-	/* --color-accent: blue; */
+	--color-fg: black;
+	--color-bg: white;
+	--color-accent: blue;
 	font-family: "Hyperwalk VF", sans-serif;
-	font-weight: 80;
-	font-size: 12pt;
+	font-weight: 70;
+	font-size: 13pt;
 	background-color: var(--color-bg);
 	color: var(--color-fg);
 	text-align: left;
@@ -29,31 +29,31 @@ p,
 h1,
 h2,
 h3 {
-	margin-bottom: .5em;
+	margin-bottom: .7em;
 }
 
 p {
-	line-height: 1.1em;
+	line-height: 1.3em;
 }
 
 h1 {
-	font-size: 4rem;
+	font-size: 38pt;
 	font-weight: 90;
 	letter-spacing: -.02em;
 	align-self: stretch;
 }
 
-h2 {
-	font-size: 2.4rem;
+h2, h3 {
+	font-size: 32pt;
 	font-weight: 90;
-	letter-spacing: -.02em;
+	letter-spacing: -.06em;
 }
 
-h3 {
-	font-size: 1.4rem;
+/* h3 {
+	font-size: 32pt;
 	font-weight: 90;
 	letter-spacing: -.02em;
-}
+} */
 
 a,
 a:hover,
@@ -61,7 +61,8 @@ a:visited,
 a:active {
 	color: var(--color-fg);
 	text-decoration: underline;
-	/* border-bottom: 1px solid black; */
+	/* move the underline down */
+	text-underline-offset: 0.2em;
 }
 
 .unstyled,
@@ -79,12 +80,15 @@ h4 a:active {
 .caption,
 .details p,
 .warning p {
-	font-size: 8pt;
-	line-height: 1.2em;
+	font-size: 9pt;
+	font-weight: 80;
+	line-height: 1em;
+	margin-bottom: 0em;
 	letter-spacing: .06em;
 }
 
 .mono,
+.warning
 .details p {
 	font-family: 'Hyperwalk Mono VF', Courier, monospace;
 	font-weight: 80;
@@ -115,13 +119,23 @@ h4 a:active {
 }
 
 h4 a {
-	font-weight: 80;
-	color: white !important;
-	background-color: black;
-	padding: .4em .4em .2em .4em;
+	/* font-weight: 80; */
+	/* color: white !important; */
+	/* background-color: black; */
+	/* padding: .4em .4em .2em .4em; */
+	padding-top: .4em;
+	padding-bottom: .4em;
+	padding-right: .4em;
 	display: inline-block;
-	/* the margin below links seemed small before the warning label */
-	margin-bottom: 1em;
+	/* margin-bottom: 1em; */
+}
+
+/* add a right arrow before h4 a links */
+h4 a::before {
+	content: "→";
+	display: inline-block;
+	/* margin-right: 0.5em; */
+	/* opacity: 0.5; */
 }
 
 hr {
@@ -137,3 +151,21 @@ hr {
 		font-size: 1.5rem;
 	}
 } */
+
+/* dark mode */
+@media (prefers-color-scheme: dark) {
+	:root {
+		--color-fg: white;
+		--color-bg: black;
+		--color-accent: blue;
+	}
+
+	/* sketchy but this inverts the entire environment paragraph so the image is inverted */
+	.environment, .warning {
+		filter: invert(1);
+	}
+
+	.environment p, .warning p, .environment a, .warning a {
+		color: black;
+	}
+}

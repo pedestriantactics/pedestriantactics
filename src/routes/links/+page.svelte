@@ -5,12 +5,6 @@
 
 <svelte:head>
 	<title>Links - Pedestrian Tactics</title>
-	<style>
-		:root {
-			--color-fg: black;
-			--color-bg: white;
-		}
-	</style>
 </svelte:head>
 
 <NavMenu currentPage="Links" breadcrumbs={[]} />

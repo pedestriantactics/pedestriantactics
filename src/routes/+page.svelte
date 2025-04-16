@@ -1,11 +1,5 @@
 <svelte:head>
 	<title>Pedestrian Tactics</title>
-	<style>
-		:root {
-			--color-fg: white;
-			--color-bg: black;
-		}
-	</style>
 </svelte:head>
 
 <div id="container">
@@ -71,7 +65,7 @@
 	#links {
 		display: flex;
 		flex-direction: column;
-		gap: 12pt;
+		/* gap: 12pt; */
 	}
 
 	a:hover::after {
@@ -110,9 +104,9 @@
 		}
 	}
 
-	@media (max-height: 500px) {
+	/* @media (max-height: 500px) {
 		#links {
 			gap: 0pt;
 		}
-	}
+	} */
 </style>

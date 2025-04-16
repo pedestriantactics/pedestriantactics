@@ -52,6 +52,7 @@
 		// }
 		if (element.classList.contains("scramble")) {
 			unscramble(element as HTMLElement);
+			// typeWriter(element as HTMLElement, 0);
 			return;
 		}
 		// console.log("Element does not have class 'type'");
@@ -73,7 +74,7 @@
 				const randomChar = String.fromCharCode(
 					33 + Math.floor(Math.random() * 94),
 				);
-				scrambledText += randomChar;
+				// scrambledText += randomChar;
 				element.textContent = scrambledText;
 				setTimeout(() => {
 					scrambledText =

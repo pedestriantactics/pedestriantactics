@@ -94,12 +94,6 @@
 
 <svelte:head>
 	<title>Newsletter - Pedestrian Tactics</title>
-	<style>
-		:root {
-			--color-fg: black;
-			--color-bg: white;
-		}
-	</style>
 </svelte:head>
 
 <style>

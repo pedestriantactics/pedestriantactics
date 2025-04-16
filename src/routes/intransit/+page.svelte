@@ -78,12 +78,6 @@
 
 <svelte:head>
 	<title>In Transit - Pedestrian Tactics</title>
-	<style>
-		:root {
-			--color-fg: black;
-			--color-bg: white;
-		}
-	</style>
 </svelte:head>
 
 <style>

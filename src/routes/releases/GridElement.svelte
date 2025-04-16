@@ -23,7 +23,7 @@
 <a class="unstyled" href="{currentRoute}/{postPath}">
 	<div id="grid-element" class="fast-animate">
 		<img src="/images/{image}" class="no-animate" alt={title} />
-		<p class="caption mono">
+		<!-- <p class="caption mono">
 			{formatDate(formattedDate)}
 		</p>
 		<div id="description" class="no-animate">
@@ -36,6 +36,17 @@
 				{#if recordLabel != ""}{recordLabel} /
 				{/if}
 				{category}
+			</p>
+		</div> -->
+		<div id="description">
+			<p class="caption mono fast-animate">
+				{#if code != ""}{code} /
+				{/if}
+				{title}
+				{#if audioType != ""}
+					/ {audioType}{/if}
+				{#if recordLabel != ""}
+					/ {recordLabel}{/if}
 			</p>
 		</div>
 	</div>

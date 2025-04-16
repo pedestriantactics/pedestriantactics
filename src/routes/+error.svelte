@@ -5,12 +5,6 @@
 
 <svelte:head>
 	<title>404 - Pedestrian Tactics</title>
-	<style>
-		:root {
-			--color-fg: white;
-			--color-bg: black;
-		}
-	</style>
 </svelte:head>
 
 <NavMenu currentPage="404" breadcrumbs={[]} />

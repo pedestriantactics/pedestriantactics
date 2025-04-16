@@ -13,12 +13,6 @@
 
 <svelte:head>
 	<title>Privacy Policy - Pedestrian Tactics</title>
-	<style>
-		:root {
-			--color-fg: black;
-			--color-bg: white;
-		}
-	</style>
 </svelte:head>
 
 <style>
