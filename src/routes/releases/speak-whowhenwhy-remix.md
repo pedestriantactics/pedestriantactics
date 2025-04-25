@@ -1,5 +1,5 @@
 ---
-title: Cororate - Speak (Feat. Mickey Shiloh) WHOWHENWHY Remix
+title: Corporate - Speak (Feat. Mickey Shiloh) WHOWHENWHY Remix
 category: audio
 audioType: remix
 recordLabel: Play Me Records
