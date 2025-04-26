@@ -15,7 +15,7 @@
 <div id="container">
 	<div id="content">
 		<div id="intro">
-			<p class="mono">2017-03-30</p>
+			<p class="">2017-03-30</p>
 			<p class="type">
 				In Transit photo series <br />
 				Shot during travels in Hong Kong.

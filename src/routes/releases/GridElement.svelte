@@ -1,12 +1,13 @@
 <script lang="ts">
 	export let title: string;
 	export let postPath: string;
+	export let category: string;
+	export let formattedDate: Date;
 	export let code: string;
 	export let image: string;
-	export let category: string;
 	export let audioType: string;
 	export let recordLabel: string;
-	export let formattedDate: Date;
+	export let imageContrast: boolean;
 	if (code == null) code = "";
 
 	// declare const window: Window & { location: Location };
@@ -20,26 +21,11 @@
 	}
 </script>
 
-<a class="unstyled" href="{currentRoute}/{postPath}">
-	<div id="grid-element" class="fast-animate">
-		<img src="/images/{image}" class="no-animate" alt={title} />
-		<!-- <p class="caption mono">
-			{formatDate(formattedDate)}
-		</p>
-		<div id="description" class="no-animate">
-			<p class="image-caption caption mono fast-animate">
-				{#if code != ""}{code} /
-				{/if}
-				{title} /
-				{#if audioType != ""}{audioType} /
-				{/if}
-				{#if recordLabel != ""}{recordLabel} /
-				{/if}
-				{category}
-			</p>
-		</div> -->
+<a class="unstyled-link" href="{currentRoute}/{postPath}">
+	<div id="grid-element">
+		<img src="/images/{image}" class="no-animate"  class:image-contrast={imageContrast} alt={title} />
 		<div id="description">
-			<p class="caption mono fast-animate">
+			<p>
 				{#if code != ""}{code} /
 				{/if}
 				{title}
@@ -57,14 +43,10 @@
 		/* margin-bottom: 2rem; */
 	}
 	#description {
-		height: 3rem;
+		height: 4rem;
 	}
 	img {
 		width: 100%;
-		margin-bottom: 0.2rem;
-	}
-	.image-caption {
-		margin-top: 1em;
-		margin-left: 4em;
+		margin-bottom: var(--grid-gap);
 	}
 </style>

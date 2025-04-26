@@ -6,9 +6,9 @@
 </script>
 
 <div id="line" class="fast-animate">
-	<p id="date" class="mono fast-animate scramble">{date}</p>
-	<p id="location" class="mono fast-animate">{location}</p>
-	<p class="mono fast-animate">{#if link != ""}<a href={link}>{name}</a>{:else}{name}{/if}</p>
+	<p id="date" class="fast-animate scramble">{date}</p>
+	<p id="location" class="fast-animate">{location}</p>
+	<p class="fast-animate">{#if link != ""}<a href={link}>{name}</a>{:else}{name}{/if}</p>
 </div>
 
 <style>

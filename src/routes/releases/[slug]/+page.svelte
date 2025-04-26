@@ -2,16 +2,16 @@
 	import NavMenu from "$lib/NavMenu.svelte";
 
 	export let data: {
-		// metadata: { [key: string]: string };
+		content: any;
+		formattedDate: Date;
 		title: string;
 		code: string;
-		formattedDate: Date;
 		images: string[];
-		links: string[];
-		description: string;
-		content: any;
-		details: string[];
-		price: string;
+		imageContrast: boolean;
+		linksTitle: string;
+		links: { title: string; url: string }[];
+		details: { title: string; description: string }[];
+		priceUSD: string;
 		environment: string;
 	};
 
@@ -28,46 +28,69 @@
 			(currentImage - 1 + data.images.length) % data.images.length;
 	}
 
+	let navTitle = data.title;
+	if (data.code) navTitle = data.code;
+
 	let metaTitle = data.title;
 	if (data.code) metaTitle = `${data.code} ${metaTitle}`;
 
 	function formatDate(date: Date): string {
 		return date.toString().split("T")[0];
 	}
+
+	// get the current url portion of this
+	let url = "";
+	let currentPage = "";
+	if (typeof window !== "undefined") {
+		url = window.location.href;
+		const urlParts = url.split("/");
+		currentPage = urlParts[urlParts.length - 1];
+	}
 </script>
 
 <svelte:head>
 	<title>{metaTitle} - Pedestrian Tactics</title>
-	{#if data.description}
+	<!-- {#if data.description}
 		<meta name="description" content="{data.title}: {data.description}" />
 	{:else}
 		<meta name="description" content={data.title} />
-	{/if}
+	{/if} -->
 </svelte:head>
 
 <NavMenu
-	currentPage={data.code}
-	breadcrumbs={[
-		{ name: "Releases", destination: "/releases" }
-	]}
+	currentPage={currentPage}
+	breadcrumbs={[{ name: "Releases", destination: "/releases" }]}
 />
 
 <div id="container">
-	<div class="grid-row">
-		<div class="grid-column">
-			<!-- space to line image up with the top -->
-			<div class="top-row"></div>
+	<div id="content">
+		<div class="row split-content">
+			<div class="mobile-hide"></div>
+			<div class="row-2-1">
+				<p>
+					{#if data.code}{data.code}{:else}{formatDate(
+							data.formattedDate,
+						)}{/if}
+				</p>
+				<p>
+					{#if data.code}{formatDate(data.formattedDate)}{/if}
+				</p>
+			</div>
+		</div>
+		<div class="row split-content">
 			<div>
 				<img
 					src="/images/{data.images[currentImage]}"
 					alt={data.title}
+					class:image-contrast={data.imageContrast}
 				/>
 				<!-- add an if statement to generate the image nav if there is more than one image -->
 				{#if data.images.length > 1}
 					<div id="image-nav">
 						{#each data.images as image, i}
-							<p class="caption mono">
-								<a class="unstyled"
+							<p>
+								<a
+									class="unstyled-link"
 									style="cursor: pointer;"
 									class:active={i === currentImage}
 									on:click={() => (currentImage = i)}
@@ -76,55 +99,90 @@
 								</a>
 							</p>
 						{/each}
-						<!-- <a on:click={showPreviousImage}>&lt;</a>
-						<a on:click={showNextImage}>&rt;</a> -->
 					</div>
 				{/if}
 			</div>
-		</div>
-		<div class="grid-column">
-			<div class="top-row">
-				<p class="caption mono">{#if data.code}{data.code}{:else}{formatDate(data.formattedDate)}{/if}</p>
-				<p class="caption mono">{#if data.code}{formatDate(data.formattedDate)}{/if}</p>
-			</div>
-			<div class="title-row">
-				<h2 class="scramble">
-					{data.title}
-				</h2>
-				<svelte:component this={data.content} />
+			<div>
+				<div class="row">
+					<h2>{data.title}</h2>
+					<p class="large-paragraph">
+						<svelte:component this={data.content} />
+					</p>
+				</div>
+				<!-- if there are details add them -->
+				{#if data.details}
+					<div class="row">
+						{#each data.details as detail}
+							<div class="row-1-2">
+								<p>{detail.title}</p>
+								<p>{detail.description}</p>
+							</div>
+						{/each}
+					</div>
+				{/if}
+				<!-- price -->
+				{#if data.priceUSD}
+					<div class="row">
+						<p>{data.priceUSD}USD</p>
+					</div>
+				{/if}
+				<!-- links -->
+				{#if data.links}
+					<div class="row">
+						<div class="row-1-2">
+							<p>{#if data.linksTitle}{data.linksTitle}{:else}Links{/if}</p>
+							<div>
+								{#each data.links as link}
+									<a class="arrow-link" href={link.url}
+										>{link.title}</a
+									>
+									<br>
+								{/each}
+							</div>
+						</div>
+					</div>
+				{/if}
 			</div>
 		</div>
 	</div>
 </div>
 
 <style>
-
 	#container {
-		max-width: 960px;
-		padding: 32px;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		margin: auto;
-		margin-top: 4rem;
-	}
-
-	.top-row {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		height: 1em;
-	}
-
-	.top-row, img, .title-row {
-		margin-bottom: 2rem;
-	}
-
-	.grid-row {
 		width: 100%;
+		height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	#content {
+		max-width: 960px;
+		padding: var(--outer-margin);
+	}
+
+	.row {
+		width: 100%;
+		margin-bottom: var(--vertical-gap);
+	}
+
+	/* this collapses with mobile */
+	.split-content {
 		display: grid;
-		grid-gap: 3rem;
 		grid-template-columns: 1fr 1fr;
-		margin-bottom: 2rem;
+		gap: var(--grid-gap);
+	}
+
+	.row-2-1 {
+		display: grid;
+		grid-template-columns: 2fr 1fr;
+		gap: var(--grid-gap);
+	}
+
+	.row-1-2 {
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+		gap: var(--grid-gap);
 	}
 
 	#image-nav a:hover,
@@ -134,13 +192,13 @@
 
 	img {
 		width: 100%;
-		/* margin-bottom: 0.8rem; */
+		margin-bottom: 1rem;
 	}
 
 	#image-nav {
 		width: 100%;
 		display: flex;
-		height: 50px;
+		/* height: 50px; */
 	}
 
 	/* make each link have --spacer on the right */
@@ -148,17 +206,24 @@
 		margin-right: 1em;
 	}
 
-	#back-container {
-		width: 100%;
-		display: flex;
-		justify-content: flex-start;
-		height: 50px;
+	/* set the shop container to 1 column when the screen is smaller than the mobile threshold */
+	@media (max-height: 700px) {
+		#container {
+			align-items: flex-start;
+			margin-top: var(--top-margin);
+		}
 	}
 
-	/* set the shop container to 1 column when the screen is smaller than the mobile threshold */
 	@media (max-width: 800px) {
-		.grid-row {
+		#container {
+			align-items: flex-start;
+			margin-top: var(--top-margin);
+		}
+		.split-content {
 			grid-template-columns: 1fr;
+		}
+		.mobile-hide {
+			display: none;
 		}
 	}
 </style>

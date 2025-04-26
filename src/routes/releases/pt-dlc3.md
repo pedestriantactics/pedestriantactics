@@ -5,20 +5,18 @@ code: PT-DLC3
 formattedDate: 2021-12-23
 images:
 - pt-dlc3-corporate-ice-sample-pack-cover-art.jpg
+details:
+- title: Format
+  description:  ZIP, 16-bit WAV
+- title: Contents
+  description: 53 audio samples
+- title: Size
+  description: 31MB
+priceUSD: 26
+linksTitle: Buy
+links:
+- title: Gumroad
+  url: https://pedestriantactics.gumroad.com/l/PT-DLC3
 ---
 
-The early “glitch-trap” hit made its way into sets by Zomboy, Pretty Lights, and was even featured in a Carl’s Jr. Ad. Now it has been deconstructed into 53 samples for producers to use in their own productions.
-
-MSRP: 26USD
-
-#### [Buy on Gumroad](https://pedestriantactics.gumroad.com/l/PT-DLC3) [Buy on Producer Dojo](https://producerdj.com/product/corporate-ice-sample-pack/)
-
-<div class="details">
-
-Format: 16-bit WAV
-
-Package: ZIP
-
-Size: 31mb
-
-</div>
+The early glitch-trap hit deconstructed into 53 samples for producers to use in their own productions

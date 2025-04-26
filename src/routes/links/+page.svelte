@@ -13,14 +13,14 @@
 	<div class="content">
 		<div class="column">
 			<h1>↘</h1>
-			<p class="caption">
+			<p >
 				All links open in a new tab for your convenience
 			</p>
 		</div>
 		<div id="links" class="column">
 			<h2>
 				<a
-					class="unstyled"
+					class="unstyled-link"
 					target="blank"
 					href="https://open.spotify.com/artist/6TFOalvhHRXh8JmQTVSoyY?si=LAiGHSjrQ_ygKM9K_AV3wA"
 					>Spotify</a
@@ -28,7 +28,7 @@
 			</h2>
 			<h2>
 				<a
-					class="unstyled"
+					class="unstyled-link"
 					target="blank"
 					href="https://music.apple.com/us/artist/pedestrian-tactics/1248460066"
 					>Apple Music</a
@@ -36,35 +36,35 @@
 			</h2>
 			<h2>
 				<a
-					class="unstyled"
+					class="unstyled-link"
 					target="blank"
 					href="http://soundcloud.com/pedestriantactics">Soundcloud</a
 				>
 			</h2>
 			<h2>
 				<a
-					class="unstyled"
+					class="unstyled-link"
 					target="blank"
 					href="http://twitter.com/pedestriantac">X (Twitter)</a
 				>
 			</h2>
 			<h2>
 				<a
-					class="unstyled"
+					class="unstyled-link"
 					target="blank"
 					href="http://instagram.com/pedestriantactics">Instagram</a
 				>
 			</h2>
 			<h2>
 				<a
-					class="unstyled"
+					class="unstyled-link"
 					target="blank"
 					href="http://youtube.com/pedestriantactics">YouTube</a
 				>
 			</h2>
 			<h2>
 				<a
-					class="unstyled"
+					class="unstyled-link"
 					target="blank"
 					href="https://www.patreon.com/pedestriantactics">Patreon</a
 				>

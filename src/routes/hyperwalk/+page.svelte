@@ -62,7 +62,7 @@
 		<p>Pedestrian Tactics<br />©2024</p>
 	</div>
 	<div class="spacer"></div>
-	<p class="caption">80 / 24pt</p>
+	<p >80 / 24pt</p>
 	<p class="b2">
 		Hyperwalk is a sans-serif typeface originally designed in two weights
 		and later adapted into a variable-weight font. The design began in 2018
@@ -71,17 +71,17 @@
 	<div class="spacer"></div>
 	<div class="grid2">
 		<div>
-			<p class="caption">PT-F5 / 120 / 48pt</p>
+			<p >PT-F5 / 120 / 48pt</p>
 			<p class="h2" style="font-weight: 120;">Hyperwalk<br />110</p>
 		</div>
 		<div>
-			<p class="caption">PT-F5 / 80 / 48pt</p>
+			<p >PT-F5 / 80 / 48pt</p>
 			<p class="h2">Hyperwalk<br />80</p>
 		</div>
 	</div>
 	<div class="grid2">
 		<div>
-			<p class="caption">Body - 80 / 24pt</p>
+			<p >Body - 80 / 24pt</p>
 			<div>
 				<p>
 					Hyperwalk was initially designed as a typographical logo for
@@ -95,7 +95,7 @@
 		</div>
 	</div>
 	<div class="spacer"></div>
-	<p class="caption">100 / 48pt</p>
+	<p >100 / 48pt</p>
 	<div class="inverse-container">
 		<p class="h2" style="font-weight:100;">
 			<span>PT-T62</span> Ill Gates - <br />Animal (Pedestrian Tactics
@@ -116,9 +116,9 @@
 	<div class="spacer"></div>
 	<div class="grid2">
 		<div>
-			<p class="caption">120 / 128pt</p>
+			<p >120 / 128pt</p>
 			<p class="h1" style="font-weight:120;">hypé</p>
-			<p class="caption">120 / 36pt</p>
+			<p >120 / 36pt</p>
 			<p class="b2" style="font-weight:120;font-size:36pt;">
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quo
 				plebiscito decreta a senatu est consuli quaestio Cn. Possumusne
@@ -128,9 +128,9 @@
 			</p>
 		</div>
 		<div>
-			<p class="caption">80 / 128pt</p>
+			<p >80 / 128pt</p>
 			<p class="h1" style="font-weight:80;">hypé</p>
-			<p class="caption">110 / 36pt</p>
+			<p >110 / 36pt</p>
 			<p class="b2" style="font-weight:80;font-size:36pt;">
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quo
 				plebiscito decreta a senatu est consuli quaestio Cn. Possumusne
@@ -144,7 +144,7 @@
 	<div>
 		<div class="grid4">
 			<div>
-				<p class="caption">Size {fontSize}pt</p>
+				<p >Size {fontSize}pt</p>
 				<input
 					class="slider"
 					type="range"
@@ -155,7 +155,7 @@
 				/>
 			</div>
 			<div>
-				<p class="caption">Weight {fontWeight}</p>
+				<p >Weight {fontWeight}</p>
 				<input
 					class="slider"
 					type="range"
@@ -166,7 +166,7 @@
 				/>
 			</div>
 			<div>
-				<p class="caption">Letter spacing {fontLetterSpacing}em</p>
+				<p >Letter spacing {fontLetterSpacing}em</p>
 				<input
 					class="slider"
 					type="range"
@@ -189,14 +189,14 @@
 		</p>
 	</div>
 	<div class="spacer"></div>
-	<p class="caption">120 / 128pt / -0.05em</p>
+	<p >120 / 128pt / -0.05em</p>
 	<div class="inverse-container">
 		<p class="h1" style="font-weight:120;font-size:128pt;">Fuel Gauge →</p>
 	</div>
 	<div class="spacer"></div>
-	<p class="caption">120 / 64pt</p>
+	<p >120 / 64pt</p>
 	<p class="h2" style="font-weight:120;font-size:64pt;">WARNING:</p>
-	<p class="caption">100 / 24pt</p>
+	<p >100 / 24pt</p>
 	<p
 		class="b2"
 		style="font-weight:100;font-size:24pt;text-transform:uppercase;"
@@ -206,7 +206,7 @@
 		ramen. Please exercise caution when using this product.
 	</p>
 	<div class="spacer"></div>
-	<p class="caption">90 / 16pt</p>
+	<p >90 / 16pt</p>
 	<div class="grid2">
 		<div>
 			<p class="b2" style="font-size:16pt;">

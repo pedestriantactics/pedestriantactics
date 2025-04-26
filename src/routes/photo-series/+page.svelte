@@ -93,7 +93,7 @@
 <div id="container">
 	<div id="content">
 		<div id="intro">
-			<p class="mono">2017-03-30</p>
+			<p class="">2017-03-30</p>
 			<p class="type">
 				This is a test of an automatically loaded photo series. <br />
 				It was generated from a folder of images with the metadata automatically pulled and displayed below each image.
@@ -107,8 +107,8 @@
 							<img alt={image.name} src={image.src} />
 						</div>
 						<div id="gallery-image-footer">
-							<p class="caption mono">{image.name}</p>
-							<p class="caption mono">
+							<p >{image.name}</p>
+							<p >
 								{image.focalLength} / {image.iso} / {image.fstop}
 								/ {image.shutterspeed}
 							</p>

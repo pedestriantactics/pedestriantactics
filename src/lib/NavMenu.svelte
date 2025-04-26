@@ -15,25 +15,24 @@
 	$: activeLink = links.find((link) => link.name === currentPage);
 </script>
 
-<div id="nav-top" class="no-animate">
-	<p class="caption mono">
-		<a class="unstyled" href="../">Pedestrian Tactics</a> / {#each breadcrumbs as breadcrumb}<a
-				class="unstyled"
+<div id="nav-top" class="unstyled-link no-animate">
+	<p>
+		<a href="../">Pedestrian Tactics</a> / {#each breadcrumbs as breadcrumb}<a
 				href={breadcrumb.destination}>{breadcrumb.name}</a
 			> /
 		{/each}{currentPage}
 		{#if showFullMenu}
-			<br />
-			<br />
+		<br>
+		<br>
 			{#each links as link}
-				{#if link.name === currentPage}
+				{#if link.name === currentPage} 
 					{link.name}←
 				{:else}
-					<a class="linky unstyled" href={link.destination}
+					<a href={link.destination}
 						>{link.name}</a
 					>
 				{/if}
-				<br />
+				<br>
 			{/each}
 		{/if}
 	</p>
@@ -42,18 +41,14 @@
 <style>
 	#nav-top {
 		position: fixed;
-		top: 1rem;
-		left: 1rem;
-		padding: 2px;
+		top: var(--outer-margin);
+		left: var(--outer-margin);
+		/* padding: 2px; */
 		z-index: 100;
+		mix-blend-mode: difference;
 	}
 
-	.linky:hover,
-	.linky:focus {
-		text-decoration: none;
-	}
-
-	.linky:hover::after {
-		content: "←";
+	#nav-top, #nav-top a {
+		color: white;
 	}
 </style>

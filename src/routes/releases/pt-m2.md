@@ -1,8 +1,8 @@
 ---
+formattedDate: 2023-07-05
 title: The Shirt
 category: physical
 code: PT-M2
-formattedDate: 2023-07-05
 images:
 - m2-4.jpg
 - m2-3.jpg
@@ -11,33 +11,18 @@ images:
 - m2-5.jpg
 - m2-6.jpg
 details:
-- "Materials: 100% organic cotton"
-- "Colors: B Black, W White"
-- "Country of origin: Bangladesh"
+- title: Materials
+  description: 100% organic cotton
+- title: Colors
+  description: B Black, W White
+- title: Origin
+  description: Bangladesh
+linksTitle: Buy
 links:
-- "[Buy](https://pedestriantactics.gumroad.com/l/pt-m2)"
-price: 30USD
+- title: Gumroad
+  url: https://pedestriantactics.gumroad.com/l/pt-m2
+priceUSD: 30
+environment: This t-shirt is made from organic cotton sourced by Stanley/Stella. It requires approximately 650 gallons of water to produce one t-shirt. A 0.5USD charge is included in the cost which is sent to Terrapass to offset the environmental impact of this product.
 ---
 
-An organic cotton unisex t-shirt featuring washing instructions, material information, and country of origin on the outside.
-
-Sizes run small. Dan is 6ft tall and is wearing a size L that has been washed.
-
-MSRP: 30USD (All sales are final)
-#### [Buy on Gumroad](https://pedestriantactics.gumroad.com/l/pt-m2)
-
-<div class="details">
-
-Materials: 100% organic cotton
-
-Colors: B Black, W White
-
-Origin: Bangladesh
-
-</div>
-
-<div class="warning environment">
-
-This t-shirt is made from organic cotton sourced by Stanley/Stella. It requires approximately 650 gallons of water to produce one t-shirt. A 0.5USD charge is included in the cost which is sent to Terrapass to offset the environmental impact of this product.
-
-</div>
+Organic cotton unisex t-shirt with externally displayed washing instructions

@@ -15,6 +15,7 @@
 			recordLabel: string;
 			formattedDate: Date;
 			images: string[];
+			imageContrast: boolean;
 		}[];
 	};
 
@@ -36,7 +37,7 @@
 <NavMenu currentPage="Releases" breadcrumbs={[]} />
 
 <!-- <div id="nav-bottom">
-	<p class="caption mono">
+	<p >
 	↘
 	<br>
 	<a href="/links">Insta</a>
@@ -51,31 +52,32 @@
 </div> -->
 
 <div id="container">
+	<div id="content">
 	<!-- render the filter links and the grid -->
-	<!-- <p id="breadcrumb" class="caption mono"><a href="/">pedestrian tactics</a> / releases</p> -->
+	<!-- <p id="breadcrumb" ><a href="/">pedestrian tactics</a> / releases</p> -->
 	<div id="filter-container">
-		<p>
+		<h2>
 			<a
-				class="unstyled"
+				class="unstyled-link"
 				href="?filter=all"
 				class:active={filter === "all"}>All</a
 			>
 			<a
-				class="unstyled"
+				class="unstyled-link"
 				href="?filter=audio"
 				class:active={filter === "audio"}>Audio</a
 			>
 			<a
-				class="unstyled"
+				class="unstyled-link"
 				href="?filter=downloadable"
 				class:active={filter === "downloadable"}>Downloadable</a
 			>
 			<a
-				class="unstyled"
+				class="unstyled-link"
 				href="?filter=physical"
 				class:active={filter === "physical"}>Physical</a
 			>
-		</p>
+		</h2>
 	</div>
 
 	<div id="grid-container">
@@ -89,11 +91,13 @@
 				recordLabel={post.recordLabel}
 				formattedDate={post.formattedDate}
 				image={post.images[0]}
+				imageContrast={post.imageContrast}
 			/>
 		{:else}
 			<p>No posts found.</p>
 		{/each}
 	</div>
+</div>
 </div>
 
 <style>
@@ -107,23 +111,26 @@
 	#filter-container a:hover,
 	#filter-container a:focus,
 	#filter-container a.active {
-		/* text-decoration: underline; */
-		border-bottom: 1px solid var(--color-fg);
+		text-decoration: underline;
 	}
 
 	#container {
-		max-width: 960px;
-		padding: 32px;
+		width: 100%;
+		height: 100vh;
 		display: flex;
-		flex-direction: column;
-		align-items: center;
-		margin: auto;
-		margin-top: 6rem;
+		justify-content: center;
+		align-items: flex-start;
+		margin-top: var(--top-margin);
+	}
+
+	#content {
+		max-width: 960px;
+		padding: var(--outer-margin);
 	}
 
 	#grid-container {
 		display: grid;
-		grid-gap: 8px;
+		grid-gap: var(--grid-gap);
 		grid-template-columns: 1fr 1fr 1fr;
 	}
 
@@ -131,7 +138,8 @@
 		width: 100%;
 		display: flex;
 		justify-content: flex-start;
-		min-height: 50px;
+		/* min-height: 50px; */
+		margin-bottom: var(--vertical-gap);
 	}
 
 	#filter-container h3 {

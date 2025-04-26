@@ -110,7 +110,7 @@
 	</div> -->
 	<div id="bottom" class="hideable">
 		<div>
-			<p class="caption mono">Size {fontSize}pt</p>
+			<p >Size {fontSize}pt</p>
 			<input
 				class="slider"
 				type="range"
@@ -121,7 +121,7 @@
 			/>
 		</div>
 		<div>
-			<p class="caption mono">Weight {fontWeight}</p>
+			<p >Weight {fontWeight}</p>
 			<input
 				class="slider"
 				type="range"
@@ -132,7 +132,7 @@
 			/>
 		</div>
 		<div>
-			<p class="caption mono">Letter spacing {fontLetterSpacing}em</p>
+			<p >Letter spacing {fontLetterSpacing}em</p>
 			<input
 				class="slider"
 				type="range"

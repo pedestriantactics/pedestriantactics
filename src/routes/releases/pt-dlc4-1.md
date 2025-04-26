@@ -1,6 +1,6 @@
 ---
 title: Every snare I’ve Ever Made Sample Pack
-category: downloadable
+category: hide
 code: PT-DLC4-1
 formattedDate: 2022-06-01
 images:

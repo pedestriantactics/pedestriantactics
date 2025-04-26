@@ -16,44 +16,54 @@
 	--color-fg: black;
 	--color-bg: white;
 	--color-accent: blue;
-	font-family: "Hyperwalk VF", sans-serif;
-	font-weight: 70;
-	font-size: 13pt;
+	--outer-margin: 1rem;
+	--top-margin: 10rem;
+	--grid-gap: 1rem;
+	--vertical-gap: 3rem;
 	background-color: var(--color-bg);
 	color: var(--color-fg);
 	text-align: left;
+	font-size: 9pt;
+}
+
+.image-contrast {
+	filter: contrast(0.77);
 }
 
 /* paragraph spacing */
-p,
-h1,
-h2,
-h3 {
-	margin-bottom: .7em;
+body {
+	font-family: "Hyperwalk Mono VF", sans-serif;
+	font-weight: 80;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	line-height: 1em;
 }
 
-p {
-	line-height: 1.3em;
+h1, h2, .large-paragraph, .caption {
+	font-family: "Hyperwalk VF", sans-serif;
+	text-transform: none;
+}
+
+.caption {
+	letter-spacing: 0.03em;
+	line-height: 1.2em;
+	font-weight: 75;
+}
+
+h1, h2, .large-paragraph {
+	font-size: 24pt;
+	font-weight: 72;
+	margin-bottom: .6em;
+	line-height: 1.2em;
+	/* letter-spacing: -.02em; */
 }
 
 h1 {
-	font-size: 38pt;
+	font-size: 48pt;
 	font-weight: 90;
 	letter-spacing: -.02em;
-	align-self: stretch;
+	/* align-self: stretch; */
 }
-
-h2, h3 {
-	font-size: 32pt;
-	font-weight: 90;
-	letter-spacing: -.06em;
-}
-
-/* h3 {
-	font-size: 32pt;
-	font-weight: 90;
-	letter-spacing: -.02em;
-} */
 
 a,
 a:hover,
@@ -61,96 +71,29 @@ a:visited,
 a:active {
 	color: var(--color-fg);
 	text-decoration: underline;
-	/* move the underline down */
-	text-underline-offset: 0.2em;
+	text-underline-offset: 0.1em;
 }
 
-.unstyled,
-.unstyled:hover,
-.unstyled:active,
-h4 a,
-h4 a:hover,
-h4 a:active {
+.arrow-link a,
+.arrow-link a:hover,
+.arrow-link a:active,
+.arrow-link,
+.arrow-link:hover,
+.arrow-link:active,
+.unstyled-link a,
+.unstyled-link a:hover,
+.unstyled-link a:active,
+.unstyled-link,
+.unstyled-link:hover,
+.unstyled-link:active {
 	text-decoration: none;
 	border-bottom: none;
 }
 
-/* details is being used by markdown files */
-
-.caption,
-.details p,
-.warning p {
-	font-size: 9pt;
-	font-weight: 80;
-	line-height: 1em;
-	margin-bottom: 0em;
-	letter-spacing: .06em;
-}
-
-.mono,
-.warning
-.details p {
-	font-family: 'Hyperwalk Mono VF', Courier, monospace;
-	font-weight: 80;
-	line-height: 1em;
-	letter-spacing: .06em;
-	margin-bottom: 0em;
-	text-transform: uppercase;
-}
-
-/* markdown specific */
-.details {
-	margin-bottom: 1rem;
-	margin-top: 2rem;
-}
-
-.warning {
-	display: inline-block;
-	padding: 0em 0em 0em 2.2em;
-	background-image: url("/images/warning.svg");
-	background-repeat: no-repeat;
-	background-size: 1.6rem;
-	min-height: 2.1rem;
-	margin-bottom: 1rem;
-}
-
-.environment {
-	background-image: url("/images/environment-warning-3.svg");
-}
-
-h4 a {
-	/* font-weight: 80; */
-	/* color: white !important; */
-	/* background-color: black; */
-	/* padding: .4em .4em .2em .4em; */
-	padding-top: .4em;
-	padding-bottom: .4em;
-	padding-right: .4em;
-	display: inline-block;
-	/* margin-bottom: 1em; */
-}
-
-/* add a right arrow before h4 a links */
-h4 a::before {
+.arrow-link::before {
 	content: "→";
-	display: inline-block;
-	/* margin-right: 0.5em; */
-	/* opacity: 0.5; */
+	/* display: inline-block; */
 }
-
-hr {
-	border: none;
-	margin-bottom: 2rem;
-	height: 0;
-	/* height: 1rem; */
-}
-
-/* add a media query that changes the size of h2 at 500px */
-/* @media (max-width: 500px) {
-	h2 {
-		font-size: 1.5rem;
-	}
-} */
 
 /* dark mode */
 @media (prefers-color-scheme: dark) {
@@ -158,14 +101,5 @@ hr {
 		--color-fg: white;
 		--color-bg: black;
 		--color-accent: blue;
-	}
-
-	/* sketchy but this inverts the entire environment paragraph so the image is inverted */
-	.environment, .warning {
-		filter: invert(1);
-	}
-
-	.environment p, .warning p, .environment a, .warning a {
-		color: black;
 	}
 }
