@@ -7,7 +7,6 @@ recordLabel: Pedestrian Tactics
 formattedDate: 2024-12-13
 images:
 - pt-a11-cover-art.jpg
-priceUSD: 12
 linksTitle: Listen
 links:
 - title: Spotify
