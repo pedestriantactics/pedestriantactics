@@ -32,8 +32,16 @@
 
 <style>
 	h1 {
+		font-size: 48pt;
+		font-weight: 90;
 		margin-bottom: 0;
 		line-height: 1.1em;
+		letter-spacing: -0.04em;
+		/* align-self: stretch; */
+	}
+	/* the width of the area with the pedestrian word */
+	.pedestrian {
+		width: 23rem;
 	}
 
 	#links {
@@ -67,10 +75,6 @@
 		align-items: flex-start;
 		gap: 3rem;
 		margin-bottom: var(--vertical-gap);
-	}
-
-	.pedestrian {
-		width: 24.5rem;
 	}
 
 	#description {

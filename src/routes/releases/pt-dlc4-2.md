@@ -7,7 +7,7 @@ images:
 - pt-dlc4-2-every-kick-ive-ever-made-sample-pack-cover-art.jpeg
 ---
 
-70 kick drum samples directly taken from every track released by Corporate and Pedestrian Tactics over the last 10 years.
+70 kick drum samples directly taken from every track released by Corporate and Pedestrian Tactics over the last 10 years
 
 MSRP: 15USD
 

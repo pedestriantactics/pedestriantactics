@@ -21,7 +21,7 @@ links:
   url: https://pedestriantactics.gumroad.com/l/pt-i2
 ---
 
-The original posted designed for stress testing our print partners. Features line size and color bleed tests, along with a grid of swatches indexed by RGB values.
+The original posted designed for stress testing our print partners. Features line size and color bleed tests, along with a grid of swatches indexed by RGB values
 
 <!-- <div class="warning environment">
 

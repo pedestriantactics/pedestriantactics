@@ -66,7 +66,7 @@
 	<div id="content">
 		<div class="row split-content">
 			<div class="mobile-hide"></div>
-			<div class="row-2-1">
+			<div class="inner-row-2-1">
 				<p>
 					{#if data.code}{data.code}{:else}{formatDate(
 							data.formattedDate,
@@ -113,7 +113,7 @@
 				{#if data.details}
 					<div class="row">
 						{#each data.details as detail}
-							<div class="row-1-2">
+							<div class="inner-row-1-2">
 								<p>{detail.title}</p>
 								<p>{detail.description}</p>
 							</div>
@@ -129,7 +129,7 @@
 				<!-- links -->
 				{#if data.links}
 					<div class="row">
-						<div class="row-1-2">
+						<div class="inner-row-1-2">
 							<p>{#if data.linksTitle}{data.linksTitle}{:else}Links{/if}</p>
 							<div>
 								{#each data.links as link}
@@ -161,27 +161,10 @@
 		padding: var(--outer-margin);
 	}
 
-	.row {
-		width: 100%;
-		margin-bottom: var(--vertical-gap);
-	}
-
 	/* this collapses with mobile */
 	.split-content {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		gap: var(--grid-gap);
-	}
-
-	.row-2-1 {
-		display: grid;
-		grid-template-columns: 2fr 1fr;
-		gap: var(--grid-gap);
-	}
-
-	.row-1-2 {
-		display: grid;
-		grid-template-columns: 1fr 2fr;
 		gap: var(--grid-gap);
 	}
 

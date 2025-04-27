@@ -19,4 +19,4 @@ links:
   url: https://soundcloud.com/pedestriantactics/pt-t61
 ---
 
-A collaborative single between Dan Taylor and [Josh Brugman](http://instagram.com/joshbrugman). Debuting in [Coffee People Zine's](https://coffeepeople.org) final Spotify playlist on December 4th.
+A collaborative single between Dan Taylor and [Josh Brugman](http://instagram.com/joshbrugman). Debuting in [Coffee People Zine's](https://coffeepeople.org) final Spotify playlist on December 4th

@@ -39,7 +39,7 @@ body {
 	line-height: 1em;
 }
 
-h1, h2, .large-paragraph, .caption {
+h1, h2, h3, .large-paragraph, .caption {
 	font-family: "Hyperwalk VF", sans-serif;
 	text-transform: none;
 }
@@ -50,19 +50,30 @@ h1, h2, .large-paragraph, .caption {
 	font-weight: 75;
 }
 
-h1, h2, .large-paragraph {
+h1, h2, h3, .large-paragraph {
 	font-size: 24pt;
-	font-weight: 72;
+	font-weight: 65;
 	margin-bottom: .6em;
 	line-height: 1.2em;
-	/* letter-spacing: -.02em; */
+	letter-spacing: -.02em;
 }
 
-h1 {
-	font-size: 48pt;
-	font-weight: 90;
-	letter-spacing: -.02em;
-	/* align-self: stretch; */
+/* these are used on the product pages but are typed here so that product pages can be manually coded */
+.row {
+	width: 100%;
+	margin-bottom: var(--vertical-gap);
+}
+
+.inner-row-2-1 {
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	gap: var(--grid-gap);
+}
+
+.inner-row-1-2 {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	gap: var(--grid-gap);
 }
 
 a,
