@@ -105,7 +105,7 @@
 			<div>
 				<div class="row">
 					<h2>{data.title}</h2>
-					<p class="large-paragraph">
+					<p>
 						<svelte:component this={data.content} />
 					</p>
 				</div>
@@ -131,9 +131,9 @@
 					<div class="row">
 						<div class="inner-row-1-2">
 							<p>{#if data.linksTitle}{data.linksTitle}{:else}Links{/if}</p>
-							<div>
+							<div class="arrow-links">
 								{#each data.links as link}
-									<a class="arrow-link" href={link.url}
+									<a href={link.url}
 										>{link.title}</a
 									>
 									<br>

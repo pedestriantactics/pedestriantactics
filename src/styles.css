@@ -34,9 +34,11 @@
 body {
 	font-family: "Hyperwalk Mono VF", sans-serif;
 	font-weight: 80;
-	letter-spacing: 0.08em;
+	letter-spacing: 0.01em;
 	text-transform: uppercase;
 	line-height: 1em;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 h1, h2, h3, .large-paragraph, .caption {
@@ -52,10 +54,14 @@ h1, h2, h3, .large-paragraph, .caption {
 
 h1, h2, h3, .large-paragraph {
 	font-size: 24pt;
-	font-weight: 65;
+	font-weight: 78;
 	margin-bottom: .6em;
 	line-height: 1.2em;
-	letter-spacing: -.02em;
+	letter-spacing: -.01em;
+}
+
+h3 {
+	font-size: 18pt;
 }
 
 /* these are used on the product pages but are typed here so that product pages can be manually coded */
@@ -85,15 +91,15 @@ a:active {
 	text-underline-offset: 0.1em;
 }
 
-.arrow-link a,
-.arrow-link a:hover,
-.arrow-link a:active,
+.arrow-links a,
+.arrow-links a:hover,
+.arrow-links a:active,
 .arrow-link,
 .arrow-link:hover,
 .arrow-link:active,
-.unstyled-link a,
-.unstyled-link a:hover,
-.unstyled-link a:active,
+.unstyled-links a,
+.unstyled-links a:hover,
+.unstyled-links a:active,
 .unstyled-link,
 .unstyled-link:hover,
 .unstyled-link:active {
@@ -101,7 +107,7 @@ a:active {
 	border-bottom: none;
 }
 
-.arrow-link::before {
+.arrow-link::before, .arrow-links a::before {
 	content: "→";
 	/* display: inline-block; */
 }
