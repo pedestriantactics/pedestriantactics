@@ -19,4 +19,4 @@ links:
   url: https://members.producerdojo.com/a/2147642139/LZ6h6XgH
 ---
 
-The Ableton Live project file for the remix of [Animal](pt-t62). Runs entirely using the stock Ableton suite devices
+## The Ableton Live project file for the remix of [Animal](pt-t62). Runs entirely using the stock Ableton suite devices

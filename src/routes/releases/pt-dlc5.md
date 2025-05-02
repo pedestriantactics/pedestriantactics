@@ -25,4 +25,4 @@ links:
   url: https://pedestriantactics.gumroad.com/l/PT-DLC5
 ---
 
-A website creation kit that can take you from no coding experience to a functioning front page in around an hour. An example website created from The Template is available [here](https://dlc5example.pedestriantactics.com)
+## A website creation kit that can take you from no coding experience to a functioning front page in around an hour. An example website created from The Template is available [here](https://dlc5example.pedestriantactics.com)

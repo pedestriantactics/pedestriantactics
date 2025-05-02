@@ -23,4 +23,4 @@ links:
   url: https://www.beatport.com/label/mad-zoo/42896
 ---
 
-Pedestrian Tactics' debut four-track EP on Mad Zoo Recordings
+## Pedestrian Tactics' debut four-track EP on Mad Zoo Recordings

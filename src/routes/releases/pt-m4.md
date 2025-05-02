@@ -23,7 +23,7 @@ links:
   url: https://pedestriantactics.gumroad.com/l/pt-m4
 ---
 
-A breakdown of a typical electronic snare drum into three sonic components, with details on timing, frequency, and real world examples
+## A breakdown of a typical electronic snare drum into three sonic components, with details on timing, frequency, and real world examples
 
 <!-- <div class="warning environment">
 

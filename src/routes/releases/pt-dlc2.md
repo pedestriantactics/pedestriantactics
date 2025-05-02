@@ -20,4 +20,4 @@ links:
 imageContrast: true
 ---
 
-Four-part recorded session breaking down all four tracks on the [Nerds Trying To Dance EP](pt-a10)
+## Four-part recorded session breaking down all four tracks on the [Nerds Trying To Dance EP](pt-a10)

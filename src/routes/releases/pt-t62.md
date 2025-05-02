@@ -20,4 +20,4 @@ links:
 imageContrast: true
 ---
 
-Part of the remix compilation by Ill Gates, Kandisha, and Bil Bless
+## Part of the remix compilation by Ill Gates, Kandisha, and Bil Bless

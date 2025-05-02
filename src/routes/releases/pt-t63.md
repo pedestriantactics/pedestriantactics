@@ -18,7 +18,7 @@ links:
   url: https://soundcloud.com/pedestriantactics/pt-t63
 --- 
 
-First collaborative single between Dan Taylor, Josh Brugman, and Laci Elle
+## First collaborative single between Dan Taylor, Josh Brugman, and Laci Elle
 
 
 

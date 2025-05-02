@@ -12,8 +12,9 @@
 <div id="container">
 	<div class="content">
 		<div class="column">
-			<h1>↘</h1>
-			<p >
+			<!-- <h1>↘</h1> -->
+			<h1>→</h1>
+			<p class="caption">
 				All links open in a new tab for your convenience
 			</p>
 		</div>
@@ -102,8 +103,10 @@
 	}
 
 	h1 {
-		font-size: 128pt;
+		font-size: 90pt;
+		font-weight: 60;
 		margin-top: -0.1em;
+		margin-left: -.05em;
 		margin-right: 0.1em;
 		margin-bottom: 0;
 	}

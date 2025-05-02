@@ -16,4 +16,4 @@ links:
   url: https://music.apple.com/us/album/collateral-single/1653019850
 ---
 
-A re-release of Corporate's Collateral EP, originally released in 2014
+## Re-release of Corporate's Collateral EP, originally released in 2014

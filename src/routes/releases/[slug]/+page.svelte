@@ -148,17 +148,8 @@
 </div>
 
 <style>
-	#container {
-		width: 100%;
-		height: 100vh;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
-
 	#content {
 		max-width: 960px;
-		padding: var(--outer-margin);
 	}
 
 	/* this collapses with mobile */
@@ -190,18 +181,7 @@
 	}
 
 	/* set the shop container to 1 column when the screen is smaller than the mobile threshold */
-	@media (max-height: 700px) {
-		#container {
-			align-items: flex-start;
-			margin-top: var(--top-margin);
-		}
-	}
-
 	@media (max-width: 800px) {
-		#container {
-			align-items: flex-start;
-			margin-top: var(--top-margin);
-		}
 		.split-content {
 			grid-template-columns: 1fr;
 		}
@@ -209,4 +189,11 @@
 			display: none;
 		}
 	}
+
+	@media (max-height: 750px), (max-width: 800px) and (max-height: 1200px) {
+	#container {
+		align-items: flex-start;
+		margin-top: var(--top-margin);
+	}
+}
 </style>

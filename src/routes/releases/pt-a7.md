@@ -17,4 +17,4 @@ links:
   url: https://music.apple.com/us/album/in-transit-ep/1318399520
 ---
 
-EP and [photo series](https://imdantaylor.com/in-transit) created while in Seattle, Thailand, Vietnam, and Hong Kong
+## EP and [photo series](https://imdantaylor.com/in-transit) created while in Seattle, Thailand, Vietnam, and Hong Kong

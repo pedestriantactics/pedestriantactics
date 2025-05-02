@@ -19,4 +19,4 @@ links:
   url: https://pedestriantactics.gumroad.com/l/PT-DLC3
 ---
 
-The early glitch-trap hit deconstructed into 53 samples for producers to use in their own productions
+## The early glitch-trap hit deconstructed into 53 samples for producers to use in their own productions

@@ -2,7 +2,7 @@
 	<title>Pedestrian Tactics</title>
 </svelte:head>
 
-<div id="container">
+<div id="title-container">
 	<div id="content">
 		<div id="content-desktop">
 			<div id="top" class="transforming-row">
@@ -57,7 +57,7 @@
 		height: 3rem;
 	}
 
-	#container {
+	#title-container {
 		width: 100%;
 		height: 100vh;
 		display: flex;

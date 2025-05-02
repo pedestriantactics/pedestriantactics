@@ -25,4 +25,4 @@ priceUSD: 30
 environment: This t-shirt is made from organic cotton sourced by Stanley/Stella. It requires approximately 650 gallons of water to produce one t-shirt. A 0.5USD charge is included in the cost which is sent to Terrapass to offset the environmental impact of this product.
 ---
 
-Organic cotton unisex t-shirt with externally displayed washing instructions
+## Organic cotton unisex t-shirt with externally displayed washing instructions

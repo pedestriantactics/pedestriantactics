@@ -103,7 +103,8 @@
 
 <div id="container">
 	<div id="content">
-		<h2>Upcoming</h2>
+		<p>Upcoming</p>
+		<br />
 		{#if upcomingShow.date != ""}
 			<LineItem
 				date={upcomingShow.date}
@@ -111,13 +112,14 @@
 				location={upcomingShow.location}
 			/>
 		{:else}
-			<p class="">
+			<p class="caption">
 				There are no upcoming shows. <br>Sign up for my
 				<a href="./newsletter">newsletter</a>
 				or <a href="./links">follow me</a> for updates!
 			</p>
 		{/if}
-		<br /><h2>Past</h2>
+		<br /><p>Past</p>
+		<br />
 		{#each pastShows as show}
 			<LineItem
 				date={show.date}
@@ -133,17 +135,11 @@
 </svelte:head>
 
 <style>
+	
+	@media (max-height: 400px), (max-width: 800px) and (max-height: 2000px) {
 	#container {
-		max-width: 960px;
-		display: grid;
-		align-items: center;
-		justify-items: center;
-		margin-left: auto;
-		margin-right: auto;
+		align-items: flex-start;
+		margin-top: var(--top-margin);
 	}
-
-	#content {
-		margin-top: 8rem;
-		padding: 2rem;
-	}
+}
 </style>

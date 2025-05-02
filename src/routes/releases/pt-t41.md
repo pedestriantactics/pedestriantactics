@@ -14,4 +14,4 @@ links:
   url: https://pedestriantactics.bandcamp.com/album/pt-t41-trump-memes
 ---
 
-The original midterm election single with artwork by Seattle illustrator [Cryomera](https://cryomera.com)
+## The original midterm election single with artwork by Seattle illustrator [Cryomera](https://cryomera.com)
