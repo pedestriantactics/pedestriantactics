@@ -23,7 +23,7 @@
 
 <a class="unstyled-link" href="{currentRoute}/{postPath}">
 	<div id="grid-element">
-		<img src="/images/{image}" class="no-animate"  class:image-contrast={imageContrast} alt={title} />
+		<img src="/images/{image}" class:image-contrast={imageContrast} alt={title} />
 		<div id="description">
 			<p>
 				{#if code != ""}{code} /

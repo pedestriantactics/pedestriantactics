@@ -36,7 +36,7 @@
 		font-weight: 90;
 		margin-bottom: 0;
 		line-height: 1.1em;
-		letter-spacing: -0.04em;
+		letter-spacing: -0.05em;
 		/* align-self: stretch; */
 	}
 	/* the width of the area with the pedestrian word */

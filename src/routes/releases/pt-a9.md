@@ -5,7 +5,7 @@ code: PT-A9
 audioType: EP
 formattedDate: 2019-02-25
 images:
-- pt-a9-system-cover-art.jpg
+- system-grid-art.jpg
 linksTitle: Listen
 links:
 - title: Bandcamp

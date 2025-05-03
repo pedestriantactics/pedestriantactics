@@ -112,7 +112,7 @@
 				location={upcomingShow.location}
 			/>
 		{:else}
-			<p class="caption">
+			<p class="large-paragraph">
 				There are no upcoming shows. <br>Sign up for my
 				<a href="./newsletter">newsletter</a>
 				or <a href="./links">follow me</a> for updates!

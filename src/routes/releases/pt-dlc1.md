@@ -1,6 +1,6 @@
 ---
 title: Silence Sample Pack
-category: downloadable
+category: hide
 code: PT-DLC1
 formattedDate: 2017-12-25
 images:

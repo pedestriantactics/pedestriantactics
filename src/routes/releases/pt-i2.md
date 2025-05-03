@@ -1,6 +1,6 @@
 ---
 title: Calibration Poster
-category: physical
+category: hide
 code: PT-I2
 formattedDate: 2023-05-09
 images:

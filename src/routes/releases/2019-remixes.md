@@ -1,6 +1,6 @@
 ---
 title: 2019 Remixes
-category: audio
+category: hide
 formattedDate: 2019-09-13
 images:
   - 2019-remixes-cover.jpg

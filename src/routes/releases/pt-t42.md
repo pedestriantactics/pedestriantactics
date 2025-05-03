@@ -5,7 +5,7 @@ code: PT-T42
 audioType: single
 formattedDate: 2018-10-10
 images:
-- pt-t42-mind-palace-cover-art.jpg
+- mind-palace-grid-art.jpg
 linksTitle: Listen
 links:
 - title: Apple Music

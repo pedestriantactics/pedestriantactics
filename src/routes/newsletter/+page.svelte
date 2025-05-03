@@ -8,11 +8,11 @@
 <div id="container">
 	<div id="content">
 		<div class="row">
-			<p class="large-paragraph">
+			<p class="large-paragraph animate">
 				Enter your email to receive infrequent communications about
 				upcoming releases and live shows
 			</p>
-			<p class="caption">
+			<p class="caption animate">
 				(By entering your email you confirm that you agree to my <a
 					href="privacy-policy">Privacy Policy</a
 				>)

@@ -6,7 +6,7 @@ audioType: Remix
 recordLabel: Producer Dojo
 formattedDate: 2022-07-15
 images:
-- pt-t62-animation.gif
+- animal-remix-deer.png
 linksTitle: Listen
 links:
 - title: Soundcloud

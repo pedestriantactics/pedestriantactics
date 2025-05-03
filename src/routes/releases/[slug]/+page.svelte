@@ -104,8 +104,8 @@
 			</div>
 			<div>
 				<div class="row">
-					<h2>{data.title}</h2>
-					<p>
+					<h2 class="animate">{data.title}</h2>
+					<p class="large-paragraph animate">
 						<svelte:component this={data.content} />
 					</p>
 				</div>
@@ -156,7 +156,7 @@
 	.split-content {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		gap: var(--grid-gap);
+		gap: calc(var(--vertical-gap)/2);
 	}
 
 	#image-nav a:hover,
