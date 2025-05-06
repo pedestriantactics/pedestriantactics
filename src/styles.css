@@ -153,6 +153,10 @@ a:active {
 		--color-bg: black;
 		--color-accent: blue;
 	}
+	.warning {
+		filter: invert(1);
+		color: var(--color-bg);
+	}
 }
 
 @media (max-height: 600px), (max-width: 500px) and (max-height: 700px) {
