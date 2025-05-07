@@ -5,20 +5,19 @@ code: PT-DLC2
 formattedDate: 2021-01-19
 images:
 - how-i-made-nttd-cover.jpeg
+details:
+- title: Length
+  description: 133 minutes
+- title: Format
+  description: ZIP, MP4
+- title: Size
+  description: 6.3GB
+priceUSD: 26
+linksTitle: Buy
+links:
+- title: Gumroad
+  url: https://pedestriantactics.gumroad.com/l/pt-dlc2
+imageContrast: true
 ---
 
-The “How I made NTTD Course” is a four-part recorded session breaking down all four tracks on Nerds Trying To Dance EP, originally released on Mad Zoo Recordings. The Ableton-centered video series covers synth production of major leads and basses, sampled and resampled instruments, drum equalization, and mixing. Intermediate knowledge of the Ableton Live Suite and the included tools is highly recommended.
-
-MSRP: 26USD
-
-#### [Buy on Gumroad](https://pedestriantactics.gumroad.com/l/pt-dlc2) [Buy On Producer Dojo](https://producerdj.com/product/how-i-made-nttd-course/)
-
-<div class="details">
-
-Length: 133 minutes
-
-Package: ZIP
-
-Size: 6.3gb
-
-</div>
+## Four-part recorded session breaking down all four tracks on the [Nerds Trying To Dance EP](pt-a10)

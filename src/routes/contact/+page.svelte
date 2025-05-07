@@ -11,10 +11,11 @@
 
 <div id="container">
 	<div id="content">
-		<p>If you're a human, you'll know what to do.</p>
+		<p class="caption">If you're a human, you'll know what to do.</p>
+		<br>
 		<img src="/images/contact.jpg" alt="contact email" />
 		<div class="warning">
-			<p>
+			<p class="caption">
 				This page will not render correctly if you are browsing without
 				images enabled or in a reader view.
 			</p>

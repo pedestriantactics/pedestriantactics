@@ -11,10 +11,8 @@
 			<img alt={name} src="images/{imageFileName}" />
 		</div>
 		<div id="gallery-image-footer">
-			<p class="caption mono">{name}</p>
-			<p class="caption mono">
-				{description}
-			</p>
+			<p>{name}</p>
+			<p>{description}</p>
 		</div>
 	</div>
 </div>

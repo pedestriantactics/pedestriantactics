@@ -1,12 +1,19 @@
 ---
 title: Silence Sample Pack
-category: downloadable
+category: hide
 code: PT-DLC1
 formattedDate: 2017-12-25
 images:
 - silence-sample-pack-booklet-1.jpg
+details: 
+- title: Format
+  description: ZIP, WAV
+- title: Size
+  description: 14.1MB
+linksTitle: Free
+links:
+- title: Gumroad
+  url: https://gumroad.com/l/pt-si/ptfree
 ---
 
-It's been months of planning and production, and it's finally time for Silence, an audio sample pack designed for modern electronic musicians. The sample pack along with a PDF booklet is available for download now.
-
-#### [Free on Gumroad!](https://gumroad.com/l/pt-si/ptfree)
+## An audio sample pack designed for modern electronic musicians

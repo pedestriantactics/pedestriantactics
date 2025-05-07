@@ -2,111 +2,111 @@
 	<title>Pedestrian Tactics</title>
 </svelte:head>
 
-<div id="container">
-	<div id="content-desktop">
-		<div class="grid-container">
-			<p id="description" class="caption">
-				Electronic music and design works assembled by Dan Taylor in
-				various coffee shops and workspaces
-			</p>
-			<h1>Pedestrian &nbsp;</h1>
-			<p class="mono">Index /</p>
-		</div>
-		<div class="grid-container">
-			<p class="caption">
-				©2024 <br /> <br /><br />
-			</p>
-			<h1>Tactics®</h1>
-			<div id="links">
-				<a href="releases" class="mono unstyled">Releases</a>
-				<a href="shows" class="mono unstyled">Shows</a>
-				<a href="newsletter" class="mono unstyled">Newsletter</a>
-				<a href="links" class="mono unstyled">Links</a>
-				<a href="contact" class="mono unstyled">Contact</a>
+<div id="title-container">
+	<div id="content">
+		<div id="content-desktop">
+			<div id="top" class="transforming-row">
+				<p class="pedestrian caption">
+					Electronic music and design works assembled by Dan Taylor in
+					various coffee shops and workspaces
+				</p>
+				<p class="caption">©2025</p>
 			</div>
-		</div>
-	</div>
-
-	<div id="content-mobile">
-		<div class="grid-container">
-			<p id="description" class="caption">
-				Electronic music and design works assembled by Dan Taylor in
-				various coffee shops and workspaces
-				<br /> <br />
-				©2024
-			</p>
-			<h1>Pedestrian<br />Tactics®</h1>
-		</div>
-		<div class="grid-container">
-			<p class="mono">Index /</p>
-			<div id="links">
-				<a href="releases" class="mono unstyled">Releases</a>
-				<a href="shows" class="mono unstyled">Shows</a>
-				<a href="newsletter" class="mono unstyled">Newsletter</a>
-				<a href="links" class="mono unstyled">Links</a>
-				<a href="contact" class="mono unstyled">Contact</a>
+			<div id="title" class="transforming-row">
+				<h1 class="pedestrian">Pedestrian</h1>
+				<h1>Tactics®</h1>
+			</div>
+			<div id="links" class="transforming-row">
+				<p class="pedestrian">Index /</p>
+				<div id="links">
+					<a href="releases" class="unstyled-link">Releases</a>
+					<a href="shows" class="unstyled-link">Shows</a>
+					<a href="newsletter" class="unstyled-link">Newsletter</a>
+					<a href="links" class="unstyled-link">Links</a>
+					<a href="contact" class="unstyled-link">Contact</a>
+				</div>
 			</div>
 		</div>
 	</div>
 </div>
 
 <style>
-	.grid-container {
+	h1 {
+		font-size: 48pt;
+		font-weight: 90;
+		margin-bottom: 0;
+		line-height: 1.1em;
+		letter-spacing: -0.05em;
+		/* align-self: stretch; */
+	}
+	/* the width of the area with the pedestrian word */
+	.pedestrian {
+		width: 23rem;
+	}
+
+	#links {
+		/* font-size: 14pt; */
+		/* line-height: 1em; */
+	}
+
+	#links a {
+		display: block;
+	}
+
+	#top {
+		height: 3rem;
+	}
+
+	#title-container {
+		width: 100%;
+		height: 100vh;
 		display: flex;
-		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	#content {
+		padding: var(--outer-margin);
+	}
+
+	.transforming-row {
+		display: flex;
+		flex-direction: row;
 		align-items: flex-start;
-		gap: 2rem;
+		gap: 3rem;
+		margin-bottom: var(--vertical-gap);
 	}
 
 	#description {
 		max-width: 22em;
-	}
-
-	#links {
-		display: flex;
-		flex-direction: column;
-		/* gap: 12pt; */
+		height: 3rem;
 	}
 
 	a:hover::after {
 		content: "←";
-		/* offset the arrow so it's to the left of the link */
 	}
 
-	#content-desktop {
-		display: inline-flex;
-		align-items: top;
-	}
-
-	#content-mobile {
-		display: none;
-	}
-
-	#container {
-		position: fixed;
-		top: 0;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
-
-	@media (max-width: 600px) {
-		#content-desktop {
-			display: none;
+	@media (max-width: 700px) {
+		#top {
+			height: auto;
 		}
 
-		#content-mobile {
-			display: flex;
+		#title {
+			gap: 0;
+		}
+
+		.transforming-row {
+			gap: 1rem;
 			flex-direction: column;
 		}
 	}
 
-	/* @media (max-height: 500px) {
-		#links {
-			gap: 0pt;
+	@media (max-width: 400px) {
+		.pedestrian {
+			width: auto;
 		}
-	} */
+		h1 {
+			font-size: 32pt;
+		}
+	}
 </style>

@@ -8,8 +8,16 @@ export async function load(data: unknown) {
     const allPosts = await Promise.all(
         iterablePostFiles.map(async ([path, resolver]) => {
             const { metadata } = await resolver() as {
+				// we only need the data for the grid
                 metadata: {
-                    title: string, category: string, code: string, audioType: string, recordLabel: string, formattedDate: Date, images: string[]
+					formattedDate: Date, 
+                    title: string, 
+					category: string, 
+					code: string, 
+					audioType: string, 
+					recordLabel: string, 
+					images: string[],
+					imageContrast: boolean
                 }
             };
 
@@ -21,13 +29,14 @@ export async function load(data: unknown) {
             }
 
             return {
+				formattedDate: metadata.formattedDate,
                 title: metadata.title || "",
                 category: metadata.category || "",
                 code: metadata.code || "",
                 audioType: metadata.audioType || "",
                 recordLabel: metadata.recordLabel || "",
-                formattedDate: metadata.formattedDate,
                 images: metadata.images || [],
+				imageContrast: metadata.imageContrast || false,
                 postPath: postPath,
             };
         }),
