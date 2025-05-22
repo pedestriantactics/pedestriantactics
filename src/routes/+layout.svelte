@@ -9,10 +9,11 @@
 	let currentIndex = 0;
 
 	function gatherElements() {
+		elements = [];
 		currentIndex = 0;
 		// Select all elements within the body except those with the class 'no-animate' and their descendants
 		const elementsList = document.querySelectorAll(
-			"body *:not(.no-animate):not(.no-animate *)",
+			"#container *, #title-container *"
 		);
 
 		// Filter the elements to include only the desired types
@@ -37,7 +38,14 @@
 			(element as HTMLElement).style.opacity = "0";
 		});
 
-		iterate();
+		// let's add a delay here
+		// to make sure the elements are hidden before we start animating
+		setTimeout(() => {
+			// Start the animation
+			iterate();
+		}, 180);
+
+		// iterate();
 	}
 
 	function iterate() {
@@ -49,25 +57,46 @@
 		standardDelay(element as HTMLElement);
 	}
 
+
+	let intervalId: ReturnType<typeof setInterval> | null = null;
+	let timeoutId: ReturnType<typeof setTimeout> | null = null;
+
+	function clearAllTimers() {
+		if (intervalId) {
+			clearInterval(intervalId);
+			intervalId = null;
+		}
+		if (timeoutId) {
+			clearTimeout(timeoutId);
+			timeoutId = null;
+		}
+	}
+
+	afterNavigate(() => {
+		clearAllTimers();
+		gatherElements();
+	});
+
+	// Update typeWriter and standardDelay to use the above timer variables
 	function typeWriter(element: HTMLElement): Promise<void> {
 		const originalText = element.textContent || "";
-		const typeDelay = 1;
+		const typeDelay = 5;
 		let typedText = "";
 		let i = 0;
 
-		// Clear the element and set opacity to 1
 		element.textContent = "";
 		element.style.opacity = "1";
 
 		return new Promise((resolve) => {
-			const intervalId = setInterval(() => {
+			intervalId = setInterval(() => {
 				if (i < originalText.length) {
 					typedText += originalText.charAt(i);
 					i += 1;
 					element.textContent = typedText;
 				} else {
-					clearInterval(intervalId);
-					resolve(); // Resolve the promise when typing is complete
+					if (intervalId) clearInterval(intervalId);
+					intervalId = null;
+					resolve();
 				}
 			}, typeDelay);
 		});
@@ -75,21 +104,16 @@
 
 	async function standardDelay(element: HTMLElement) {
 		if (element.classList.contains("animate")) {
-			// Wait for the typewriter animation to finish before iterating
 			await typeWriter(element);
-			iterate(); // Call iterate after typeWriter finishes
+			iterate();
 		} else {
 			const delay = 10;
-			setTimeout(() => {
+			timeoutId = setTimeout(() => {
 				element.style.opacity = "1";
 				iterate();
 			}, delay);
 		}
 	}
-
-	afterNavigate(() => {
-		gatherElements();
-	});
 </script>
 
 <svelte:head>

@@ -3,7 +3,7 @@
 </svelte:head>
 
 <div id="title-container">
-	<div id="content">
+	<div id="title-content">
 		<div id="content-desktop">
 			<div id="top" class="transforming-row">
 				<p class="pedestrian caption">
@@ -13,8 +13,8 @@
 				<p class="caption">©2025</p>
 			</div>
 			<div id="title" class="transforming-row">
-				<h1 class="pedestrian">Pedestrian</h1>
-				<h1>Tactics®</h1>
+				<h1 class="pedestrian animate">Pedestrian</h1>
+				<h1 class="tactics animate">Tactics®</h1>
 			</div>
 			<div id="links" class="transforming-row">
 				<p class="pedestrian">Index /</p>
@@ -31,7 +31,7 @@
 </div>
 
 <style>
-	#content {
+	#title-content {
 		width: auto;
 		flex-grow: 0;
 	}
@@ -46,6 +46,9 @@
 	/* the width of the area with the pedestrian word */
 	.pedestrian {
 		width: 220pt;
+	}
+	.tactics {
+		width: 180pt;
 	}
 
 	#links {

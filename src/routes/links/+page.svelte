@@ -21,7 +21,7 @@
 		<div id="links" class="column">
 			<h2>
 				<a
-					class="unstyled-link"
+					class="unstyled-link animate"
 					target="blank"
 					href="https://open.spotify.com/artist/6TFOalvhHRXh8JmQTVSoyY?si=LAiGHSjrQ_ygKM9K_AV3wA"
 					>Spotify</a
@@ -29,7 +29,7 @@
 			</h2>
 			<h2>
 				<a
-					class="unstyled-link"
+					class="unstyled-link animate"
 					target="blank"
 					href="https://music.apple.com/us/artist/pedestrian-tactics/1248460066"
 					>Apple Music</a
@@ -37,35 +37,35 @@
 			</h2>
 			<h2>
 				<a
-					class="unstyled-link"
+					class="unstyled-link animate"
 					target="blank"
 					href="http://soundcloud.com/pedestriantactics">Soundcloud</a
 				>
 			</h2>
 			<h2>
 				<a
-					class="unstyled-link"
+					class="unstyled-link animate"
 					target="blank"
 					href="http://twitter.com/pedestriantac">X (Twitter)</a
 				>
 			</h2>
 			<h2>
 				<a
-					class="unstyled-link"
+					class="unstyled-link animate"
 					target="blank"
 					href="http://instagram.com/pedestriantactics">Instagram</a
 				>
 			</h2>
 			<h2>
 				<a
-					class="unstyled-link"
+					class="unstyled-link animate"
 					target="blank"
 					href="http://youtube.com/pedestriantactics">YouTube</a
 				>
 			</h2>
 			<h2>
 				<a
-					class="unstyled-link"
+					class="unstyled-link animate"
 					target="blank"
 					href="https://www.patreon.com/pedestriantactics">Patreon</a
 				>
@@ -87,6 +87,8 @@
 		justify-content: space-between;
 		/* add a gap of 32px */
 		gap: 3rem;
+		/* this helps animation be smooth */
+		min-height: 180pt;
 	}
 
 	p {

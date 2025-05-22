@@ -58,22 +58,22 @@
 	<div id="filter-container">
 		<h2>
 			<a
-				class="unstyled-link"
+				class="unstyled-link animate"
 				href="?filter=all"
 				class:active={filter === "all"}>All</a
 			>
 			<a
-				class="unstyled-link"
+				class="unstyled-link animate"
 				href="?filter=audio"
 				class:active={filter === "audio"}>Audio</a
 			>
 			<a
-				class="unstyled-link"
+				class="unstyled-link animate"
 				href="?filter=downloadable"
 				class:active={filter === "downloadable"}>Downloadable</a
 			>
 			<a
-				class="unstyled-link"
+				class="unstyled-link animate"
 				href="?filter=physical"
 				class:active={filter === "physical"}>Physical</a
 			>

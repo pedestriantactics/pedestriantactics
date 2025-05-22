@@ -9,10 +9,9 @@
 	<div id="content">
 		<div class="row">
 			<p class="large-paragraph animate">
-				Enter your email to receive infrequent communications about
-				upcoming releases and live shows
+				Enter your email
 			</p>
-			<p class="caption animate">
+			<p class="caption">
 				(By entering your email you confirm that you agree to my <a
 					href="privacy-policy">Privacy Policy</a
 				>)
@@ -101,6 +100,7 @@
 
 <style>
 	#content {
+		/* this helps animation be smooth */
 		min-height: 190pt;
 	}
 	/* .warning p, .warning a {

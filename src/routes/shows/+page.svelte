@@ -112,13 +112,12 @@
 				location={upcomingShow.location}
 			/>
 		{:else}
-			<p class="large-paragraph">
-				There are no upcoming shows. <br>Sign up for my
-				<a href="./newsletter">newsletter</a>
-				or <a href="./links">follow me</a> for updates!
+			<p class="large-paragraph animate">
+				There are no upcoming shows. <br />
 			</p>
 		{/if}
-		<br /><p>Past</p>
+		<br />
+		<p>Past</p>
 		<br />
 		{#each pastShows as show}
 			<LineItem
@@ -135,12 +134,17 @@
 </svelte:head>
 
 <style>
-	
-	@media (max-height: 400px), (max-width: 800px) and (max-height: 2000px) {
-	#container {
-		align-items: flex-start;
-		margin-top: var(--top-margin);
-		height: auto;
+	#content {
+		/* this helps with animation */
+		min-height: 280pt;
+		/* background-color: blue; */
+		/* height: auto; */
 	}
-}
+
+	@media (max-height: 400px), (max-width: 800px) and (max-height: 2000px) {
+		#container {
+			align-items: flex-start;
+			margin-top: var(--top-margin);
+		}
+	}
 </style>

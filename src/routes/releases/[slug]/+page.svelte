@@ -105,7 +105,7 @@
 			<div class="rows">
 				<div class="row">
 					<h2 class="animate">{data.title}</h2>
-					<p class="large-paragraph animate">
+					<p class="large-paragraph">
 						<svelte:component this={data.content} />
 					</p>
 				</div>

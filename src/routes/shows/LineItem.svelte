@@ -8,7 +8,7 @@
 <div id="line">
 	<p id="date" class="animate">{date}</p>
 	<p id="location" class="animate">{location}</p>
-	<p class="animate">{#if link != ""}<a href={link}>{name}</a>{:else}{name}{/if}</p>
+	<p class="">{#if link != ""}<a href={link}>{name}</a>{:else}{name}{/if}</p>
 </div>
 
 <style>
