@@ -1,5 +1,5 @@
 
-export let prerender = false;
+export let prerender = true;
 
 export async function load(data: unknown) {
     const allPostFiles = import.meta.glob("./*.md");
