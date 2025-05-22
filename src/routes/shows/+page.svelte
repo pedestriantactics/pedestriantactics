@@ -140,6 +140,7 @@
 	#container {
 		align-items: flex-start;
 		margin-top: var(--top-margin);
+		height: auto;
 	}
 }
 </style>

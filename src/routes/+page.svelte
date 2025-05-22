@@ -31,6 +31,10 @@
 </div>
 
 <style>
+	#content {
+		width: auto;
+		flex-grow: 0;
+	}
 	h1 {
 		font-size: 48pt;
 		font-weight: 90;
@@ -41,7 +45,7 @@
 	}
 	/* the width of the area with the pedestrian word */
 	.pedestrian {
-		width: 200pt;
+		width: 220pt;
 	}
 
 	#links {
@@ -73,7 +77,7 @@
 		display: flex;
 		flex-direction: row;
 		align-items: flex-start;
-		gap: 3rem;
+		gap: 1rem;
 		margin-bottom: var(--vertical-gap);
 	}
 
@@ -101,12 +105,12 @@
 		}
 	}
 
-	@media (max-width: 400px) {
+	@media (max-width: 380px) {
 		.pedestrian {
 			width: auto;
 		}
 		h1 {
-			font-size: 32pt;
+			font-size: 36pt;
 		}
 	}
 </style>

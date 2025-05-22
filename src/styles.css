@@ -82,12 +82,19 @@ h3 {
 #content {
 	max-width: 48rem;
 	padding: var(--outer-margin);
+	flex-grow: 1;
+}
+
+.rows {
+	display: flex;
+	flex-direction: column;
+	gap: var(--vertical-gap);
 }
 
 /* these are used on the product pages but are typed here so that product pages can be manually coded */
 .row {
 	width: 100%;
-	margin-bottom: var(--vertical-gap);
+	/* margin-bottom: var(--vertical-gap); */
 }
 
 .inner-row-2-1 {
@@ -163,5 +170,6 @@ a:active {
 	#container {
 		align-items: flex-start;
 		margin-top: var(--top-margin);
+		height: auto;
 	}
 }

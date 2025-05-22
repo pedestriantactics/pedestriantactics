@@ -75,15 +75,6 @@
 </div>
 
 <style>
-	#container {
-		width: 100vw;
-		height: 100vh;
-		display: grid;
-		align-items: center;
-		justify-items: center;
-		margin-left: auto;
-		margin-right: auto;
-	}
 
 	#links h2 {
 		margin-bottom: 0;

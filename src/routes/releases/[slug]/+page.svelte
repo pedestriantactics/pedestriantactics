@@ -63,7 +63,7 @@
 />
 
 <div id="container">
-	<div id="content">
+	<div id="content" class="rows">
 		<div class="row split-content">
 			<div class="mobile-hide"></div>
 			<div class="inner-row-2-1">
@@ -102,7 +102,7 @@
 					</div>
 				{/if}
 			</div>
-			<div>
+			<div class="rows">
 				<div class="row">
 					<h2 class="animate">{data.title}</h2>
 					<p class="large-paragraph animate">
@@ -194,6 +194,7 @@
 	#container {
 		align-items: flex-start;
 		margin-top: var(--top-margin);
+		height: auto;
 	}
 }
 </style>

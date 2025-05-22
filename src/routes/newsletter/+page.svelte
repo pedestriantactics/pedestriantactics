@@ -100,6 +100,9 @@
 </svelte:head>
 
 <style>
+	#content {
+		min-height: 190pt;
+	}
 	/* .warning p, .warning a {
 		color: var(--color-bg);
 	} */

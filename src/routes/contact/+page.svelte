@@ -24,16 +24,6 @@
 </div>
 
 <style>
-	#container {
-		max-width: 640px;
-		width: 100vw;
-		height: 100vh;
-		display: grid;
-		align-items: center;
-		justify-items: center;
-		margin-left: auto;
-		margin-right: auto;
-	}
 
 	.warning {
 		max-width: 50%;
