@@ -6,7 +6,7 @@
 <NavMenu currentPage="Newsletter" breadcrumbs={[]} />
 
 <div id="container">
-	<div id="content">
+	<div id="content" class="rows">
 		<div class="row">
 			<p class="large-paragraph animate">
 				Enter your email
@@ -111,6 +111,10 @@
 		border-bottom: 1px solid var(--color-fg);
 	} */
 
+	.row {
+		margin-bottom: var(--vertical-gap);
+	}
+
 	/* mailchimp styling */
 	#mc_embed_signup {
 		background: none;
@@ -193,4 +197,12 @@
 
 	/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
     We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+
+	@media (max-height: 600px), (max-width: 500px) and (max-height: 700px) {
+	#container {
+		align-items: flex-start;
+		margin-top: var(--top-margin);
+		height: auto;
+	}
+}
 </style>
