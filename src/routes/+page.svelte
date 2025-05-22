@@ -41,7 +41,7 @@
 	}
 	/* the width of the area with the pedestrian word */
 	.pedestrian {
-		width: 22.7rem;
+		width: 200pt;
 	}
 
 	#links {
