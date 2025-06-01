@@ -3,9 +3,10 @@
 	export var date = "";
 	export var name = "";
 	export var description = "";
+	let imageLoaded = false;
 </script>
 
-<div id="gallery-image-container">
+<div class="gallery-image-container {imageLoaded ? 'fade-in' : ''}">
 	<div>
 		<div id="gallery-image-wrapper">
 			<img alt={name} src="images/{imageFileName}" />
@@ -18,11 +19,17 @@
 </div>
 
 <style>
-	#gallery-image-container {
+	.gallery-image-container {
 		width: 100%;
 		margin-bottom: 3rem;
 		display: flex;
 		justify-content: center;
+		opacity: 0;
+		transition: opacity 0s;
+	}
+
+	.gallery-image-container.fade-in {
+		opacity: 1;
 	}
 
 	#gallery-image-wrapper {
