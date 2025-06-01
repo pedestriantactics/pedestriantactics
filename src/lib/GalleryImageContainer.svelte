@@ -9,7 +9,7 @@
 <div class="gallery-image-container {imageLoaded ? 'fade-in' : ''}">
 	<div>
 		<div id="gallery-image-wrapper">
-			<img alt={name} src="images/{imageFileName} on:load={() => (imageLoaded = true)}" />
+			<img alt={name} src="images/{imageFileName}" on:load={() => (imageLoaded = true)} />
 		</div>
 		<div id="gallery-image-footer">
 			<p>{name}</p>
