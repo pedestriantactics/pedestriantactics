@@ -9,6 +9,11 @@
 
 	let pastShows = [
 		{
+			date: "2025-06",
+			name: "Supernova with Baastik",
+			location: "Seattle, WA"
+		},
+		{
 			date: "2024-10",
 			name: "Selector Records with Hudson Lee",
 			location: "Seattle, WA",
