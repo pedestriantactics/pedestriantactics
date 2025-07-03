@@ -36,11 +36,11 @@
 		flex-grow: 0;
 	}
 	h1 {
-		font-size: 48pt;
-		font-weight: 90;
+		font-size: 46pt;
+		font-weight: 78;
 		margin-bottom: 0;
 		line-height: 1.1em;
-		letter-spacing: -0.05em;
+		letter-spacing: -0.03em;
 		/* align-self: stretch; */
 	}
 	/* the width of the area with the pedestrian word */
