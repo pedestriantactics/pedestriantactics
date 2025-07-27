@@ -2,22 +2,23 @@
 	<title>Pedestrian Tactics</title>
 </svelte:head>
 
-<div id="title-container">
-	<div id="title-content">
-		<div id="content-desktop">
-			<div id="top" class="transforming-row">
-				<p class="pedestrian caption">
-					Electronic music and design works assembled by Dan Taylor in
-					various coffee shops and workspaces
+<div id="container">
+	<div id="content">
+		<div id="title-container">
+			<div class="title-row">
+				<p class="caption">
+					Designed and assembled in various coffee shops and workspaces
 				</p>
 				<p class="caption">©2025</p>
 			</div>
-			<div id="title" class="transforming-row">
-				<h1 class="pedestrian animate">Pedestrian</h1>
-				<h1 class="tactics animate">Tactics®</h1>
+			<div id="title" class="title-row">
+				<div>&#xE002;</div>
+				<div>&#xE003;</div>
+				<div>&#xE004;</div>
+				<div>&#xE005;</div>
 			</div>
-			<div id="links" class="transforming-row">
-				<p class="pedestrian">Index /</p>
+			<div id="links" class="title-row">
+				<p>Pedestrian Tactics /</p>
 				<div id="links">
 					<a href="releases" class="unstyled-link">Releases</a>
 					<a href="shows" class="unstyled-link">Shows</a>
@@ -31,89 +32,46 @@
 </div>
 
 <style>
-	#title-content {
-		width: auto;
-		flex-grow: 0;
-	}
-	h1 {
-		font-size: 46pt;
-		font-weight: 78;
-		margin-bottom: 0;
-		line-height: 1.1em;
-		letter-spacing: -0.03em;
-		/* align-self: stretch; */
-	}
-	/* the width of the area with the pedestrian word */
-	.pedestrian {
-		width: 220pt;
-	}
-	.tactics {
-		width: 180pt;
-	}
-
-	#links {
-		/* font-size: 14pt; */
-		/* line-height: 1em; */
-	}
-
 	#links a {
 		display: block;
 	}
 
-	#top {
-		height: 3rem;
-	}
-
 	#title-container {
-		width: 100%;
-		height: 100vh;
 		display: flex;
-		justify-content: center;
+		/* width: 100%; */
+		flex-direction: column;
 		align-items: center;
 	}
 
-	#content {
-		padding: var(--outer-margin);
-	}
-
-	.transforming-row {
-		display: flex;
-		flex-direction: row;
-		align-items: flex-start;
-		gap: 1rem;
+	.title-row {
+		width: 100%;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 2rem;
 		margin-bottom: var(--vertical-gap);
 	}
 
-	#description {
-		max-width: 22em;
-		height: 3rem;
+	#title {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		font-family: "Hyperwalk VF";
+		font-size: 128pt;
+		line-height: 0.6em;
 	}
 
 	a:hover::after {
 		content: "←";
 	}
 
-	@media (max-width: 700px) {
-		#top {
-			height: auto;
-		}
-
+	@media (max-width: 600px) {
 		#title {
-			gap: 0;
-		}
-
-		.transforming-row {
-			gap: 1rem;
-			flex-direction: column;
+			font-size: 96pt;
 		}
 	}
 
-	@media (max-width: 380px) {
-		.pedestrian {
-			width: auto;
-		}
-		h1 {
-			font-size: 36pt;
+	@media (max-width: 490px) {
+		#title {
+			grid-template-columns: 1fr 1fr;
+			font-size: 128pt;
 		}
 	}
 </style>
