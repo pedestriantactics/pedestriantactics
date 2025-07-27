@@ -1,7 +1,7 @@
 ---
 formattedDate: 2023-07-05
 title: The Shirt
-category: physical
+category: hide
 code: PT-M2
 images:
 - m2-4.jpg
