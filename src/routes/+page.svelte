@@ -2,6 +2,13 @@
 	<title>Pedestrian Tactics</title>
 </svelte:head>
 
+<div id="bg-image">
+	</div>
+
+	<div id="footer">
+		<p><a class="arrow-link" href="releases/pt-t68">PT-T68 Out Sep 12</a></p>
+	</div>
+
 <div id="container">
 	<div id="content">
 		<div id="title-container">
@@ -32,6 +39,26 @@
 </div>
 
 <style>
+	#bg-image {
+		background-image: url('images/home-bg.jpg');
+		background-size: cover;
+		background-position: center;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -2;
+	}
+
+	#footer {
+		position: absolute;
+		bottom: var(--outer-margin);
+		right: var(--outer-margin);
+		display: flex;
+		justify-content: space-between;
+	}
+
 	#links a {
 		display: block;
 	}
@@ -61,7 +88,7 @@
 	a:hover::after {
 		content: "←";
 	}
-
+/*
 	@media (max-width: 600px) {
 		#title {
 			font-size: 96pt;
@@ -72,6 +99,13 @@
 		#title {
 			grid-template-columns: 1fr 1fr;
 			font-size: 128pt;
+		}
+	}
+	*/
+
+	@media (max-width: 490px) {
+		#title {
+			font-size: 80pt;
 		}
 	}
 </style>

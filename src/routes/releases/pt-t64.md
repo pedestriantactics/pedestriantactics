@@ -4,7 +4,7 @@ title: I Like Math
 category: audio
 code: PT-T64
 audioType: compilation track
-recordLabe: Mau5trap
+recordLabel: Mau5trap
 images:
 - pt-t64-i-like-math-cover-art-2.jpg
 linksTitle: Listen
