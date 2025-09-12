@@ -6,7 +6,7 @@
 	</div>
 
 	<div id="footer">
-		<p><a class="arrow-link" href="releases/pt-t68">PT-T68 Out Sep 12</a></p>
+		<p><a class="arrow-link" href="releases/pt-t68">PT-T68 Out now!</a></p>
 	</div>
 
 <div id="container">
