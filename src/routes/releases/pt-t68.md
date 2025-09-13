@@ -12,6 +12,8 @@ links:
   url: https://open.spotify.com/track/6gXVhs11etys1uHIyZQISG?si=f92f621a01984734
 - title: Apple Music
   url: https://music.apple.com/us/album/traditional-computer-solo-single/1828111833
+- title: Soundcloud
+  url: http://soundcloud.com/pedestriantactics/pt-t68
 imageContrast: false
 --- 
 
