@@ -8,6 +8,8 @@ images:
 - pt-t68-tcs-cover-art.jpg
 linksTitle: Listen
 links:
+- title: Bandcamp
+  url: https://pedestriantactics.bandcamp.com/album/pt-t68-traditional-computer-solo
 - title: Spotify
   url: https://open.spotify.com/track/6gXVhs11etys1uHIyZQISG?si=f92f621a01984734
 - title: Apple Music

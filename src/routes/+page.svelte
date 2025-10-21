@@ -5,9 +5,9 @@
 <div id="bg-image">
 	</div>
 
-	<div id="footer">
+	<!-- <div id="footer">
 		<p><a class="arrow-link" href="releases/pt-t68">PT-T68 Out now!</a></p>
-	</div>
+	</div> -->
 
 <div id="container">
 	<div id="content">
@@ -40,7 +40,9 @@
 
 <style>
 	#bg-image {
-		background-image: url('/images/home-bg.jpg');
+		/* 
+		background-image: url('/images/home-bg.jpg'); 
+		*/
 		background-size: cover;
 		background-position: center;
 		position: absolute;
