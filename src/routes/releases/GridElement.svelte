@@ -31,8 +31,8 @@
 				{title}
 				{#if audioType != ""}
 					/ {audioType}{/if}
-				{#if recordLabel != ""}
-					/ {recordLabel}{/if}
+				<!-- {#if recordLabel != ""}
+					/ {recordLabel}{/if} -->
 			</p>
 		</div>
 	</div>
