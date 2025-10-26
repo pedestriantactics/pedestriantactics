@@ -16,7 +16,7 @@
 				<p class="caption">
 					Designed and assembled in various coffee shops and workspaces
 				</p>
-				<p class="caption">©2025</p>
+				<p class="caption">2025</p>
 			</div>
 			<div id="title" class="title-row">
 				<div>&#xE002;</div>
@@ -28,10 +28,13 @@
 				<p>Pedestrian Tactics /</p>
 				<div id="links">
 					<a href="releases" class="unstyled-link">Releases</a>
-					<a href="shows" class="unstyled-link">Shows</a>
-					<a href="newsletter" class="unstyled-link">Newsletter</a>
-					<a href="links" class="unstyled-link">Links</a>
-					<a href="contact" class="unstyled-link">Contact</a>
+					<a href="sessions" class="unstyled-link">Sessions</a>
+					<!-- <a href="shows" class="unstyled-link">Live archive</a> -->
+					<a href="https://pedestriantactics.bandcamp.com" class="unstyled-link">Bandcamp</a>
+					<a href="http://instagram.com/pedestriantactics" class="unstyled-link">Instagram</a>
+					<!-- <a href="newsletter" class="unstyled-link">Newsletter</a> -->
+					<!-- <a href="links" class="unstyled-link">Links</a> -->
+					<a href="email" class="unstyled-link">Email</a>
 				</div>
 			</div>
 		</div>
@@ -61,6 +64,11 @@
 		justify-content: space-between;
 	}
 
+	#links {
+		font-size: 1.4rem;
+		line-height: 1.4rem;
+	}
+
 	#links a {
 		display: block;
 	}
@@ -87,7 +95,7 @@
 		line-height: 0.6em;
 	}
 
-	a:hover::after {
+	a::after {
 		content: "←";
 	}
 /*

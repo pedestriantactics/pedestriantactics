@@ -6,10 +6,11 @@
 
 	let links: { name: string; destination: string }[] = [
 		{ name: "Releases", destination: "/releases" },
-		{ name: "Newsletter", destination: "/newsletter" },
-		{ name: "Shows", destination: "/shows" },
-		{ name: "Links", destination: "/links" },
-		{ name: "Contact", destination: "/contact" },
+		{ name: "Sessions", destination: "/sessions" },
+		// { name: "Shows", destination: "/shows" },
+		{ name: "Bandcamp", destination: "https://pedestriantactics.bandcamp.com" },
+		{ name: "Instagram", destination: "https://instagram.com/pedestriantactics" },
+		{ name: "Email", destination: "/email" },
 	];
 
 	$: activeLink = links.find((link) => link.name === currentPage);
