@@ -16,7 +16,7 @@
 			softwares are welcome
 		</h2>
 		<h2 class="">Click the arrow to be redirected to my Calendly booking page</h2>
-		<a class="unstyled-link" href="https://calendly.com/pedestriantactics/1-hour"><h2 class="animate">→</h2></a>
+		<a class="unstyled-link" href="https://calendly.com/pedestriantactics/"><h2 class="animate">→</h2></a>
 	</div>
 </div>
 
