@@ -1,5 +1,6 @@
 ---
 title: Nerds Trying To Dance
+description: Pedestrian Tactics' debut four-track EP on Mad Zoo Recordings
 category: audio
 code: PT-A10
 audioType: EP

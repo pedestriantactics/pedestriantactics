@@ -1,5 +1,6 @@
 ---
 title: Come With Me
+description: Pedestrian Tactics' debut single released on Simplify Recordings
 category: audio
 code: PT-T23
 audioType: single

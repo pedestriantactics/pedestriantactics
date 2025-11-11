@@ -1,5 +1,6 @@
 ---
 formattedDate: 2023-07-05
+description: Organic cotton unisex t-shirt with externally displayed washing instructions
 title: The Shirt
 category: hide
 code: PT-M2

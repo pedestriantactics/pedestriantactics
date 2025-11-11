@@ -1,5 +1,6 @@
 ---
 title: In Transit
+description: EP and created while in Seattle, Thailand, Vietnam, and Hong Kong
 category: audio
 code: PT-A7
 audioType: EP
@@ -15,6 +16,8 @@ links:
   url: https://open.spotify.com/album/6bVuwnfztP0BSQI0p8aof3
 - title: Apple Music
   url: https://music.apple.com/us/album/in-transit-ep/1318399520
+- title: Photo Series
+  url: https://imdantaylor.com/in-transit
 ---
 
 ## EP and [photo series](https://imdantaylor.com/in-transit) created while in Seattle, Thailand, Vietnam, and Hong Kong

@@ -1,5 +1,6 @@
 ---
 title: Animal Remix Project File
+description: The Ableton Live project file for the remix of Animal. Runs entirely using the stock Ableton suite devices
 category: downloadable
 code: PT-DLC6
 formattedDate: 2023-08-31
@@ -19,4 +20,4 @@ links:
   url: https://members.producerdojo.com/a/2147642139/LZ6h6XgH
 ---
 
-## The Ableton Live project file for the remix of [Animal](pt-t62). Runs entirely using the stock Ableton suite devices
+## The Ableton Live project file for the remix of Animal. Runs entirely using the stock Ableton suite devices

@@ -1,5 +1,6 @@
 ---
 title: How I Made NTTD
+description: Four-part recorded session breaking down all four tracks on the Nerds Trying To Dance EP
 category: downloadable
 code: PT-DLC2
 formattedDate: 2021-01-19

@@ -1,5 +1,6 @@
 ---
 title: Caffeine
+description: A collaborative single between Dan Taylor and Josh Brugman. Debuting in Coffee People Zine's final Spotify playlist
 category: audio
 code: PT-T61
 audioType: single
@@ -17,6 +18,8 @@ links:
   url: https://pedestriantactics.bandcamp.com/track/caffeine
 - title: Soundcloud
   url: https://soundcloud.com/pedestriantactics/pt-t61
+- title: Josh Brugman
+  url: http://instagram.com/joshbrugman
 ---
 
 ## A collaborative single between Dan Taylor and [Josh Brugman](http://instagram.com/joshbrugman). Debuting in [Coffee People Zine's](https://coffeepeople.org) final Spotify playlist on December 4th

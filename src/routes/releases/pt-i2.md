@@ -1,5 +1,6 @@
 ---
 title: Calibration Poster
+description: The original posted designed for stress testing our print partners. Features line size and color bleed tests, along with a grid of swatches indexed by RGB values
 category: hide
 code: PT-I2
 formattedDate: 2023-05-09
@@ -22,11 +23,3 @@ links:
 ---
 
 ## The original posted designed for stress testing our print partners. Features line size and color bleed tests, along with a grid of swatches indexed by RGB values
-
-<!-- <div class="warning environment">
-
-This poster is made from 170g paper sourced from Sappi in Japan. An average tree can be made into approximately 762 of these. A 0.3USD charge is included in the cost which is sent to Terrapass as an attempt to offset the environmental impact of this product.
-
-I like trees.
-
-</div> -->

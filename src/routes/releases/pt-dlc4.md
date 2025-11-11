@@ -1,5 +1,6 @@
 ---
 title: Every Drum I’ve Ever Made Sample Pack
+description: 321 drum samples from every track released by Corporate and Pedestrian Tactics over the last 10 years
 category: downloadable
 code: PT-DLC4
 formattedDate: 2022-06-01

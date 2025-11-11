@@ -1,5 +1,6 @@
 ---
 title: Snare Poster
+description: A breakdown of a typical electronic snare drum into three sonic components, with details on timing, frequency, and real world examples
 category: physical
 code: PT-M4
 formattedDate: 2023-07-05

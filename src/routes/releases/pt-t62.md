@@ -1,5 +1,6 @@
 ---
 title: Ill Gates - Animal (Pedestrian Tactics Remix)
+description: Part of the remix compilation by Ill Gates, Kandisha, and Bil Bless
 category: audio
 code: PT-T62
 audioType: Remix

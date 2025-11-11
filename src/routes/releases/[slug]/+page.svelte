@@ -5,6 +5,7 @@
 		content: any;
 		formattedDate: Date;
 		title: string;
+		description?: string;
 		code: string;
 		images: string[];
 		imageContrast: boolean;
@@ -49,18 +50,26 @@
 </script>
 
 <svelte:head>
-	<title>{metaTitle} - Pedestrian Tactics</title>
-	<!-- {#if data.description}
-		<meta name="description" content="{data.title}: {data.description}" />
-	{:else}
-		<meta name="description" content={data.title} />
-	{/if} -->
+    <title>{metaTitle} - Pedestrian Tactics</title>
 
-	<meta property="og:title" content="{metaTitle} - Pedestrian Tactics" />
-	<meta property="og:description" content="{data.content}" />
-	<meta property="og:image" content="/images/{data.images[currentImage]}" />
-	<!-- <meta property="og:image:width" content="1200" />
-	<meta property="og:image:height" content="627" /> -->
+    {#if data.description}
+        <meta name="description" content={data.description} />
+    {:else}
+        <meta name="description" content={data.title} />
+    {/if}
+
+    <meta property="og:title" content={metaTitle + ' - Pedestrian Tactics'} />
+    <meta property="og:description" content={data.description ?? data.title} />
+    {#if data.images && data.images.length > 0}
+        <meta property="og:image" content={"/images/" + data.images[0]} />
+    {/if}
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={metaTitle + ' - Pedestrian Tactics'} />
+    <meta name="twitter:description" content={data.description ?? data.title} />
+    {#if data.images && data.images.length > 0}
+        <meta name="twitter:image" content={"/images/" + data.images[0]} />
+    {/if}
 </svelte:head>
 
 <NavMenu
@@ -111,9 +120,12 @@
 			<div class="rows">
 				<div class="row">
 					<h2 class="animate">{data.title}</h2>
+					{#if data.description}
 					<p class="large-paragraph">
-						<svelte:component this={data.content} />
+						<!-- <svelte:component this={data.content} /> -->
+						 {data.description}
 					</p>
+					{/if}
 				</div>
 				<!-- if there are details add them -->
 				{#if data.details}

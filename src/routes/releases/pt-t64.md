@@ -1,5 +1,6 @@
 ---
 formattedDate: 2023-01-05
+description: Part of Mau5trap's 11th We Are Friends compilation
 title: I Like Math
 category: audio
 code: PT-T64

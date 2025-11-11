@@ -1,5 +1,6 @@
 ---
 title: Corporate - Ice Sample Pack
+description: The early glitch-trap hit deconstructed into 53 samples for producers to use in their own productions
 category: downloadable
 code: PT-DLC3
 formattedDate: 2021-12-23

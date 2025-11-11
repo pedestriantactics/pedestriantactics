@@ -1,5 +1,6 @@
 ---
 title: Trump Memes
+description: The original midterm election single with artwork by Seattle illustrator Cryomera
 category: audio
 code: PT-T41
 audioType: single
@@ -12,6 +13,8 @@ links:
   url: https://soundcloud.com/pedestriantactics/pt-t41
 - title: Bandcamp
   url: https://pedestriantactics.bandcamp.com/album/pt-t41-trump-memes
+- title: Cryomera's artwork
+  url: https://cryomera.com
 ---
 
 ## The original midterm election single with artwork by Seattle illustrator [Cryomera](https://cryomera.com)
