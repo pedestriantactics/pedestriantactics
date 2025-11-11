@@ -47,6 +47,14 @@
 		const urlParts = url.split("/");
 		currentPage = urlParts[urlParts.length - 1];
 	}
+
+	    // helper for OG/twitter image urls
+    const firstImagePath =
+        data.images && data.images.length ? "/images/" + data.images[0] : undefined;
+    const firstImageAbsolute =
+        typeof window !== "undefined" && firstImagePath
+            ? window.location.origin + firstImagePath
+            : firstImagePath;
 </script>
 
 <svelte:head>
@@ -61,14 +69,14 @@
     <meta property="og:title" content={metaTitle + ' - Pedestrian Tactics'} />
     <meta property="og:description" content={data.description ?? data.title} />
     {#if data.images && data.images.length > 0}
-        <meta property="og:image" content="{"/images/" + data.images[0]}" />
+        <meta property="og:image" content={firstImageAbsolute ?? firstImagePath} />
     {/if}
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={metaTitle + ' - Pedestrian Tactics'} />
     <meta name="twitter:description" content={data.description ?? data.title} />
     {#if data.images && data.images.length > 0}
-        <meta name="twitter:image" content="{"/images/" + data.images[0]}" />
+        <meta name="twitter:image" content={firstImageAbsolute ?? firstImagePath} />
     {/if}
 </svelte:head>
 
