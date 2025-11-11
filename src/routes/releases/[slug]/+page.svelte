@@ -55,10 +55,16 @@
 	{:else}
 		<meta name="description" content={data.title} />
 	{/if} -->
+
+	<meta property="og:title" content="{metaTitle} - Pedestrian Tactics" />
+	<meta property="og:description" content="{data.content}" />
+	<meta property="og:image" content="/images/{data.images[currentImage]}" />
+	<!-- <meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="627" /> -->
 </svelte:head>
 
 <NavMenu
-	currentPage={currentPage}
+	{currentPage}
 	breadcrumbs={[{ name: "Releases", destination: "/releases" }]}
 />
 
@@ -130,13 +136,13 @@
 				{#if data.links}
 					<div class="row">
 						<div class="inner-row-1-2">
-							<p>{#if data.linksTitle}{data.linksTitle}{:else}Links{/if}</p>
+							<p>
+								{#if data.linksTitle}{data.linksTitle}{:else}Links{/if}
+							</p>
 							<div class="arrow-links">
 								{#each data.links as link}
-									<a href={link.url}
-										>{link.title}</a
-									>
-									<br>
+									<a href={link.url}>{link.title}</a>
+									<br />
 								{/each}
 							</div>
 						</div>
@@ -156,7 +162,7 @@
 	.split-content {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		gap: calc(var(--vertical-gap)/2);
+		gap: calc(var(--vertical-gap) / 2);
 	}
 
 	#image-nav a:hover,
@@ -191,10 +197,10 @@
 	}
 
 	@media (max-height: 750px), (max-width: 800px) and (max-height: 1200px) {
-	#container {
-		align-items: flex-start;
-		margin-top: var(--top-margin);
-		height: auto;
+		#container {
+			align-items: flex-start;
+			margin-top: var(--top-margin);
+			height: auto;
+		}
 	}
-}
 </style>
