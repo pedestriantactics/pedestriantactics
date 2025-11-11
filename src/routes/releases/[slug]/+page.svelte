@@ -61,14 +61,14 @@
     <meta property="og:title" content={metaTitle + ' - Pedestrian Tactics'} />
     <meta property="og:description" content={data.description ?? data.title} />
     {#if data.images && data.images.length > 0}
-        <meta property="og:image" content={"/images/" + data.images[0]} />
+        <meta property="og:image" content="{"/images/" + data.images[0]}" />
     {/if}
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={metaTitle + ' - Pedestrian Tactics'} />
     <meta name="twitter:description" content={data.description ?? data.title} />
     {#if data.images && data.images.length > 0}
-        <meta name="twitter:image" content={"/images/" + data.images[0]} />
+        <meta name="twitter:image" content="{"/images/" + data.images[0]}" />
     {/if}
 </svelte:head>
 
