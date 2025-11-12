@@ -27,7 +27,7 @@
 		return false;
 	}) as (typeof data)["posts"];
 
-	let metaTitle = "Products";
+	let metaTitle = "Releases";
 </script>
 
 <svelte:head>

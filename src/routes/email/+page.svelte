@@ -4,10 +4,10 @@
 </script>
 
 <svelte:head>
-	<title>Contact - Pedestrian Tactics</title>
+	<title>Email - Pedestrian Tactics</title>
 </svelte:head>
 
-<NavMenu currentPage="Contact" breadcrumbs={[]} />
+<NavMenu currentPage="Email" breadcrumbs={[]} />
 
 <div id="container">
 	<div id="content">
