@@ -2,41 +2,36 @@
 	<title>Pedestrian Tactics</title>
 </svelte:head>
 
-<div id="bg-image"></div>
+<div id="bg-image">
+	</div>
 
-<!-- <div id="footer">
+	<!-- <div id="footer">
 		<p><a class="arrow-link" href="releases/pt-t68">PT-T68 Out now!</a></p>
 	</div> -->
 
 <div id="container">
 	<div id="content">
 		<div id="title-container">
-			<div id="description" class="title-row">
+			<div class="title-row">
 				<p class="caption">
-					Designed and assembled in various coffee shops and
-					workspaces
+					Designed and assembled in various coffee shops and workspaces
 				</p>
-				<p class="caption">©2025</p>
+				<p class="caption">2025</p>
 			</div>
 			<div id="title" class="title-row">
-				<h1>Pedestrian</h1>
-				<h1>Tactics</h1>
+				<div>&#xE002;</div>
+				<div>&#xE003;</div>
+				<div>&#xE004;</div>
+				<div>&#xE005;</div>
 			</div>
 			<div id="links" class="title-row">
-				<p>Index /</p>
-				<!-- <h2>&#xE002; &#xE003; &#xE004; &#xE005;</h2> -->
+				<p>Pedestrian Tactics /</p>
 				<div id="links">
 					<a href="releases" class="unstyled-link">Releases</a>
 					<a href="sessions" class="unstyled-link">Sessions</a>
 					<!-- <a href="shows" class="unstyled-link">Live archive</a> -->
-					<a
-						href="https://pedestriantactics.bandcamp.com"
-						class="unstyled-link">Bandcamp</a
-					>
-					<a
-						href="http://instagram.com/pedestriantactics"
-						class="unstyled-link">Instagram</a
-					>
+					<a href="https://pedestriantactics.bandcamp.com" class="unstyled-link">Bandcamp</a>
+					<a href="http://instagram.com/pedestriantactics" class="unstyled-link">Instagram</a>
 					<!-- <a href="newsletter" class="unstyled-link">Newsletter</a> -->
 					<!-- <a href="links" class="unstyled-link">Links</a> -->
 					<a href="email" class="unstyled-link">Email</a>
@@ -69,10 +64,10 @@
 		justify-content: space-between;
 	}
 
-	/* #links {
+	#links {
 		font-size: 1.4rem;
 		line-height: 1.4rem;
-	} */
+	}
 
 	#links a {
 		display: block;
@@ -88,24 +83,22 @@
 	.title-row {
 		width: 100%;
 		display: grid;
-		grid-template-columns: 1fr 0.75fr;
+		grid-template-columns: 1fr 1fr;
 		gap: 2rem;
-		/* margin-bottom: var(--vertical-gap); */
-		/* background-color: red; */
+		margin-bottom: var(--vertical-gap);
 	}
 
-	#description {
-		/* grid-template-columns: 1fr 1fr 2fr; */
-	}
-
-	#content {
-		max-width: 46rem;
+	#title {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		font-family: "Hyperwalk VF";
+		font-size: 128pt;
+		line-height: 0.6em;
 	}
 
 	a::after {
 		content: "←";
 	}
-	/*
+/*
 	@media (max-width: 600px) {
 		#title {
 			font-size: 96pt;
@@ -120,17 +113,9 @@
 	}
 	*/
 
-	@media (max-width: 600px) {
-		h1 {
-			font-size: 32pt;
-		}
-
-		#content {
-			max-width: 30rem;
-		}
-
-		.title-row {
-			gap: 1rem;
+	@media (max-width: 490px) {
+		#title {
+			font-size: 80pt;
 		}
 	}
 </style>

@@ -14,23 +14,24 @@
 		<p class="caption">If you're a human, you'll know what to do.</p>
 		<br>
 		<img src="/images/contact.jpg" alt="contact email" />
-		<div class="warning">
+		<!-- <div class="warning">
 			<p class="caption">
 				This page will not render correctly if you are browsing without
 				images enabled or in a reader view.
 			</p>
-		</div>
+		</div> -->
 	</div>
 </div>
 
 <style>
 
 	.warning {
-		max-width: 50%;
+		max-width: 40%;
 	}
 
 	#content {
 		margin: 2rem;
+		max-width: 52rem;
 	}
 
 	img {

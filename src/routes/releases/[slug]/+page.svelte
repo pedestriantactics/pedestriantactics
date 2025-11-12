@@ -29,6 +29,9 @@
 			(currentImage - 1 + data.images.length) % data.images.length;
 	}
 
+	let previewImagePath = `/images/${data.images[0]}`;
+	let currentImagePath = `/images/${data.images[currentImage]}`;
+
 	let navTitle = data.title;
 	if (data.code) navTitle = data.code;
 
@@ -47,14 +50,6 @@
 		const urlParts = url.split("/");
 		currentPage = urlParts[urlParts.length - 1];
 	}
-
-	    // helper for OG/twitter image urls
-    const firstImagePath =
-        data.images && data.images.length ? "/images/" + data.images[0] : undefined;
-    const firstImageAbsolute =
-        typeof window !== "undefined" && firstImagePath
-            ? window.location.origin + firstImagePath
-            : firstImagePath;
 </script>
 
 <svelte:head>
@@ -69,14 +64,14 @@
     <meta property="og:title" content={metaTitle + ' - Pedestrian Tactics'} />
     <meta property="og:description" content={data.description ?? data.title} />
     {#if data.images && data.images.length > 0}
-        <meta property="og:image" content={firstImageAbsolute ?? firstImagePath} />
+        <meta property="og:image" content={previewImagePath} />
     {/if}
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={metaTitle + ' - Pedestrian Tactics'} />
     <meta name="twitter:description" content={data.description ?? data.title} />
     {#if data.images && data.images.length > 0}
-        <meta name="twitter:image" content={firstImageAbsolute ?? firstImagePath} />
+        <meta name="twitter:image" content={previewImagePath} />
     {/if}
 </svelte:head>
 
@@ -103,7 +98,7 @@
 		<div class="row split-content">
 			<div>
 				<img
-					src="/images/{data.images[currentImage]}"
+					src={currentImagePath}
 					alt={data.title}
 					class:image-contrast={data.imageContrast}
 				/>
@@ -216,7 +211,7 @@
 		}
 	}
 
-	@media (max-height: 750px), (max-width: 800px) and (max-height: 1200px) {
+	@media (max-width: 800px) and (max-height: 1050px), (max-height: 750px) {
 		#container {
 			align-items: flex-start;
 			margin-top: var(--top-margin);
