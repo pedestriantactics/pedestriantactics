@@ -8,6 +8,7 @@
 		description?: string;
 		code: string;
 		images: string[];
+		previewImageURL: string;
 		imageContrast: boolean;
 		linksTitle: string;
 		links: { title: string; url: string }[];
@@ -29,7 +30,6 @@
 			(currentImage - 1 + data.images.length) % data.images.length;
 	}
 
-	let previewImagePath = `/images/${data.images[0]}`;
 	let currentImagePath = `/images/${data.images[currentImage]}`;
 
 	let navTitle = data.title;
@@ -64,14 +64,14 @@
     <meta property="og:title" content={metaTitle + ' - Pedestrian Tactics'} />
     <meta property="og:description" content={data.description ?? data.title} />
     {#if data.images && data.images.length > 0}
-        <meta property="og:image" content={previewImagePath} />
+        <meta property="og:image" content={data.previewImageURL} />
     {/if}
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={metaTitle + ' - Pedestrian Tactics'} />
     <meta name="twitter:description" content={data.description ?? data.title} />
     {#if data.images && data.images.length > 0}
-        <meta name="twitter:image" content={previewImagePath} />
+        <meta name="twitter:image" content={data.previewImageURL} />
     {/if}
 </svelte:head>
 

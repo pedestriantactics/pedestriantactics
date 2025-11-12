@@ -17,6 +17,11 @@ export async function load({ params }: { params: { slug: string } }) {
 	} = post.metadata
 	const content = post.default
 
+	let previewImageURL = null
+	if (images && images.length > 0) {
+		previewImageURL = "/images/" + images[0]
+	}
+
 	return {
 		content,
 		title,
@@ -24,6 +29,7 @@ export async function load({ params }: { params: { slug: string } }) {
 		formattedDate,
 		description,
 		images,
+		previewImageURL,
 		imageContrast,
 		linksTitle,
 		links,
