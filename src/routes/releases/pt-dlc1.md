@@ -2,7 +2,7 @@
 title: Silence Sample Pack
 description: An audio sample pack designed for modern electronic musicians
 category: hide
-code: PT-DLC1
+code: PT-DLC1 lol
 formattedDate: 2017-12-25
 images:
 - silence-sample-pack-booklet-1.jpg
