@@ -56,7 +56,7 @@
 	<!-- render the filter links and the grid -->
 	<!-- <p id="breadcrumb" ><a href="/">pedestrian tactics</a> / releases</p> -->
 	<div id="filter-container">
-		<h2>
+		
 			<a
 				class="unstyled-link animate"
 				href="?filter=all"
@@ -77,7 +77,7 @@
 				href="?filter=physical"
 				class:active={filter === "physical"}>Physical</a
 			>
-		</h2>
+		
 	</div>
 
 	<div id="grid-container">
@@ -124,7 +124,7 @@
 	}
 
 	#content {
-		max-width: 960px;
+		max-width: 100%;
 		padding: var(--outer-margin);
 	}
 
@@ -138,8 +138,9 @@
 		width: 100%;
 		display: flex;
 		justify-content: flex-start;
+		gap: var(--spacer);
 		/* min-height: 50px; */
-		margin-bottom: var(--vertical-gap);
+		margin-bottom: 1rem;
 	}
 
 	#filter-container h3 {
