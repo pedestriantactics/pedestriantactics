@@ -16,11 +16,12 @@
 	--color-fg: black;
 	--color-bg: white;
 	--color-accent: blue;
-	--outer-margin: 3rem;
+	--outer-margin: 1rem;
 	--top-margin: 10rem;
-	--grid-gap: .4rem;
+	--grid-gap: 1rem;
 	--vertical-gap: 3rem;
 	--spacer: 1rem;
+	--nav-height: 5rem;
 	background-color: var(--color-bg);
 	color: var(--color-fg);
 	text-align: left;
@@ -48,33 +49,15 @@ body,
 	-moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, .large-paragraph, .caption,
-/* this last part is for mailchimp */
-.mc-field-group input {
-	font-family: "Hyperwalk VF", sans-serif;
-	/* font-size: 12pt; */
-	line-height: 1.2em;
-	font-weight: 80;
-	letter-spacing: 0.03em;
+h1,
+h2,
+h3 {
+	font-family: "Helvetica Neue", "Helvetica", sans-serif;
+	font-size: 24pt;
+	line-height: 1em;
+	font-weight: 400;
+	letter-spacing: 0.01em;
 	text-transform: none;
-}
-
-/* .caption {
-	letter-spacing: 0.03em;
-	line-height: 1.2em;
-	font-weight: 75;
-} */
-
-h1, h2, h3, .large-paragraph,
-/* this last part is for the mailchimp form */
-.mc-field-group input {
-	/* text-transform: lowercase; */
-	font-size: 22pt;
-	font-weight: 86;
-	margin-bottom: .4em;
-	line-height: 1.2em;
-	letter-spacing: -.03em;
-	/* letter-spacing: 0.01em; */
 }
 
 h1 {
@@ -99,6 +82,11 @@ h3 {
 	max-width: 48rem;
 	padding: var(--outer-margin);
 	flex-grow: 1;
+}
+
+.grid {
+	display: grid;
+	gap: var(--grid-gap);
 }
 
 .rows {
@@ -152,7 +140,8 @@ a:active {
 	border-bottom: none;
 }
 
-.arrow-link::before, .arrow-links a::before,
+.arrow-link::before,
+.arrow-links a::before,
 /* mailchimp button */
 #mc-embedded-subscribe::before {
 	content: "→";
@@ -176,6 +165,7 @@ a:active {
 		--color-bg: black;
 		--color-accent: blue;
 	}
+
 	.warning {
 		filter: invert(1);
 		color: var(--color-bg);

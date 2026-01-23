@@ -7,13 +7,14 @@
 
 	let elements: Element[] = [];
 	let currentIndex = 0;
-
+	export const byline = "Designed and assembled in various coffee shops and workspaces";
+	
 	function gatherElements() {
 		elements = [];
 		currentIndex = 0;
 		// Select all elements within the body except those with the class 'no-animate' and their descendants
 		const elementsList = document.querySelectorAll(
-			"#container *, #title-container *"
+			"#container *, #title-container *",
 		);
 
 		// Filter the elements to include only the desired types
@@ -56,7 +57,6 @@
 
 		standardDelay(element as HTMLElement);
 	}
-
 
 	let intervalId: ReturnType<typeof setInterval> | null = null;
 	let timeoutId: ReturnType<typeof setTimeout> | null = null;
