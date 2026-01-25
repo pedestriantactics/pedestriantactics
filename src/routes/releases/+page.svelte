@@ -53,10 +53,9 @@
 
 <div id="container">
 	<div id="content">
-	<!-- render the filter links and the grid -->
-	<!-- <p id="breadcrumb" ><a href="/">pedestrian tactics</a> / releases</p> -->
-	<div id="filter-container">
-		
+		<!-- render the filter links and the grid -->
+		<!-- <p id="breadcrumb" ><a href="/">pedestrian tactics</a> / releases</p> -->
+		<div id="filter-container">
 			<a
 				class="unstyled-link animate"
 				href="?filter=all"
@@ -77,27 +76,26 @@
 				href="?filter=physical"
 				class:active={filter === "physical"}>Physical</a
 			>
-		
-	</div>
+		</div>
 
-	<div id="grid-container">
-		{#each filteredPosts as post}
-			<GridElement
-				postPath={post.postPath}
-				code={post.code}
-				title={post.title}
-				category={post.category}
-				audioType={post.audioType}
-				recordLabel={post.recordLabel}
-				formattedDate={post.formattedDate}
-				image={post.images[0]}
-				imageContrast={post.imageContrast}
-			/>
-		{:else}
-			<p>No posts found.</p>
-		{/each}
+		<div id="grid-container">
+			{#each filteredPosts as post}
+				<GridElement
+					postPath={post.postPath}
+					code={post.code}
+					title={post.title}
+					category={post.category}
+					audioType={post.audioType}
+					recordLabel={post.recordLabel}
+					formattedDate={post.formattedDate}
+					image={post.images[0]}
+					imageContrast={post.imageContrast}
+				/>
+			{:else}
+				<p>No posts found.</p>
+			{/each}
+		</div>
 	</div>
-</div>
 </div>
 
 <style>
@@ -131,7 +129,7 @@
 	#grid-container {
 		display: grid;
 		grid-gap: var(--grid-gap);
-		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-columns: repeat(4, 1fr);
 	}
 
 	#filter-container {
@@ -158,7 +156,7 @@
 			grid-template-columns: 1fr 1fr;
 		}
 	}
-	@media (max-width: 500px) {
+	@media (max-width: 580px) {
 		#grid-container {
 			grid-template-columns: 1fr;
 		}

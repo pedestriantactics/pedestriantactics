@@ -1,0 +1,11 @@
+todo
+-	consider putting the toggling byline in the layout instead of the pages 
+	so that it shows up on mobile in the grid and the individual pages
+
+-	universalize the container and contents in the styles.css file
+	make sure the distance from the top in the grid and page (when scrolling) 
+	is the same
+
+-	figure out what to do with sessions
+
+-	figure out why the page isn't animating

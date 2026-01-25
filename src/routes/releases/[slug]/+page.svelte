@@ -1,5 +1,6 @@
 <script lang="ts">
 	import NavMenu from "$lib/NavMenu.svelte";
+	import { byline } from "$lib/constants";
 
 	export let data: {
 		content: any;
@@ -17,20 +18,10 @@
 		environment: string;
 	};
 
-	// let breakpoint = 800;
+	let currentImage: number;
+	$: currentImage = 0;
 
-	let currentImage = 0;
-
-	function showNextImage() {
-		currentImage = (currentImage + 1) % data.images.length;
-	}
-
-	function showPreviousImage() {
-		currentImage =
-			(currentImage - 1 + data.images.length) % data.images.length;
-	}
-
-	let currentImagePath = `/images/${data.images[currentImage]}`;
+	$: currentImagePath = `/images/${data.images[currentImage]}`;
 
 	let navTitle = data.title;
 	if (data.code) navTitle = data.code;
@@ -80,8 +71,8 @@
 	breadcrumbs={[{ name: "Releases", destination: "/releases" }]}
 />
 
-<div id="new-container">
-	<div id="new-content">
+<div id="new-container" class="animate">
+	<div id="new-content" class="animate">
 		<!-- small screen title -->
 
 		<!-- image area -->
@@ -94,69 +85,67 @@
 			{#if data.images.length > 1}
 				<div id="image-nav">
 					{#each data.images as image, i}
-						<p>
-							<a
-								class="unstyled-link"
-								style="cursor: pointer;"
-								class:active={i === currentImage}
-								on:click={() => (currentImage = i)}
-							>
-								IMG{i + 1}
-							</a>
-						</p>
+						<button
+							type="button"
+							class="unstyled-link"
+							class:active={i === currentImage}
+							on:click={() => (currentImage = i)}
+							aria-label={`Show image ${i + 1}`}
+						>
+							IMG{i + 1}
+						</button>
 					{/each}
 				</div>
 			{/if}
 		</div>
 		<!-- title -->
-		<div id="code-and-title" class="large-only">
+		<div id="code-and-title" class="large-only animate">
 			{#if data.code}
-				<h2 id="archive-code">{data.code}</h2>
+				<div id="archive-code">
+					<h2 class="archive-code">{data.code}</h2>
+				</div>
 			{/if}
 			<h2 id="title">{data.title}</h2>
 		</div>
 		<!-- info area -->
-		<div id="info">
+		<div id="info" class="animate">
 			{#if data.description}
-				<p id="description">
+				<p id="description" class="animate">
 					{data.description}
 				</p>
 			{/if}
-			<div id="details-and-links">
-				{#if data.details}
-					<div id="details">
-						{#each data.details as detail}
-							<p class="detail-title">{detail.title}</p>
-							<p class="detail-description">
-								{detail.description}
-							</p>
-						{/each}
-					</div>
-				{/if}
-				<!-- price -->
-				{#if data.priceUSD}
-					<p id="price">{data.priceUSD}USD</p>
-				{/if}
-				<!-- links -->
-				{#if data.links}
-					<div class="details-and-links grid">
-						<p>
-							{#if data.linksTitle}{data.linksTitle}{:else}Links{/if}
+			{#if data.details}
+				<div class="details">
+					{#each data.details as detail}
+						<p class="detail-title">{detail.title}</p>
+						<p class="detail-description">
+							{detail.description}
 						</p>
-						<div class="arrow-links">
-							{#each data.links as link}
-								<a href={link.url}>{link.title}</a>
-								<br />
-							{/each}
-						</div>
-					</div>
-				{/if}
-			</div>
+					{/each}
+				</div>
+			{/if}
+			<!-- price -->
+			{#if data.priceUSD}
+				<p id="price">{data.priceUSD}USD</p>
+			{/if}
+			<!-- links -->
+			{#if data.links}
+				<div class="details">
+					<p class="detail-title">
+						{#if data.linksTitle}{data.linksTitle}{:else}Links{/if}
+					</p>
+					{#each data.links as link}
+						<a class="arrow-link detail-description" href={link.url}
+							>{link.title}</a
+						>
+					{/each}
+				</div>
+			{/if}
+			<!-- </div> -->
 			<div class="small-only">
 				<!-- TODO: find a way to store this universally -->
-				<p>
-					Designed and assembled in various coffee shops and
-					workspaces
+				<p class="animate">
+					{byline}
 				</p>
 			</div>
 		</div>
@@ -166,6 +155,7 @@
 <style>
 	.small-only {
 		display: none;
+		grid-column: 2 / -1;
 	}
 
 	.large-only {
@@ -199,53 +189,53 @@
 	#code-and-title {
 		display: grid;
 		grid-template-columns: subgrid;
+		grid-template-rows: auto;
+		row-gap: var(--grid-gap);
 		grid-area: titl;
 	}
 
 	#archive-code {
-		grid-column: span 1;
+		grid-column: 1 / 1;
 	}
 
 	#title {
-		grid-column: span 3;
+		grid-column: 1 / -1;
 	}
 
 	#archive-code + #title {
-		grid-column: 2 / 4;
+		grid-column: 2 / -1;
 	}
 
 	#info {
 		display: grid;
 		grid-template-columns: subgrid;
+		grid-template-rows: min-content min-content min-content;
+		row-gap: 2rem;
 		grid-area: info;
 	}
 
 	#description {
-		grid-column: span 3;
+		grid-column: 1 / -1;
 	}
 
-	#details-and-links {
-		display: grid;
-		grid-template-columns: subgrid;
-		grid-column: span 3;
-		grid-template-rows: auto;
-		row-gap: var(--grid-gap);
-	}
-
-	#details {
+	.details {
 		display: grid;
 		grid-template-columns: subgrid;
 		grid-template-rows: auto;
-		grid-column: span 3;
+		grid-column: 1 / -1;
 		row-gap: 0;
 	}
 
 	.detail-title {
-		grid-column: span 1;
+		grid-column: 1 / 2;
 	}
 
 	.detail-description {
-		grid-column: span 2;
+		grid-column: 2 / -1;
+	}
+
+	#price {
+		grid-column: 1 / -1;
 	}
 
 	#image-nav a:hover,
@@ -261,7 +251,7 @@
 	#image-nav {
 		width: 100%;
 		display: flex;
-		/* height: 50px; */
+		gap: var(--grid-gap);
 	}
 
 	/* make each link have --spacer on the right */
@@ -269,6 +259,7 @@
 		margin-right: 1em;
 	}
 
+	/* allow scrolling */
 	@media (max-height: 600px) or (max-width: 580px) {
 		#new-container {
 			top: 0;
@@ -283,57 +274,59 @@
 		}
 	}
 
-	@media (max-width: 920px) {
-		#image-and-info {
-			grid-template-columns: 1fr 1fr;
+	@media (max-width: 1200px) {
+		#archive-code {
+			grid-column: 1 / -1;
 		}
 
-		#code-and-title {
-			grid-template-columns: 1fr 3fr;
-		}
-
-		.details-and-links {
-			grid-template-columns: 1fr 3fr;
+		#archive-code + #title {
+			grid-column: 1 / -1;
 		}
 	}
 
-	@media (max-width: 820px) {
-		#code-and-title {
-			grid-template-columns: 1fr;
-		}
-	}
-
-	@media (max-width: 720px) {
-		.details-and-links {
-			grid-template-columns: 1fr 1fr;
+	@media (max-width: 950px) {
+		#new-content {
+			grid-template-areas:
+				"imag imag imag imag titl titl titl titl"
+				"imag imag imag imag info info info info";
 		}
 	}
 
 	@media (max-width: 580px) {
+		#new-content {
+			grid-template-columns: repeat(3, 1fr);
+			grid-template-areas:
+				"titl titl titl"
+				"imag imag imag"
+				"info info info";
+		}
+
+		@media (max-width: 1200px) {
+			#archive-code {
+				grid-column: 1 / 1;
+			}
+
+			#archive-code + #title {
+				grid-column: 2 / -1;
+			}
+		}
+
 		.small-only {
 			display: block;
 		}
+
 		.large-only {
 			display: none;
 		}
-
-		#image-and-info {
-			grid-template-columns: 1fr;
-			gap: var(--vertical-gap);
-		}
-
-		#code-and-title {
-			grid-template-columns: 1fr 3fr;
-		}
-
-		.details-and-links {
-			grid-template-columns: 1fr 3fr;
-		}
 	}
 
-	@media (max-width: 450px) {
-		#code-and-title {
-			grid-template-columns: 1fr;
+	@media (max-width: 480px) {
+		#archive-code {
+			grid-column: 1 / -1;
+		}
+
+		#archive-code + #title {
+			grid-column: 1 / -1;
 		}
 	}
 </style>

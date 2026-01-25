@@ -19,7 +19,7 @@
 	--outer-margin: 1rem;
 	--top-margin: 10rem;
 	--grid-gap: 1rem;
-	--vertical-gap: 3rem;
+	--vertical-gap: 4rem;
 	--spacer: 1rem;
 	--nav-height: 5rem;
 	background-color: var(--color-bg);
@@ -29,6 +29,24 @@
 	/* text-transform: lowercase; */
 	font-family: "Hyperwalk VF", sans-serif;
 	/* text-transform: lowercase; */
+}
+
+/* make buttons just be the same as a plain text link and the active state should have an underline just like links */
+button.unstyled-link,
+button.unstyled-link:hover,
+button.unstyled-link:active {
+	background: none;
+	border: none;
+	padding: 0;
+	font: inherit;
+	color: inherit;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+button.unstyled-link.active {
+	text-decoration: underline;
+	text-underline-offset: 0.2em;
 }
 
 .image-contrast {
@@ -59,6 +77,13 @@ h3 {
 	letter-spacing: 0.01em;
 	text-transform: none;
 }
+
+/* .archive-code {
+	background-color: #000;
+	color: var(--color-bg);
+	padding: .1em .2em;
+	width: fit-content;
+} */
 
 h1 {
 	text-transform: lowercase;

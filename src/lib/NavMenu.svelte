@@ -1,15 +1,12 @@
 <script lang="ts">
 	import { page } from "$app/stores";
+	import { byline } from "$lib/constants";
+
 	export let currentPage: string;
 	export let breadcrumbs: { name: string; destination: string }[];
 	export let showFullMenu = true;
-
-	export let byline =
-		"Designed and assembled in various coffee shops and workspaces";
-
 	let links: { name: string; destination: string }[] = [
 		{ name: "Releases", destination: "/releases" },
-		{ name: "Sessions", destination: "/sessions" },
 		// { name: "Shows", destination: "/shows" },
 		{
 			name: "Bandcamp",
@@ -19,13 +16,14 @@
 			name: "Instagram",
 			destination: "https://instagram.com/pedestriantactics",
 		},
+		{ name: "Sessions", destination: "/sessions" },
 		{ name: "Email", destination: "/email" },
 	];
 
 	$: activeLink = links.find((link) => link.name === currentPage);
 </script>
 
-<div id="nav-top" class="unstyled-links no-animate">
+<div id="nav-top" class="unstyled-links">
 	<h2 id="title">
 		<a href="../">Pedestrian Tactics</a>
 	</h2>
