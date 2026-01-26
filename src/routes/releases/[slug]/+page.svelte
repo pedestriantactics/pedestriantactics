@@ -143,7 +143,6 @@
 			{/if}
 			<!-- </div> -->
 			<div class="small-only">
-				<!-- TODO: find a way to store this universally -->
 				<p class="animate">
 					{byline}
 				</p>
@@ -154,8 +153,8 @@
 
 <style>
 	.small-only {
-		display: none;
 		grid-column: 2 / -1;
+		display: none;
 	}
 
 	.large-only {
