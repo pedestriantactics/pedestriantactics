@@ -57,22 +57,22 @@
 		<!-- <p id="breadcrumb" ><a href="/">pedestrian tactics</a> / releases</p> -->
 		<div id="filter-container">
 			<a
-				class="unstyled-link animate"
+				class="unstyled-link"
 				href="?filter=all"
 				class:active={filter === "all"}>All</a
 			>
 			<a
-				class="unstyled-link animate"
+				class="unstyled-link"
 				href="?filter=audio"
 				class:active={filter === "audio"}>Audio</a
 			>
 			<a
-				class="unstyled-link animate"
+				class="unstyled-link"
 				href="?filter=downloadable"
 				class:active={filter === "downloadable"}>Downloadable</a
 			>
 			<a
-				class="unstyled-link animate"
+				class="unstyled-link"
 				href="?filter=physical"
 				class:active={filter === "physical"}>Physical</a
 			>
