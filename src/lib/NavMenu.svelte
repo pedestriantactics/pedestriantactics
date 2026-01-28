@@ -1,86 +1,71 @@
 <script lang="ts">
 	import { page } from "$app/stores";
-	import { byline } from "$lib/constants";
+	import Byline from "$lib/Byline.svelte";
 
-	export let currentPage: string;
-	export let breadcrumbs: { name: string; destination: string }[];
-	export let showFullMenu = true;
-	let links: { name: string; destination: string }[] = [
-		{ name: "Releases", destination: "/releases" },
-		// { name: "Shows", destination: "/shows" },
-		{
-			name: "Bandcamp",
-			destination: "https://pedestriantactics.bandcamp.com",
-		},
-		{
-			name: "Instagram",
-			destination: "https://instagram.com/pedestriantactics",
-		},
-		{ name: "Sessions", destination: "/sessions" },
-		{ name: "Email", destination: "/email" },
-	];
-
-	$: activeLink = links.find((link) => link.name === currentPage);
+	// adds a return to home button for sub pages
+	export let backVisible: boolean = true;
 </script>
 
 <div id="nav-top" class="unstyled-links">
 	<h2 id="title">
 		<a href="../">Pedestrian Tactics</a>
+		<!-- {#if backVisible}
+			<a class="mono" href="../">←</a>
+		{/if} -->
 	</h2>
-	<p id="links">
-		{#if showFullMenu}
-			{#each links as link}
-				{#if link.name === currentPage}
-					{link.name}←
-				{:else}
-					<a href={link.destination}>{link.name}</a>
-				{/if}
-				<br />
-			{/each}
-		{/if}
+	<p id="links" class="">
+		<a href="https://pedestriantactics.bandcamp.com">Bandcamp</a>
+		<a href="https://instagram.com/pedestriantactics">Instagram</a>
+		<a href="https://bsky.app/profile/pedestriantactics.bsky.social"
+			>Bluesky</a
+		>
+		<a href="/sessions">Sessions</a>
 	</p>
-	<p id="byline">{byline}</p>
+	<div id="byline">
+		<Byline />
+	</div>
 </div>
 
 <style>
 	#nav-top {
 		position: fixed;
-		top: var(--outer-margin);
-		left: var(--outer-margin);
-		right: var(--outer-margin);
+		top: 0;
+		left: 0;
+		right: 0;
+		padding: 1rem;
 		z-index: 100;
-		mix-blend-mode: difference;
-		-webkit-font-smoothing: antialiased;
-		-moz-osx-font-smoothing: grayscale;
 		display: grid;
 		grid-template-columns: repeat(8, 1fr);
 		gap: var(--grid-gap);
+		grid-template-areas: "titl titl titl titl lnks lnks blin blin";
+		background-color: var(--color-bg);
+	}
+
+	#links > * {
+		display: block;
 	}
 
 	#title {
-		grid-column: span 4;
+		grid-area: titl;
 	}
 
-	#links,
+	#links {
+		grid-area: lnks;
+	}
+
 	#byline {
-		grid-column: span 2;
+		grid-area: blin;
 	}
 
 	#nav-top,
 	#nav-top a {
-		color: white;
+		/* color: white; */
 	}
 
 	@media (max-width: 580px) {
 		#nav-top {
 			grid-template-columns: repeat(3, 1fr);
-		}
-		#title {
-			grid-column: span 2;
-		}
-
-		#links {
-			grid-column: span 1;
+			grid-template-areas: "titl titl lnks";
 		}
 
 		#byline {

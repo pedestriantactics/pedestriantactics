@@ -1,1 +1,0 @@
-export const byline = "Designed and assembled in various coffee shops and workspaces, ©2026";

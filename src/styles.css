@@ -27,7 +27,7 @@
 	text-align: left;
 	font-size: 10pt;
 	/* text-transform: lowercase; */
-	font-family: "Hyperwalk VF", sans-serif;
+	/* font-family: "Hyperwalk VF", sans-serif; */
 	/* text-transform: lowercase; */
 }
 
@@ -53,11 +53,8 @@ button.unstyled-link.active {
 	filter: contrast(0.77);
 }
 
-/* paragraph spacing */
 body,
-/* this last part is for mailchimp */
-.mc-field-group input,
-#mc-embedded-subscribe {
+.mono {
 	font-family: "Hyperwalk Mono VF", sans-serif;
 	font-weight: 80;
 	letter-spacing: 0.02em;
@@ -95,20 +92,6 @@ h3 {
 	font-size: 18pt;
 }
 
-#container {
-	width: 100%;
-	height: 100vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-#content {
-	max-width: 48rem;
-	padding: var(--outer-margin);
-	flex-grow: 1;
-}
-
 .grid {
 	display: grid;
 	gap: var(--grid-gap);
@@ -143,8 +126,6 @@ a:hover,
 a:visited,
 a:active {
 	color: var(--color-fg);
-	text-decoration: underline;
-	text-underline-offset: 0.1em;
 }
 
 .arrow-links a,
@@ -169,6 +150,7 @@ a:active {
 .arrow-links a::before,
 /* mailchimp button */
 #mc-embedded-subscribe::before {
+	/* content: "↗"; */
 	content: "→";
 	/* display: inline-block; */
 }

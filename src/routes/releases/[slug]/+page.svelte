@@ -1,6 +1,6 @@
 <script lang="ts">
 	import NavMenu from "$lib/NavMenu.svelte";
-	import { byline } from "$lib/constants";
+	import Byline from "$lib/Byline.svelte";
 
 	export let data: {
 		content: any;
@@ -66,13 +66,11 @@
 	{/if}
 </svelte:head>
 
-<NavMenu
-	{currentPage}
-	breadcrumbs={[{ name: "Releases", destination: "/releases" }]}
-/>
+<NavMenu />
 
-<div id="new-container" class="animate">
-	<div id="new-content" class="animate">
+<div id="container" class="animate">
+	<div id="content" class="animate">
+		<h2><a id="back-button"class="unstyled-link mono" href="../">←</a></h2>
 		<!-- small screen title -->
 
 		<!-- image area -->
@@ -142,18 +140,17 @@
 				</div>
 			{/if}
 			<!-- </div> -->
-			<div class="small-only">
-				<p class="animate">
-					{byline}
-				</p>
-			</div>
 		</div>
+	</div>
+	<div class="small-only">
+		<p class="animate">
+			<Byline />
+		</p>
 	</div>
 </div>
 
 <style>
 	.small-only {
-		grid-column: 2 / -1;
 		display: none;
 	}
 
@@ -161,7 +158,7 @@
 		display: block;
 	}
 
-	#new-container {
+	#container {
 		position: fixed;
 		top: calc(var(--nav-height) + var(--outer-margin));
 		left: var(--outer-margin);
@@ -170,15 +167,19 @@
 		align-content: center;
 	}
 
-	#new-content {
+	#content {
 		display: grid;
 		grid-template-columns: repeat(8, 1fr);
 		grid-template-rows: min-content 1fr;
 		column-gap: var(--grid-gap);
 		row-gap: var(--vertical-gap);
 		grid-template-areas:
-			".    imag imag imag titl titl titl .   "
+			"back imag imag imag titl titl titl .   "
 			".    imag imag imag info info info .   ";
+	}
+
+	#back-button {
+		grid-area: back;
 	}
 
 	#image-container {
@@ -260,7 +261,7 @@
 
 	/* allow scrolling */
 	@media (max-height: 600px) or (max-width: 580px) {
-		#new-container {
+		#container {
 			top: 0;
 			left: 0;
 			bottom: 0;
@@ -284,17 +285,20 @@
 	}
 
 	@media (max-width: 950px) {
-		#new-content {
+		#content {
+			grid-template-rows: min-content min-content 1fr;
 			grid-template-areas:
+				"back back back back back back back back"
 				"imag imag imag imag titl titl titl titl"
 				"imag imag imag imag info info info info";
 		}
 	}
 
 	@media (max-width: 580px) {
-		#new-content {
+		#content {
 			grid-template-columns: repeat(3, 1fr);
 			grid-template-areas:
+				"back back back"
 				"titl titl titl"
 				"imag imag imag"
 				"info info info";
@@ -311,7 +315,13 @@
 		}
 
 		.small-only {
-			display: block;
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: var(--grid-gap);
+		}
+
+		.small-only p {
+			grid-column: 2 / -1;
 		}
 
 		.large-only {
