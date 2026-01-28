@@ -67,10 +67,11 @@ body,
 h1,
 h2,
 h3 {
+	/* font-family: "ZT Hoky", sans-serif; */
 	font-family: "Helvetica Neue", "Helvetica", sans-serif;
+	font-weight: 400;
 	font-size: 24pt;
 	line-height: 1em;
-	font-weight: 400;
 	letter-spacing: 0.01em;
 	text-transform: none;
 }
