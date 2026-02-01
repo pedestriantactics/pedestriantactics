@@ -302,6 +302,7 @@
 				"titl titl titl"
 				"imag imag imag"
 				"info info info";
+			margin-bottom: var(--vertical-gap);
 		}
 
 		@media (max-width: 1200px) {
