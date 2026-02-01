@@ -19,7 +19,7 @@
 		<a href="https://bsky.app/profile/pedestriantactics.bsky.social"
 			>Bluesky</a
 		>
-		<a href="/sessions">Sessions</a>
+		<a href="https://calendly.com/pedestriantactics/">Sessions</a>
 	</p>
 	<div id="byline">
 		<Byline />
