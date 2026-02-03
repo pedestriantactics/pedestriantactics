@@ -10,10 +10,6 @@
 	export let imageContrast: boolean;
 	if (code == null) code = "";
 
-	// declare const window: Window & { location: Location };
-	// const currentRoute = window.location.pathname.split('/').slice(0, -1).join('/');
-	const currentRoute = "/releases";
-
 	// create a function that creates a date string from a Date
 	// this will use the get methods of the Date object to create a date that is formatted yyyy-mm-dd
 	function formatDate(date: Date): string {
@@ -21,9 +17,9 @@
 	}
 </script>
 
-<a class="unstyled-link" href="{currentRoute}/{postPath}">
+<a class="unstyled-link" href={"/" + postPath}>
 	<div id="grid-element">
-		<img src="/images/{image}" class:image-contrast={imageContrast} alt={title} />
+		<img src={"/images/" + image} class:image-contrast={imageContrast} alt={title} />
 		<div id="description">
 			<p>
 				{#if code != ""}{code} /
@@ -31,17 +27,12 @@
 				{title}
 				{#if audioType != ""}
 					/ {audioType}{/if}
-				<!-- {#if recordLabel != ""}
-					/ {recordLabel}{/if} -->
 			</p>
 		</div>
 	</div>
 </a>
 
 <style>
-	#grid-element {
-		/* margin-bottom: 2rem; */
-	}
 	#description {
 		height: 4rem;
 	}

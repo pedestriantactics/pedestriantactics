@@ -1,136 +1,166 @@
+<script lang="ts">
+	import GridElement from "./GridElement.svelte";
+	import NavMenu from "$lib/NavMenu.svelte";
+	import { page } from "$app/stores";
+	import Byline from "$lib/Byline.svelte";
+
+	$: filter = $page.url?.searchParams?.get("filter") ?? "all";
+
+	export let data: {
+		posts: {
+			postPath: string;
+			title: string;
+			code: string;
+			category: string;
+			audioType: string;
+			recordLabel: string;
+			formattedDate: Date;
+			images: string[];
+			imageContrast: boolean;
+		}[];
+	};
+
+	$: filteredPosts = data.posts.filter((post) => {
+		if (filter === "all") return true;
+		if (filter === "physical") return post.category === "physical";
+		if (filter === "downloadable") return post.category === "downloadable";
+		if (filter === "audio") return post.category === "audio";
+		return false;
+	}) as (typeof data)["posts"];
+</script>
+
 <svelte:head>
 	<title>Pedestrian Tactics</title>
 </svelte:head>
 
-<div id="bg-image"></div>
-
-<!-- <div id="footer">
-		<p><a class="arrow-link" href="releases/pt-t68">PT-T68 Out now!</a></p>
-	</div> -->
+<NavMenu />
 
 <div id="container">
 	<div id="content">
-		<div id="title-container">
-			<div id="description" class="title-row">
-				<p class="caption">
-					Designed and assembled in various coffee shops and
-					workspaces
-				</p>
-				<p class="caption">©2025</p>
-			</div>
-			<div id="title" class="title-row">
-				<h1>Pedestrian</h1>
-				<h1>Tactics</h1>
-			</div>
-			<div id="links" class="title-row">
-				<p>Index /</p>
-				<!-- <h2>&#xE002; &#xE003; &#xE004; &#xE005;</h2> -->
-				<div id="links">
-					<a href="releases" class="unstyled-link">Releases</a>
-					<a href="sessions" class="unstyled-link">Sessions</a>
-					<!-- <a href="shows" class="unstyled-link">Live archive</a> -->
-					<a
-						href="https://pedestriantactics.bandcamp.com"
-						class="unstyled-link">Bandcamp</a
-					>
-					<a
-						href="http://instagram.com/pedestriantactics"
-						class="unstyled-link">Instagram</a
-					>
-					<!-- <a href="newsletter" class="unstyled-link">Newsletter</a> -->
-					<!-- <a href="links" class="unstyled-link">Links</a> -->
-					<a href="email" class="unstyled-link">Email</a>
-				</div>
-			</div>
+		<!-- render the filter links and the grid -->
+		<!-- <p id="breadcrumb" ><a href="/">pedestrian tactics</a> / releases</p> -->
+		<div id="filter-container">
+			<a
+				class="unstyled-link"
+				href="?filter=all"
+				class:active={filter === "all"}>All</a
+			>
+			<a
+				class="unstyled-link"
+				href="?filter=audio"
+				class:active={filter === "audio"}>Audio</a
+			>
+			<a
+				class="unstyled-link"
+				href="?filter=downloadable"
+				class:active={filter === "downloadable"}>Downloadable</a
+			>
+			<a
+				class="unstyled-link"
+				href="?filter=physical"
+				class:active={filter === "physical"}>Physical</a
+			>
 		</div>
+
+		<div id="grid-container">
+			{#each filteredPosts as post}
+				<GridElement
+					postPath={post.postPath}
+					code={post.code}
+					title={post.title}
+					category={post.category}
+					audioType={post.audioType}
+					recordLabel={post.recordLabel}
+					formattedDate={post.formattedDate}
+					image={post.images[0]}
+					imageContrast={post.imageContrast}
+				/>
+			{:else}
+				<p>No posts found.</p>
+			{/each}
+		</div>
+	</div>
+	<div class="small-only">
+		<p class="animate">
+			<Byline />
+		</p>
 	</div>
 </div>
 
 <style>
-	#bg-image {
-		/* 
-		background-image: url('/images/home-bg.jpg'); 
-		*/
-		background-size: cover;
-		background-position: center;
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		z-index: -1;
+	.small-only {
+		grid-column: 2 / -1;
+		display: none;
 	}
 
-	#footer {
-		position: absolute;
-		bottom: var(--outer-margin);
-		right: var(--outer-margin);
-		display: flex;
-		justify-content: space-between;
-	}
-
-	/* #links {
-		font-size: 1.4rem;
-		line-height: 1.4rem;
+	/* #filter-container a:hover,
+	#filter-container a:focus,
+	#filter-container a.active {
+		text-decoration: underline;
+		text-underline-offset: 0.2em;
 	} */
 
-	#links a {
-		display: block;
-	}
-
-	#title-container {
-		display: flex;
-		/* width: 100%; */
-		flex-direction: column;
-		align-items: center;
-	}
-
-	.title-row {
-		width: 100%;
-		display: grid;
-		grid-template-columns: 1fr 0.75fr;
-		gap: 2rem;
-		/* margin-bottom: var(--vertical-gap); */
-		/* background-color: red; */
-	}
-
-	#description {
-		/* grid-template-columns: 1fr 1fr 2fr; */
+	#container {
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		padding: var(--outer-margin);
+		position: relative;
+		margin-top: calc(var(--nav-height) + var(--vertical-gap));
+		width: calc(100% - 2 * var(--outer-margin));
+		height: auto;
 	}
 
 	#content {
-		max-width: 46rem;
+		max-width: 100%;
+		display: flex;
+		flex-direction: column;
+		gap: var(--grid-gap);
 	}
 
-	a::after {
-		content: "←";
-	}
-	/*
-	@media (max-width: 600px) {
-		#title {
-			font-size: 96pt;
-		}
+	#grid-container {
+		display: grid;
+		grid-gap: var(--grid-gap);
+		grid-template-columns: repeat(4, 1fr);
 	}
 
-	@media (max-width: 490px) {
-		#title {
+	#filter-container {
+		width: 100%;
+		display: flex;
+		justify-content: flex-start;
+		gap: var(--spacer);
+	}
+
+	#filter-container a.active::before {
+		content: "→";
+	}
+
+	/* change grid to two columns when max width changes */
+	@media (max-width: 900px) {
+		#grid-container {
 			grid-template-columns: 1fr 1fr;
-			font-size: 128pt;
 		}
 	}
-	*/
-
-	@media (max-width: 600px) {
-		h1 {
-			font-size: 32pt;
+	@media (max-width: 580px) {
+		#filter-container {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 0;
 		}
 
-		#content {
-			max-width: 30rem;
+		#grid-container {
+			grid-template-columns: 1fr;
 		}
 
-		.title-row {
-			gap: 1rem;
+		.small-only {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: var(--grid-gap);
+		}
+
+		.small-only p {
+			grid-column: 2 / -1;
 		}
 	}
 </style>
