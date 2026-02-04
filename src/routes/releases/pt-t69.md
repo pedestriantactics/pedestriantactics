@@ -11,6 +11,8 @@ linksTitle: Listen
 links:
 - title: Bandcamp
   url: https://pedestriantactics.bandcamp.com/track/riddle
+- title: Soundcloud
+  url: https://soundcloud.com/pedestriantactics/pt-t69
 - title: Spotify
   url: https://open.spotify.com/album/6qW7FWJj5TPfhM7QLqYYKn?si=Nuu2IOH8R36Eq99hfdvSdQ
 - title: Apple Music
