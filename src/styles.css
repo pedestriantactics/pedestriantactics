@@ -74,12 +74,11 @@ body,
 h1,
 h2,
 h3 {
-	/* font-family: "ZT Hoky", sans-serif; */
 	font-family: "Tactics Regular", "Helvetica", sans-serif;
 	font-weight: 400;
-	font-size: 28pt;
+	font-size: 22pt;
 	line-height: 1em;
-	letter-spacing: 0.0em;
+	letter-spacing: 0.02em;
 	text-transform: none;
 }
 
