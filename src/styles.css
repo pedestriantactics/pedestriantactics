@@ -23,7 +23,7 @@
 	--color-fg: black;
 	--color-bg: white;
 	--color-accent: blue;
-	--outer-margin: 1rem;
+	--outer-margin: 2rem;
 	--top-margin: 10rem;
 	--grid-gap: 1rem;
 	--vertical-gap: 4rem;
@@ -185,3 +185,9 @@ a:active {
 		color: var(--color-bg);
 	}
 }
+
+	@media (max-width: 420px) {
+		:root {
+			--outer-margin: 1rem;
+		}
+	}

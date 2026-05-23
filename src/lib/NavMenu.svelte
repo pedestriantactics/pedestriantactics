@@ -32,7 +32,10 @@
 		top: 0;
 		left: 0;
 		right: 0;
-		padding: 1rem;
+		padding-top: var(--outer-margin);
+		padding-left: var(--outer-margin);
+		padding-right: var(--outer-margin);
+		padding-bottom: 1rem;
 		z-index: 100;
 		display: grid;
 		grid-template-columns: repeat(8, 1fr);
