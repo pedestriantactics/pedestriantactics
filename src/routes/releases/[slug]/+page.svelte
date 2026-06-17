@@ -100,7 +100,7 @@
 		<div id="code-and-title" class="large-only animate">
 			{#if data.code}
 				<div id="archive-code">
-					<h2 class="archive-code">{data.code}</h2>
+					<h4 class="archive-code">{data.code}</h4>
 				</div>
 			{/if}
 			<h2 id="title">{data.title}</h2>
